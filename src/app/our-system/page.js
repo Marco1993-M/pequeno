@@ -86,7 +86,7 @@ export default function OurSystem() {
               ))}
             </div>
             <p className="text-gray-700 text-lg">
-              At the core of our system lies a lightweight steel framework — precision-cut and manufactured off-site for fast, efficient assembly. Unlike traditional timber, steel framing is immune to rot, termites, and warping. It’s incredibly strong, dimensionally stable, and 100% recyclable.
+              At the core of our system lies a lightweight steel framework — precision-cut and manufactured off-site for fast, efficient assembly. Unlike traditional timber, steel framing is immune to rot, termites, and warping. It is incredibly strong, dimensionally stable, and 100% recyclable.
             </p>
             <p className="text-gray-700 text-lg mt-4">
               Our modular approach means we can deliver and assemble buildings quickly with minimal waste and disruption. The result: a structurally sound, adaptable skeleton designed to stand the test of time.
@@ -129,7 +129,7 @@ export default function OurSystem() {
           <section id="cladding" className="mb-24 scroll-mt-32">
             <h2 className="text-2xl font-semibold mb-4">3. Exterior Cladding Options</h2>
             <p className="text-gray-700 text-lg mb-4">
-              Finishing a building is about more than aesthetics — it's about protection, personality, and longevity. We offer a curated selection of cladding materials to suit every climate and style.
+              Finishing a building is about more than aesthetics — it iss about protection, personality, and longevity. We offer a curated selection of cladding materials to suit every climate and style.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
