@@ -82,7 +82,7 @@ export default function OnboardingPage() {
       <main className="min-h-screen font-sans text-gray-800 px-6 py-24 bg-white flex items-center justify-center">
         <div className="text-center space-y-4">
           <h1 className="text-3xl font-bold">Thank you!</h1>
-          <p>We've received your project info and will be in touch soon.</p>
+          <p>We have received your project info and will be in touch soon.</p>
         </div>
       </main>
     );
