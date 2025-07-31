@@ -34,7 +34,7 @@ export default function EnquirePage() {
         <div>
           <h1 className="font-semibold tracking-widest uppercase text-black">Interested in working with us?</h1>
           <p className="font-thin tracking-widest uppercase text-black">
-            Whether you're dreaming of a custom home, an off-grid cabin, or a tailored architectural solution — we’d love to hear from you.
+            Whether you are dreaming of a custom home, an off-grid cabin, or a tailored architectural solution — we’d love to hear from you.
             Simply fill out the form, and our team will be in touch.
           </p>
         </div>
