@@ -129,7 +129,7 @@ export default function OurSystem() {
           <section id="cladding" className="mb-24 scroll-mt-32">
             <h2 className="text-2xl font-semibold mb-4">3. Exterior Cladding Options</h2>
             <p className="text-gray-700 text-lg mb-4">
-              Finishing a building is about more than aesthetics — it iss about protection, personality, and longevity. We offer a curated selection of cladding materials to suit every climate and style.
+              Finishing a building is about more than aesthetics — it is about protection, personality, and longevity. We offer a curated selection of cladding materials to suit every climate and style.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
