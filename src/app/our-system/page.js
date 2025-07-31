@@ -121,7 +121,7 @@ export default function OurSystem() {
               A high-performance building envelope is key to indoor comfort and energy efficiency. We use breathable wall wraps, reflective barriers, and insulation materials with high R-values to regulate temperature, reduce moisture build-up, and block external noise.
             </p>
             <p className="text-gray-700 text-lg mt-4">
-              Whether you're building in a coastal, dry, or mountainous region, our layered wall system ensures protection from the elements and helps lower heating and cooling costs long-term.
+              Whether you are building in a coastal, dry, or mountainous region, our layered wall system ensures protection from the elements and helps lower heating and cooling costs long-term.
             </p>
           </section>
 
