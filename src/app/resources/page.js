@@ -69,7 +69,7 @@ export default function ResourcesPage() {
       <div className="max-w-7xl mx-auto">
         <h1 className="font-semibold tracking-widest uppercase text-black">Resources and Brochures</h1>
         <p className="font-thin tracking-widest uppercase text-black mb-6">
-          Explore Pequeño&apos's collection of brochures, case studies, and technical information to help you plan and build with confidence.
+          Explore our collection of brochures, case studies, and technical information to help you plan and build with confidence.
         </p>
 
         <div className="grid md:grid-cols-3 gap-12">
