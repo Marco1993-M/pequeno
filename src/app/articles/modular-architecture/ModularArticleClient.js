@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import Script from "next/script";
 
 function Breadcrumbs() {
   return (
@@ -13,13 +14,21 @@ function Breadcrumbs() {
     >
       <ol className="list-reset flex">
         <li>
-          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/" className="hover:underline">
+            Home
+          </Link>
         </li>
-        <li><span className="mx-2">/</span></li>
         <li>
-          <Link href="/articles" className="hover:underline">Articles</Link>
+          <span className="mx-2">/</span>
         </li>
-        <li><span className="mx-2">/</span></li>
+        <li>
+          <Link href="/articles" className="hover:underline">
+            Articles
+          </Link>
+        </li>
+        <li>
+          <span className="mx-2">/</span>
+        </li>
         <li aria-current="page" className="text-gray-900 font-semibold">
           Exploring Modular Architecture
         </li>
@@ -62,103 +71,121 @@ export default function ModularArticleClient() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Exploring Modular Architecture: Reshaping the South African Landscape",
-    "description": "Modular architecture is revolutionizing South Africa with fast, eco-friendly building methods. Learn about its benefits and Pequeño’s unique approach.",
-    "image": "https://www.pequenohome.com/images/modular-hero.jpg",
-    "author": {
+    headline: "Exploring Modular Architecture: Reshaping the South African Landscape",
+    description:
+      "Modular architecture is revolutionizing South Africa with fast, eco-friendly building methods. Learn about its benefits and Pequeño’s unique approach.",
+    image: "https://www.pequenohome.com/images/modular-hero.jpg",
+    author: {
       "@type": "Organization",
-      "name": "Pequeño",
-      "url": "https://www.pequenohome.com"
+      name: "Pequeño",
+      url: "https://www.pequenohome.com",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "Pequeño",
-      "logo": {
+      name: "Pequeño",
+      logo: {
         "@type": "ImageObject",
-        "url": "https://www.pequenohome.com/images/logo.png"
-      }
+        url: "https://www.pequenohome.com/images/logo.png",
+      },
     },
-    "mainEntityOfPage": {
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://www.pequenohome.com/articles/exploring-modular-architecture"
+      "@id": "https://www.pequenohome.com/articles/exploring-modular-architecture",
     },
-    "datePublished": "2025-08-01",
-    "dateModified": "2025-08-01"
+    datePublished: "2025-08-01",
+    dateModified: "2025-08-01",
   };
 
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.pequenohome.com/"
+        position: 1,
+        name: "Home",
+        item: "https://www.pequenohome.com/",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Articles",
-        "item": "https://www.pequenohome.com/articles"
+        position: 2,
+        name: "Articles",
+        item: "https://www.pequenohome.com/articles",
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": "Exploring Modular Architecture",
-        "item": "https://www.pequenohome.com/articles/exploring-modular-architecture"
-      }
-    ]
+        position: 3,
+        name: "Exploring Modular Architecture",
+        item: "https://www.pequenohome.com/articles/exploring-modular-architecture",
+      },
+    ],
   };
 
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
+    mainEntity: [
       {
         "@type": "Question",
-        "name": "Are modular homes durable?",
-        "acceptedAnswer": {
+        name: "Are modular homes durable?",
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": "Yes. Pequeño homes use high-quality, lightweight steel engineered to endure South Africa's diverse climates."
-        }
+          text: "Yes. Pequeño homes use high-quality, lightweight steel engineered to endure South Africa's diverse climates.",
+        },
       },
       {
         "@type": "Question",
-        "name": "Can I customise the design?",
-        "acceptedAnswer": {
+        name: "Can I customise the design?",
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": "Absolutely. Each home is tailored to your lifestyle, land conditions, and budget."
-        }
+          text: "Absolutely. Each home is tailored to your lifestyle, land conditions, and budget.",
+        },
       },
       {
         "@type": "Question",
-        "name": "Are modular homes more affordable than traditional homes?",
-        "acceptedAnswer": {
+        name: "Are modular homes more affordable than traditional homes?",
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": "Modular homes often result in cost savings due to streamlined processes and reduced labour time."
-        }
+          text: "Modular homes often result in cost savings due to streamlined processes and reduced labour time.",
+        },
       },
       {
         "@type": "Question",
-        "name": "Do they meet South African building codes?",
-        "acceptedAnswer": {
+        name: "Do they meet South African building codes?",
+        acceptedAnswer: {
           "@type": "Answer",
-          "text": "Yes. All Pequeño homes comply fully with local building regulations."
-        }
-      }
-    ]
+          text: "Yes. All Pequeño homes comply fully with local building regulations.",
+        },
+      },
+    ],
   };
 
   return (
     <>
       <Head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
         <title>Exploring Modular Architecture | Pequeño</title>
-        <meta name="description" content="Explore how modular steel architecture is reshaping South Africa’s housing landscape. Fast, sustainable, and modern — discover Pequeño’s unique modular approach." />
+        <meta
+          name="description"
+          content="Explore how modular steel architecture is reshaping South Africa’s housing landscape. Fast, sustainable, and modern — discover Pequeño’s unique modular approach."
+        />
       </Head>
+
+      {/* Use next/script to inject JSON-LD for better Google detection */}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
 
       <Breadcrumbs />
 
@@ -200,10 +227,20 @@ export default function ModularArticleClient() {
           </p>
           <h3 className="text-2xl font-semibold mb-4">Key Benefits:</h3>
           <ul className="list-disc list-inside max-w-3xl space-y-2">
-            <li><strong>Speed:</strong> Up to 50% faster than conventional builds.</li>
-            <li><strong>Sustainability:</strong> Less waste, fewer site disturbances, and lower emissions.</li>
-            <li><strong>Cost-Efficiency:</strong> Reduced labour and time expenses.</li>
-            <li><strong>Scalability:</strong> Easily expanded or adapted as needs evolve.</li>
+            <li>
+              <strong>Speed:</strong> Up to 50% faster than conventional builds.
+            </li>
+            <li>
+              <strong>Sustainability:</strong> Less waste, fewer site disturbances,
+              and lower emissions.
+            </li>
+            <li>
+              <strong>Cost-Efficiency:</strong> Reduced labour and time expenses.
+            </li>
+            <li>
+              <strong>Scalability:</strong> Easily expanded or adapted as needs
+              evolve.
+            </li>
           </ul>
         </section>
 
@@ -217,16 +254,26 @@ export default function ModularArticleClient() {
             these by providing:
           </p>
           <ul className="list-disc list-inside max-w-3xl space-y-2 mb-6">
-            <li><strong>Quick-deploy housing</strong> for underserved communities.</li>
-            <li><strong>Eco-friendly alternatives</strong> for developers and local governments.</li>
-            <li><strong>Custom, beautiful designs</strong> reflecting local climate and culture.</li>
+            <li>
+              <strong>Quick-deploy housing</strong> for underserved communities.
+            </li>
+            <li>
+              <strong>Eco-friendly alternatives</strong> for developers and local
+              governments.
+            </li>
+            <li>
+              <strong>Custom, beautiful designs</strong> reflecting local climate and
+              culture.
+            </li>
           </ul>
         </section>
 
         <hr className="my-12" />
 
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">Pequeño&apos;s Approach to Modular Living</h2>
+          <h2 className="text-3xl font-semibold mb-6">
+            Pequeño&apos;s Approach to Modular Living
+          </h2>
           <p className="mb-6 max-w-3xl">
             At Pequeño, small means smarter. Our lightweight steel modular homes
             are crafted for:
@@ -238,7 +285,8 @@ export default function ModularArticleClient() {
             <li>Modern architectural flair that stands out.</li>
           </ul>
           <blockquote className="border-l-4 border-black pl-6 italic text-gray-700 text-lg max-w-3xl">
-            “We don&apos;t just build homes. We build systems that evolve with your life.” — Pequeño Team
+            “We don&apos;t just build homes. We build systems that evolve with your
+            life.” — Pequeño Team
           </blockquote>
         </section>
 
@@ -248,13 +296,16 @@ export default function ModularArticleClient() {
           <h2 className="text-3xl font-semibold mb-6">Real-World Examples</h2>
           <ul className="list-disc list-inside max-w-3xl space-y-4 mb-6">
             <li>
-              <strong>Coastal Retreats:</strong> Off-site built modular homes delivered to remote coastal sites with minimal environmental disruption.
+              <strong>Coastal Retreats:</strong> Off-site built modular homes delivered
+              to remote coastal sites with minimal environmental disruption.
             </li>
             <li>
-              <strong>Urban Infill Projects:</strong> Backyard units and gap housing in metropolitan areas like Cape Town and Johannesburg.
+              <strong>Urban Infill Projects:</strong> Backyard units and gap housing
+              in metropolitan areas like Cape Town and Johannesburg.
             </li>
             <li>
-              <strong>Community Projects:</strong> Temporary classrooms and clinics in rural areas, constructed rapidly.
+              <strong>Community Projects:</strong> Temporary classrooms and clinics
+              in rural areas, constructed rapidly.
             </li>
           </ul>
         </section>
@@ -285,7 +336,9 @@ export default function ModularArticleClient() {
         <section className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl font-bold mb-6">Join the Modular Movement</h2>
           <p className="mb-8 max-w-xl mx-auto">
-            Whether you&apos;re a homeowner, developer, or municipality, modular architecture opens up a world of opportunity. It&apos;s time to build smarter, faster, and more sustainably.
+            Whether you&apos;re a homeowner, developer, or municipality, modular
+            architecture opens up a world of opportunity. It&apos;s time to build
+            smarter, faster, and more sustainably.
           </p>
           <Link
             href="https://www.pequenohome.com"
