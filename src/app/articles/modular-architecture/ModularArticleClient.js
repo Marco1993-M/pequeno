@@ -189,20 +189,32 @@ export default function ModularArticleClient() {
 
       <Breadcrumbs />
 
-      <article className="max-w-5xl mx-auto px-6 py-16 font-sans text-gray-900 leading-relaxed">
-        <h1 className="text-4xl font-bold mb-6">
-          Exploring Modular Architecture: Reshaping the South African Landscape
-        </h1>
+      <article className="px-6 py-16 font-sans text-gray-900 leading-relaxed">
+  <div className="text-center max-w-3xl mx-auto">
+    <h1 className="text-4xl font-bold mb-4">
+      Exploring Modular Architecture: Reshaping the South African Landscape
+    </h1>
 
-        <Image
-          src="/images/modular-hero.jpg"
-          alt="Modular steel home in South Africa"
-          width={1200}
-          height={630}
-          className="rounded-lg shadow-lg w-full mb-10"
-        />
+    <p className="text-lg mb-2 text-gray-600">By Pequeño</p>
+    <p className="text-sm mb-2 text-gray-500">Photography by Pequeño</p>
+    <p className="text-sm text-gray-500 mb-8">01 August 2025</p>
+  </div>
 
-        <p className="text-lg mb-8 leading-relaxed">
+  {/* Full-width Hero Image */}
+  <div className="w-full mb-10">
+    <Image
+      src="/images/modular-hero.jpg"
+      alt="Modular steel home in South Africa"
+      width={1920}
+      height={960}
+      className="w-full h-auto object-cover rounded-none"
+      priority
+    />
+  </div>
+
+  {/* Keep article content centered within max width */}
+  <div className="max-w-5xl mx-auto">
+    <p className="text-lg mb-8 leading-relaxed">
           Modular architecture is rapidly becoming a symbol of innovation,
           sustainability, and efficiency across South Africa. As urban growth
           accelerates and housing demands intensify, modular structures provide
@@ -347,6 +359,7 @@ export default function ModularArticleClient() {
             Explore Our Modular Living Solutions
           </Link>
         </section>
+      </div>
       </article>
     </>
   );
