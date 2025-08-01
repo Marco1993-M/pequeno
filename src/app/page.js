@@ -158,7 +158,7 @@ export default function Page() {
             {
               title: "Exploring Modular Architecture",
               desc: "A look at how modular structures are reshaping the South African landscape — fast, sustainable, and beautiful.",
-              link: "/news/exploring-modular-architecture",
+              link: "/articles/modular-architecture",
               img: "/images/modular.jpg"
             },
             {
