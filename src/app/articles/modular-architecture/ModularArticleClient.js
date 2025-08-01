@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head"; // 👈 Added
+import Head from "next/head";
 
 function Breadcrumbs() {
   return (
@@ -25,17 +25,6 @@ function Breadcrumbs() {
         </li>
       </ol>
     </nav>
-  );
-}
-
-function ImageWithCaption({ src, alt, caption }) {
-  return (
-    <figure className="mb-12 max-w-4xl mx-auto">
-      <Image src={src} alt={alt} width={1200} height={630} className="rounded-lg shadow-lg w-full" />
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500 italic">{caption}</figcaption>
-      )}
-    </figure>
   );
 }
 
@@ -122,11 +111,51 @@ export default function ModularArticleClient() {
     ]
   };
 
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are modular homes durable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Pequeño homes use high-quality, lightweight steel engineered to endure South Africa's diverse climates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customise the design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Each home is tailored to your lifestyle, land conditions, and budget."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are modular homes more affordable than traditional homes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Modular homes often result in cost savings due to streamlined processes and reduced labour time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do they meet South African building codes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All Pequeño homes comply fully with local building regulations."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
         <title>Exploring Modular Architecture | Pequeño</title>
         <meta name="description" content="Explore how modular steel architecture is reshaping South Africa’s housing landscape. Fast, sustainable, and modern — discover Pequeño’s unique modular approach." />
       </Head>
