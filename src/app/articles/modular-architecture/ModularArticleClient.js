@@ -2,25 +2,27 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from 'next/link';
-
+import Link from "next/link";
 
 function Breadcrumbs() {
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-8 max-w-5xl mx-auto px-6">
+    <nav
+      aria-label="Breadcrumb"
+      className="text-sm text-gray-600 mb-8 max-w-5xl mx-auto px-6"
+    >
       <ol className="list-reset flex">
         <li>
-          <a href="/" className="hover:underline">
+          <Link href="/" className="hover:underline">
             Home
-          </a>
+          </Link>
         </li>
         <li>
           <span className="mx-2">/</span>
         </li>
         <li>
-          <a href="/articles" className="hover:underline">
+          <Link href="/articles" className="hover:underline">
             Articles
-          </a>
+          </Link>
         </li>
         <li>
           <span className="mx-2">/</span>
@@ -36,9 +38,17 @@ function Breadcrumbs() {
 function ImageWithCaption({ src, alt, caption }) {
   return (
     <figure className="mb-12 max-w-4xl mx-auto">
-      <img src={src} alt={alt} className="rounded-lg shadow-lg w-full" />
+      <Image
+        src={src}
+        alt={alt}
+        width={1200}
+        height={630}
+        className="rounded-lg shadow-lg w-full"
+      />
       {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500 italic">{caption}</figcaption>
+        <figcaption className="mt-2 text-center text-sm text-gray-500 italic">
+          {caption}
+        </figcaption>
       )}
     </figure>
   );
@@ -84,13 +94,13 @@ export default function ModularArticleClient() {
           Exploring Modular Architecture: Reshaping the South African Landscape
         </h1>
 
-       <Image
-  src="/images/modular-hero.jpg"
-  alt="Description of the image"
-  width={1200}  // specify actual width of the image in px
-  height={630}  // specify actual height of the image in px
-  className="your-css-classes-if-any"
-/>
+        <Image
+          src="/images/modular-hero.jpg"
+          alt="Modular steel home in South Africa"
+          width={1200}
+          height={630}
+          className="rounded-lg shadow-lg w-full mb-10"
+        />
 
         <p className="text-lg mb-8 leading-relaxed">
           Modular architecture is rapidly becoming a symbol of innovation,
@@ -100,7 +110,7 @@ export default function ModularArticleClient() {
         </p>
 
         <blockquote className="border-l-4 border-black pl-6 italic mb-12 text-xl text-gray-700 max-w-3xl">
-          “Modular design is not about limitation — it’s about liberation. It
+          “Modular design is not about limitation — it&apos;s about liberation. It
           allows us to rethink how we live, build, and adapt to the world around
           us.” — Pequeño Team
         </blockquote>
@@ -143,7 +153,7 @@ export default function ModularArticleClient() {
         <hr className="my-12" />
 
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">Pequeño's Approach to Modular Living</h2>
+          <h2 className="text-3xl font-semibold mb-6">Pequeño&apos;s Approach to Modular Living</h2>
           <p className="mb-6 max-w-3xl">
             At Pequeño, small means smarter. Our lightweight steel modular homes
             are crafted for:
@@ -155,7 +165,7 @@ export default function ModularArticleClient() {
             <li>Modern architectural flair that stands out.</li>
           </ul>
           <blockquote className="border-l-4 border-black pl-6 italic text-gray-700 text-lg max-w-3xl">
-            “We don not just build homes. We build systems that evolve with your life.” — Pequeño Team
+            “We don&apos;t just build homes. We build systems that evolve with your life.” — Pequeño Team
           </blockquote>
         </section>
 
@@ -183,7 +193,7 @@ export default function ModularArticleClient() {
 
           <FAQItem
             question="Are modular homes durable?"
-            answer="Yes. Pequeño homes use high-quality, lightweight steel engineered to endure South Africa’s diverse climates."
+            answer="Yes. Pequeño homes use high-quality, lightweight steel engineered to endure South Africa&apos;s diverse climates."
           />
           <FAQItem
             question="Can I customise the design?"
@@ -202,14 +212,14 @@ export default function ModularArticleClient() {
         <section className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl font-bold mb-6">Join the Modular Movement</h2>
           <p className="mb-8 max-w-xl mx-auto">
-            Whether you are a homeowner, developer, or municipality, modular architecture opens up a world of opportunity. It is time to build smarter, faster, and more sustainably.
+            Whether you&apos;re a homeowner, developer, or municipality, modular architecture opens up a world of opportunity. It&apos;s time to build smarter, faster, and more sustainably.
           </p>
-          <a
+          <Link
             href="https://www.pequenohome.com"
             className="inline-block bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
           >
             Explore Our Modular Living Solutions
-          </a>
+          </Link>
         </section>
       </article>
     </>
