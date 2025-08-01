@@ -5,9 +5,9 @@ import emailjs from '@emailjs/browser';
 import Link from 'next/link';
 
 
-const SERVICE_ID = 'service_h817nk1';
-const TEMPLATE_ID = 'template_vilvxrl';
-const PUBLIC_KEY = 'JIPAN9YaQCPrkSgep';
+const SERVICE_ID = 'service_7sp2v1f';
+const TEMPLATE_ID = 'template_31rth73';
+const PUBLIC_KEY = 'CN4db3HoeMcAONo2F';
 
 export default function OnboardingPage() {
   const [submitted, setSubmitted] = useState(false);
