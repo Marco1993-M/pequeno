@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from 'next/link';
 
 
 function Breadcrumbs() {
@@ -154,7 +155,7 @@ export default function ModularArticleClient() {
             <li>Modern architectural flair that stands out.</li>
           </ul>
           <blockquote className="border-l-4 border-black pl-6 italic text-gray-700 text-lg max-w-3xl">
-            “We don’t just build homes. We build systems that evolve with your life.” — Pequeño Team
+            “We don not just build homes. We build systems that evolve with your life.” — Pequeño Team
           </blockquote>
         </section>
 
@@ -201,7 +202,7 @@ export default function ModularArticleClient() {
         <section className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl font-bold mb-6">Join the Modular Movement</h2>
           <p className="mb-8 max-w-xl mx-auto">
-            Whether you're a homeowner, developer, or municipality, modular architecture opens up a world of opportunity. It’s time to build smarter, faster, and more sustainably.
+            Whether you are a homeowner, developer, or municipality, modular architecture opens up a world of opportunity. It is time to build smarter, faster, and more sustainably.
           </p>
           <a
             href="https://www.pequenohome.com"
