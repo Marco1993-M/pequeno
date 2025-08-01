@@ -1,4 +1,4 @@
-// app/layout.js or app/layout.tsx (depending on your setup)
+// app/layout.js or app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
@@ -39,7 +39,7 @@ export const metadata = {
     siteName: "Pequeño",
     images: [
       {
-        url: "https://www.pequenohome.com/og-image.jpg", // Replace with your actual OG image URL
+        url: "https://www.pequenohome.com/og-image.jpg", // Replace with your actual OG image
         width: 1200,
         height: 630,
         alt: "Pequeño steel home exterior",
@@ -53,8 +53,20 @@ export const metadata = {
     title: "Pequeño — Lightweight Steel Homes",
     description:
       "Discover beautifully crafted, prefabricated lightweight steel homes designed for smart living.",
-    images: ["https://www.pequenohome.com/og-image.jpg"], // Replace with actual image
-    creator: "@pequeno", // Add your handle or remove if not applicable
+    images: ["https://www.pequenohome.com/og-image.jpg"],
+    creator: "@pequeno", // Update or remove if not using Twitter
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: "Pequeño",
   },
 };
 
