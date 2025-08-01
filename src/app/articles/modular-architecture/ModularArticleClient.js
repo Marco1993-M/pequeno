@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head"; // 👈 Added
 
 function Breadcrumbs() {
   return (
@@ -12,21 +13,13 @@ function Breadcrumbs() {
     >
       <ol className="list-reset flex">
         <li>
-          <Link href="/" className="hover:underline">
-            Home
-          </Link>
+          <Link href="/" className="hover:underline">Home</Link>
         </li>
+        <li><span className="mx-2">/</span></li>
         <li>
-          <span className="mx-2">/</span>
+          <Link href="/articles" className="hover:underline">Articles</Link>
         </li>
-        <li>
-          <Link href="/articles" className="hover:underline">
-            Articles
-          </Link>
-        </li>
-        <li>
-          <span className="mx-2">/</span>
-        </li>
+        <li><span className="mx-2">/</span></li>
         <li aria-current="page" className="text-gray-900 font-semibold">
           Exploring Modular Architecture
         </li>
@@ -38,17 +31,9 @@ function Breadcrumbs() {
 function ImageWithCaption({ src, alt, caption }) {
   return (
     <figure className="mb-12 max-w-4xl mx-auto">
-      <Image
-        src={src}
-        alt={alt}
-        width={1200}
-        height={630}
-        className="rounded-lg shadow-lg w-full"
-      />
+      <Image src={src} alt={alt} width={1200} height={630} className="rounded-lg shadow-lg w-full" />
       {caption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-500 italic">
-          {caption}
-        </figcaption>
+        <figcaption className="mt-2 text-center text-sm text-gray-500 italic">{caption}</figcaption>
       )}
     </figure>
   );
@@ -85,8 +70,67 @@ function FAQItem({ question, answer }) {
 }
 
 export default function ModularArticleClient() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Exploring Modular Architecture: Reshaping the South African Landscape",
+    "description": "Modular architecture is revolutionizing South Africa with fast, eco-friendly building methods. Learn about its benefits and Pequeño’s unique approach.",
+    "image": "https://www.pequenohome.com/images/modular-hero.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Pequeño",
+      "url": "https://www.pequenohome.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pequeño",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.pequenohome.com/images/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.pequenohome.com/articles/exploring-modular-architecture"
+    },
+    "datePublished": "2025-08-01",
+    "dateModified": "2025-08-01"
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.pequenohome.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://www.pequenohome.com/articles"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Exploring Modular Architecture",
+        "item": "https://www.pequenohome.com/articles/exploring-modular-architecture"
+      }
+    ]
+  };
+
   return (
     <>
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />
+        <title>Exploring Modular Architecture | Pequeño</title>
+        <meta name="description" content="Explore how modular steel architecture is reshaping South Africa’s housing landscape. Fast, sustainable, and modern — discover Pequeño’s unique modular approach." />
+      </Head>
+
       <Breadcrumbs />
 
       <article className="max-w-5xl mx-auto px-6 py-16 font-sans text-gray-900 leading-relaxed">
