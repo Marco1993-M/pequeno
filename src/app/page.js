@@ -78,30 +78,40 @@ return (
       <SocialProofStrip />
 
         {/* ABOUT SECTION */}
-    <section className="w-full mt-32">
+    <section className="w-full mt-20">
   <div className="max-w-screen-xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
     <div className="space-y-8">
-      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-black">
-        Design Meets Durability
-      </h2>
+     <h2 className="text-4xl md:text-5xl font-bold leading-tight text-black">
+  <span className="font-serif italic">Design</span> Meets <span className="font-serif italic">Durability</span>
+</h2>
+
       <p className="text-gray-600 text-lg leading-relaxed">
-        Pequeño specializes in architect-led homes and retreats made for the diverse South African landscape — from sun-scorched plains to lush coastlines.
+       Traditional construction often struggles with longevity and adaptability across South Africa’s diverse landscapes. Pequeño is trusted by landowners, architects, and developers to deliver architect-designed, prefabricated homes and retreats that are both modern and resilient. Our steel-framed, sustainable homes are fully scalable and built to last, combining sleek design with durability to create living spaces that thrive in any environment.
       </p>
       <p className="text-gray-600 text-lg leading-relaxed">
-        We partner with landowners, architects, and developers to deliver beautifully prefabricated, steel-framed spaces that are scalable, sustainable, and modern.
+        Trusted by landowners, architects, and developers to craft homes and retreats that stand out and last.
       </p>
     </div>
     <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-gray-200">
-      <img
-        src="/banner3.jpg"
-        alt="Modern unit"
-        className="object-cover w-full h-[28rem] transition-transform duration-500 group-hover:scale-105"
-      />
-      <div className="absolute top-4 left-4 w-full h-full rounded-2xl border border-black opacity-10 pointer-events-none" />
+<div className="relative w-full aspect-[16/9] overflow-hidden group">
+  {/* Default image */}
+  <img
+    src="/banner3.jpg"
+    alt="Modern unit"
+    className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+  />
+
+  {/* Hover image */}
+  <img
+    src="/banner3-hover.jpg"
+    alt="Modern unit alternate"
+    className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-800 group-hover:opacity-100"
+  />
+</div>
+
     </div>
   </div>
 </section>
-
 
         {/* OUR BUILDING SYSTEM */}
         <section className="mt-24 px-6 pb-22">
