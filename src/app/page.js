@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from 'next/link';
+import SocialProofStrip from "@/components/SocialProofStrip";
 
 export default function Page() {
   const [showMore, setShowMore] = useState(false);
