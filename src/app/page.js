@@ -6,9 +6,9 @@ import Link from 'next/link';
 export default function Page() {
   const [showMore, setShowMore] = useState(false);
 
-  return (
+return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <main className="w-full px-6 py-10">
+    <main className="w-full px-0 py-0">
 
  {/* HERO SECTION */}
       <section
