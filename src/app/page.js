@@ -10,7 +10,7 @@ return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
     <main className="w-full px-0 py-0">
 
- {/* HERO SECTION */}
+  {/* HERO SECTION */}
       <section
         className="relative w-full h-screen flex flex-col justify-center items-center text-center text-black px-2"
         style={{
@@ -32,13 +32,20 @@ return (
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-gradient-to-r from-black via-gray-600 to-black/90 bg-clip-text text-transparent">
-            Your Dream Home, Built 60% Faster & 100% Better
-          </h1>
+  Your <span className="font-serif italic">Dream Home</span>
+  <span className="block">
+    Built <span className="font-serif italic">60%</span> Faster & <span className="font-serif italic">100%</span> Better
+  </span>
+</h1>
 
-          {/* Subheading */}
-          <p className="text-lg md:text-xl text-black mb-8">
-            Pequeño delivers stylish, sustainable houses that you will love, built fast.
-          </p>
+
+         {/* Subheading */}
+<p className="text-lg md:text-xl mb-8">
+  <span className="inline-block px-4 py-1 bg-white/70 border border-black rounded-full shadow-sm text-sm text-black">
+    Pequeño delivers stylish, sustainable houses that you will love, built fast.
+  </span>
+</p>
+
 
           {/* CTA Buttons */}
           <div className="flex justify-center gap-4 mb-10 flex-wrap">
@@ -64,6 +71,10 @@ return (
           </div>
         </div>
       </section>
+
+
+   {/* Social proof strip */}
+      <SocialProofStrip />
 
         {/* ABOUT SECTION */}
     <section className="w-full mt-32">
