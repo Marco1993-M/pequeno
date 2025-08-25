@@ -10,44 +10,60 @@ export default function Page() {
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       <main className="w-full px-6 py-10">
 
-        {/* HERO SECTION */}
-        <section className="relative py-22 px-6 text-center bg-white">
-          <div className="max-w-3xl mx-auto">
-            <div className="inline-block mb-6 px-4 py-1 border border-gray-300 text-sm font-medium rounded-full relative overflow-hidden text-gray-800">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#fcb69f] via-[#ffecd2] to-[#fcb69f] bg-[length:200%_200%] animate-gradient z-0" />
-              <span className="relative z-10">Architect-designed. Off-grid-ready.</span>
-            </div>
+ {/* HERO SECTION */}
+      <section
+        className="relative w-full h-screen flex flex-col justify-center items-center text-center text-black px-2"
+        style={{
+          backgroundImage: "url('/heroB.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/0"></div>
 
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
-              Transforming the Future of Building
-            </h1>
-
-            <p className="text-lg md:text-xl text-gray-600 mb-8">
-              From private retreats to commercial eco-developments, Pequeño redefines living for South Africa’s diverse landscapes.
-            </p>
-
-            <div className="flex justify-center gap-4 mb-10 flex-wrap">
-              <a href="/onboarding">
-                <button className="bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-[#ff5c36] hover:scale-105 transition duration-300">
-                  Get Started
-                </button>
-              </a>
-              <a href="/recent">
-                <button className="text-gray-700 border border-orange-300 px-8 py-3 rounded-full font-semibold hover:text-black hover:scale-105 transition duration-300">
-                  See Projects
-                </button>
-              </a>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3">
-              {["Modular Living", "Eco Conscious", "Fast Assembly"].map((tag, i) => (
-                <span key={i} className="px-4 py-1 bg-white border border-gray-200 rounded-full text-sm text-gray-700 shadow-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
+        {/* Content Wrapper */}
+        <div className="relative z-10 max-w-3xl mx-auto">
+          {/* Eyebrow */}
+          <div className="inline-block mb-6 px-4 py-1 border border-black text-sm font-medium rounded-full relative overflow-hidden text-white">
+            <div className="absolute inset-0 bg-[#ff5c36] z-0" />
+            <span className="relative z-10">Architect-designed. Off-grid-ready.</span>
           </div>
-        </section>
+
+          {/* Headline */}
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-gradient-to-r from-black via-gray-600 to-black/90 bg-clip-text text-transparent">
+            Your Dream Home, Built 60% Faster & 100% Better
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-lg md:text-xl text-black mb-8">
+            Pequeño delivers stylish, sustainable houses that you will love, built fast.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex justify-center gap-4 mb-10 flex-wrap">
+            <a href="/onboarding">
+              <button className="bg-[#ff5c36] text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
+                Get Started
+              </button>
+            </a>
+            <a href="/recent">
+              <button className="text-black bg-white/70 border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
+                See Projects
+              </button>
+            </a>
+          </div>
+
+          {/* Stats / Badges */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {["60% Avg. Build Time Saved", "100% Modern designs", "30% lower energy use"].map((tag, i) => (
+              <span key={i} className="px-4 py-1 bg-white/70 border border-black rounded-full text-sm text-black shadow-sm">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
         {/* ABOUT SECTION */}
     <section className="w-full mt-32">
