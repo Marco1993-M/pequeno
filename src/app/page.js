@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from 'next/link';
 import SocialProofStrip from "@/components/SocialProofStrip";
+import { Typewriter } from 'react-simple-typewriter'
 
 export default function Page() {
   const [showMore, setShowMore] = useState(false);
@@ -11,67 +12,76 @@ return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
     <main className="w-full px-0 py-0">
 
-  {/* HERO SECTION */}
-      <section
-        className="relative w-full h-screen flex flex-col justify-center items-center text-center text-black px-2"
-        style={{
-          backgroundImage: "url('/heroB.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-black/0"></div>
+{/* HERO SECTION */}
+<section
+  className="relative w-full h-screen flex flex-col justify-between items-center text-center text-black px-4"
+  style={{
+    backgroundImage: "url('/heroB.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* Overlay Gradient */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent"></div>
 
-        {/* Content Wrapper */}
-        <div className="relative z-10 max-w-3xl mx-auto">
-          {/* Eyebrow */}
-          <div className="inline-block mb-6 px-4 py-1 border border-black text-sm font-medium rounded-full relative overflow-hidden text-white">
-            <div className="absolute inset-0 bg-[#ff5c36] z-0" />
-            <span className="relative z-10">Architect-designed. Off-grid-ready.</span>
-          </div>
+  {/* Content Wrapper */}
+  <div className="relative z-10 flex flex-col justify-center items-center h-full w-full">
+    {/* Eyebrow */}
+    <p className="text-sm font-light tracking-wider text-black">
+      Architect-designed. Off-grid-ready.
+    </p>
 
-          {/* Headline */}
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-gradient-to-r from-black via-gray-600 to-black/90 bg-clip-text text-transparent">
-  Your <span className="font-serif italic">Dream Home</span>
+{/* Headline */}
+<h1 className="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-lg mb-32">
+  Your <span className="font-serif italic text-[#ff5c36]">Dream Home</span>
   <span className="block">
-    Built <span className="font-serif italic">60%</span> Faster & <span className="font-serif italic">100%</span> Better
+    <Typewriter
+      words={['Simplified', 'Tailored', 'Built To Love', 'Built To Last']}
+      loop={0}         // 0 = infinite loop
+      cursor           // show the cursor
+      cursorStyle="_"
+      typeSpeed={90}
+      deleteSpeed={50}
+      delaySpeed={2000}
+    />
   </span>
 </h1>
 
 
-         {/* Subheading */}
-<p className="text-lg md:text-xl mb-8">
-  <span className="inline-block px-4 py-1 bg-white/70 border border-black rounded-full shadow-sm text-sm text-black">
-    Pequeño delivers stylish, sustainable houses that you will love, built fast.
-  </span>
-</p>
+
+    {/* Just above the fold → Subheading + CTAs */}
+    <div className="absolute bottom-[5%] w-full px-4 flex flex-col items-center">
+      {/* Subheading */}
+      <p className="text-base md:text-lg text-white">
+        Tailored. Timeless. Sustainable
+      </p>
+      <p className="text-base md:text-lg text-white">
+        Private houses, cabins, modular & more.
+      </p>
+
+{/* CTA Buttons */}
+<div className="flex justify-center gap-4 flex-wrap mt-4 items-center">
+  {/* Pill CTA */}
+  <a href="/onboarding">
+    <button className="bg-[#ff5c36] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
+      Get Started
+    </button>
+  </a>
+
+  {/* Round Icon CTA */}
+  <a href="/recent">
+    <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-black/90 shadow-md hover:bg-white hover:text-[#ff5c36] transition duration-300">
+      <span className="text-lg">→</span>
+    </button>
+  </a>
+</div>
 
 
-          {/* CTA Buttons */}
-          <div className="flex justify-center gap-4 mb-10 flex-wrap">
-            <a href="/onboarding">
-              <button className="bg-[#ff5c36] text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
-                Get Started
-              </button>
-            </a>
-            <a href="/recent">
-              <button className="text-black bg-white/70 border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
-                See Projects
-              </button>
-            </a>
-          </div>
 
-          {/* Stats / Badges */}
-          <div className="flex flex-wrap justify-center gap-3">
-            {["60% Avg. Build Time Saved", "100% Modern designs", "30% lower energy use"].map((tag, i) => (
-              <span key={i} className="px-4 py-1 bg-white/70 border border-black rounded-full text-sm text-black shadow-sm">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+
+    </div>
+  </div>
+</section>
 
 
    {/* Social proof strip */}
