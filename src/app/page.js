@@ -34,16 +34,23 @@ return (
 {/* Headline */}
 <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-lg mb-32">
   Your <span className="font-serif italic text-[#ff5c36]">Dream Home</span>
+  
+  {/* Typewriter visual effect */}
   <span className="block">
     <Typewriter
       words={['Simplified', 'Tailored', 'Built To Love', 'Built To Last']}
-      loop={0}         // 0 = infinite loop
-      cursor           // show the cursor
+      loop={0}
+      cursor
       cursorStyle="_"
       typeSpeed={90}
       deleteSpeed={50}
       delaySpeed={2000}
     />
+  </span>
+  
+  {/* Hidden for SEO crawlers */}
+  <span className="sr-only">
+    Quality modular homes, architecturally designed homes, fast construction, sustainable modular homes, lightweight steel homes
   </span>
 </h1>
 
@@ -96,7 +103,7 @@ return (
 </h2>
 
       <p className="text-gray-600 text-lg leading-relaxed">
-       Traditional construction often struggles with longevity and adaptability across South Africa’s diverse landscapes. Pequeño is trusted by landowners, architects, and developers to deliver architect-designed, prefabricated homes and retreats that are both modern and resilient. Our steel-framed, sustainable homes are fully scalable and built to last, combining sleek design with durability to create living spaces that thrive in any environment.
+       Quality modular homes often face challenges with longevity and adaptability across South Africa&apos;s diverse landscapes. Pequeño is trusted by landowners, architects, and developers to deliver architect-designed, prefabricated, and lightweight steel homes that are modern, resilient, and fast to construct. Our steel-framed, sustainable homes are fully scalable and built to last, combining sleek design with durability to create living spaces that thrive in any environment.
       </p>
       <p className="text-gray-600 text-lg leading-relaxed">
         Trusted by landowners, architects, and developers to craft homes and retreats that stand out and last.
