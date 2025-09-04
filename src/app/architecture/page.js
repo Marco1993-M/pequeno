@@ -11,7 +11,7 @@ export default function Architecture() {
     <main className="mx-auto" style={{ maxWidth: "85vw", width: "100%" }}>
       
       {/* Intro Text Full Width */}
-      <section className="py-12">
+      <section className="py-46">
         <div className="text-left space-y-4">
           <h1 className="font-semibold tracking-widest uppercase text-black">Architecture</h1>
           <p className="font-thin tracking-widest uppercase text-black max-w-5xl">
