@@ -24,7 +24,7 @@ export default function SocialProofStrip() {
     },
     { 
       label: "Better for You and the Planet", 
-      value: "Durable, eco-friendly steel that’s strong, sustainable, and future-ready.", 
+      value: "Durable, eco-friendly steel that is strong, sustainable, and future-ready.", 
       icon: <Square3Stack3DIcon className="w-8 h-8" /> 
     },
     { 
