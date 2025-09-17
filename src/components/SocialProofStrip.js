@@ -58,7 +58,7 @@ export default function SocialProofStrip() {
 
 
             <p className="text-gray-600 text-xl leading-relaxed">
-              <span className="font-serif italic">Quality modular homes</span> often face challenges with longevity and adaptability across South Africa's diverse landscapes. <span className="font-serif italic">Pequeño</span> is trusted by landowners, architects, and developers to deliver <span className="font-serif italic">architect-designed</span>, prefabricated, and lightweight steel homes that are <span className="font-serif italic">modern</span>, resilient, and fast to construct. Our <span className="font-serif italic">steel-framed, sustainable homes</span> are fully scalable and built to last, combining <span className="font-serif italic">sleek design</span> with <span className="font-serif italic">durability</span> to create living spaces that thrive in any environment.
+              <span className="font-serif italic">Quality modular homes</span> often face challenges with longevity and adaptability across South Africas diverse landscapes. <span className="font-serif italic">Pequeño</span> is trusted by landowners, architects, and developers to deliver <span className="font-serif italic">architect-designed</span>, prefabricated, and lightweight steel homes that are <span className="font-serif italic">modern</span>, resilient, and fast to construct. Our <span className="font-serif italic">steel-framed, sustainable homes</span> are fully scalable and built to last, combining <span className="font-serif italic">sleek design</span> with <span className="font-serif italic">durability</span> to create living spaces that thrive in any environment.
             </p>
 
             <a href="/onboarding">
