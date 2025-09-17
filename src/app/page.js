@@ -18,7 +18,7 @@ return (
 >
   {/* Card Background */}
   <div
-    className="absolute left-6 right-6 top-20 bottom-6 rounded-3xl overflow-hidden shadow-xl"
+    className="absolute left-6 right-6 top-18 bottom-6 rounded-3xl overflow-hidden shadow-xl"
     style={{
       backgroundImage: "url('/heroB.jpg')",
       backgroundSize: "cover",
