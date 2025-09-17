@@ -15,14 +15,19 @@ return (
 {/* HERO SECTION */}
 <section
   className="relative w-full h-screen flex flex-col justify-between items-center text-center text-black px-4"
-  style={{
-    backgroundImage: "url('/heroB.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
 >
+  {/* Card Background */}
+  <div
+    className="absolute left-6 right-6 top-20 bottom-6 rounded-3xl overflow-hidden shadow-xl"
+    style={{
+      backgroundImage: "url('/heroB.jpg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  ></div>
+
   {/* Overlay Gradient */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent"></div>
+  <div className="absolute inset-0 m-6 rounded-3xl bg-gradient-to-t from-black/70 via-black/0 to-transparent pointer-events-none"></div>
 
   {/* Content Wrapper */}
   <div className="relative z-10 flex flex-col justify-center items-center h-full w-full">
@@ -31,61 +36,41 @@ return (
       Architect-designed. Off-grid-ready.
     </p>
 
-{/* Headline */}
-<h1 className="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-lg mb-32">
-  Your <span className="font-serif italic text-[#ff5c36]">Dream Home</span>
-  
-  {/* Typewriter visual effect */}
-  <span className="block">
-    <Typewriter
-      words={['Simplified', 'Tailored', 'Built To Love', 'Built To Last']}
-      loop={0}
-      cursor
-      cursorStyle="_"
-      typeSpeed={90}
-      deleteSpeed={50}
-      delaySpeed={2000}
-    />
-  </span>
-  
-  {/* Hidden for SEO crawlers */}
-  <span className="sr-only">
-    Quality modular homes, architecturally designed homes, fast construction, sustainable modular homes, lightweight steel homes
-  </span>
-</h1>
-
-
+    <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-lg mb-32">
+      Your <span className="font-serif italic text-[#ff5c36]">Dream Home</span>
+      <span className="block">
+        <Typewriter
+          words={['Simplified', 'Tailored', 'Built To Love', 'Built To Last']}
+          loop={0}
+          cursor
+          cursorStyle="_"
+          typeSpeed={90}
+          deleteSpeed={50}
+          delaySpeed={2000}
+        />
+      </span>
+      <span className="sr-only">
+        Quality modular homes, architecturally designed homes, fast construction, sustainable modular homes, lightweight steel homes
+      </span>
+    </h1>
 
     {/* Just above the fold → Subheading + CTAs */}
     <div className="absolute bottom-[5%] w-full px-4 flex flex-col items-center">
-      {/* Subheading */}
-      <p className="text-base md:text-lg text-white">
-        Tailored. Timeless. Sustainable
-      </p>
-      <p className="text-base md:text-lg text-white">
-        Private houses, cabins, modular & more.
-      </p>
+      <p className="text-base md:text-lg text-white">Tailored. Timeless. Sustainable</p>
+      <p className="text-base md:text-lg text-white">Private houses, cabins, modular & more.</p>
 
-{/* CTA Buttons */}
-<div className="flex justify-center gap-4 flex-wrap mt-4 items-center">
-  {/* Pill CTA */}
-  <a href="/onboarding">
-    <button className="bg-[#ff5c36] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
-      Get Started
-    </button>
-  </a>
-
-  {/* Round Icon CTA */}
-  <a href="/recent">
-    <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-black/90 shadow-md hover:bg-white hover:text-[#ff5c36] transition duration-300">
-      <span className="text-lg">→</span>
-    </button>
-  </a>
-</div>
-
-
-
-
+      <div className="flex justify-center gap-4 flex-wrap mt-4 items-center">
+        <a href="/onboarding">
+          <button className="bg-[#ff5c36] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
+            Get Started
+          </button>
+        </a>
+        <a href="/recent">
+          <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-black/90 shadow-md hover:bg-white hover:text-[#ff5c36] transition duration-300">
+            <span className="text-lg">→</span>
+          </button>
+        </a>
+      </div>
     </div>
   </div>
 </section>
