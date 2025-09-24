@@ -125,7 +125,7 @@ export default function Free3DMockup() {
             <div className="flex flex-wrap gap-x-2 gap-y-6 mb-4">
               {[
                 "Cabin",
-                "Single Bedrooms",
+                "Single Bedroom",
                 "3+ Bedrooms",
                 "Gable Roof",
                 "Flat Roof",
