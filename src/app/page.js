@@ -59,21 +59,34 @@ return (
       <p className="text-base md:text-lg text-white">Tailored. Timeless. Sustainable</p>
       <p className="text-base md:text-lg text-white">Private houses, cabins, modular & more.</p>
 
-      <div className="flex justify-center gap-4 flex-wrap mt-4 items-center">
-        <a href="/onboarding">
-          <button className="bg-[#ff5c36] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
-            Get Started
-          </button>
-        </a>
-        <a href="/recent">
-          <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-black/90 shadow-md hover:bg-white hover:text-[#ff5c36] transition duration-300">
-            <span className="text-lg">→</span>
-          </button>
-        </a>
-      </div>
+<div className="flex justify-center gap-4 flex-wrap mt-4 items-center">
+  {/* Primary button: Free 3D Mockup */}
+<a href="/free-3d-mockup">
+  <button className="bg-[#ff5c36] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-white hover:text-[#ff5c36] hover:scale-105 transition duration-300">
+    Free 3D Mockup
+  </button>
+</a>
+
+  {/* Secondary button: Onboarding */}
+  <a href="/onboarding">
+    <button className="bg-white text-[#ff5c36] px-8 py-3 rounded-full font-semibold shadow-md hover:bg-[#ff5c36] hover:text-white hover:scale-105 transition duration-300">
+      Get Started
+    </button>
+  </a>
+
+  {/* Arrow button: Recent Projects */}
+  <a href="/recent">
+    <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white/90 text-black/90 shadow-md hover:bg-white hover:text-[#ff5c36] transition duration-300">
+      <span className="text-lg">→</span>
+    </button>
+  </a>
+</div>
+
+
     </div>
   </div>
 </section>
+
 
 
    {/* Social proof strip */}
