@@ -39,6 +39,38 @@
   }
 }
 
+/* CSS-generated blueprint/grid background */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 40px 40px; /* adjust scale */
+  background-position: center;
+}
+
+/* Floating blueprint grid */
+.animated-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0;
+  animation: floatGrid 60s linear infinite;
+}
+
+@keyframes floatGrid {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 20px 20px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradientFlow 6s ease-in-out infinite;
