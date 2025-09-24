@@ -9,7 +9,7 @@ export default function Page() {
   const [showMore, setShowMore] = useState(false);
 
 return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
+    <div className="min-h-screen text-gray-900 font-sans">
     <main className="w-full px-0 py-0">
 
 {/* HERO SECTION */}
