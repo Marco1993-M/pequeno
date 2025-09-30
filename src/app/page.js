@@ -33,7 +33,7 @@ return (
   <div className="relative z-10 flex flex-col justify-center items-center h-full w-full">
     {/* Eyebrow */}
     <p className="text-sm font-light tracking-wider text-black">
-      Architect-designed. Off-grid-ready.
+      Architect-designed. Off-grid-ready, Modular Lightweight Steel Homes.
     </p>
 
     <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-lg mb-32">
