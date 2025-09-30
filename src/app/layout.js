@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Pequeño — Modular Lightweight Steel Homes",
   description:
-    "Pequeño designs and builds sustainable, lightweight steel homes with precision and purpose. Engineered for speed, strength, and beautiful simplicity.",
+    "Pequeño designs and builds sustainable, Modular Lightweight Steel Homes with precision and purpose. Engineered for speed, strength, and beautiful simplicity.",
   keywords: [
     "Pequeño",
     "lightweight steel homes",
