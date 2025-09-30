@@ -96,7 +96,7 @@ return (
         <section className="mt-24 px-6 pb-22">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 ">
             <div>
-              <h2 className="text-4xl font-bold tracking-tight mb-1">Our Building System</h2>
+              <h2 className="text-4xl font-bold tracking-tight mb-1">How We Build Modular Lightweight Steel Homes</h2>
               <p className="text-gray-600 text-lg">Lightweight steel framing, modular components, and curated finishes</p>
             </div>
             <div className="mt-6 md:mt-0">
@@ -152,10 +152,10 @@ return (
   <div className="max-w-screen-xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     <div className="space-y-6">
       <h2 className="text-4xl font-bold leading-tight text-black">
-        Realise your design ambitions<br />with Light Weight Steel
+        Realise your design ambitions<br />with Modular Lightweight Steel Homes
       </h2>
       <p className="text-gray-700 text-lg">
-        Frames are lightweight, durable, strong, and versatile in design. Light Weight Steel’s high strength-to-weight ratio is ideal for projects that feature large spans and modern open plan spaces.
+        Frames are lightweight, durable, strong, and versatile in design. Lightweight Steel’s high strength-to-weight ratio is ideal for projects that feature large spans and modern open plan spaces.
       </p>
     </div>
     <div className="rounded overflow-hidden group">
