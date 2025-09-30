@@ -50,7 +50,7 @@ return (
         />
       </span>
       <span className="sr-only">
-        Quality modular homes, architecturally designed homes, fast construction, sustainable modular homes, lightweight steel homes
+        Quality modular homes, architecturally designed homes, fast construction, sustainable modular homes, Modular Lightweight Steel Homes
       </span>
     </h1>
 
