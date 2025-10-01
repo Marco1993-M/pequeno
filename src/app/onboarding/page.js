@@ -3,9 +3,9 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const SERVICE_ID = "service_h817nk1";
-const TEMPLATE_ID = "template_vilvxrl";
-const PUBLIC_KEY = "JIPAN9YaQCPrkSgep";
+const SERVICE_ID = "service_7sp2v1f";
+const TEMPLATE_ID = "template_31rth73";
+const PUBLIC_KEY = "CN4db3HoeMcAONo2F";
 
 // Option Card with Image
 const OptionCard = ({ name, value, label, img, selected, onChange, multi }) => {
