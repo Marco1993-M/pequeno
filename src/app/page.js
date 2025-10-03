@@ -92,60 +92,87 @@ return (
    {/* Social proof strip */}
       <SocialProofStrip />
 
-        {/* OUR BUILDING SYSTEM */}
-        <section className="mt-24 px-6 pb-22">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 ">
-            <div>
-              <h2 className="text-4xl font-bold tracking-tight mb-1">How We Build Modular Lightweight Steel Homes</h2>
-              <p className="text-gray-600 text-lg">Lightweight steel framing, modular components, and curated finishes</p>
-            </div>
-            <div className="mt-6 md:mt-0">
-              <Link
-                href="/our-system"
-                className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
+       
+{/* OUR BUILDING SYSTEM */}
+<section className="w-[95%] mx-auto mt-24">
+  <div className="rounded-3xl border p-8 md:p-12 shadow-sm">
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                img: "/system-structure.jpg",
-                label: "Structure",
-                title: "The Framework of the Building",
-                desc: "Precision-engineered steel frames form the durable, rust-resistant skeleton of each unit—built off-site and assembled quickly on location."
-              },
-              {
-                img: "/system-insulation.jpg",
-                label: "Envelope",
-                title: "Sheathing & Insulation",
-                desc: "Breathable wall systems, weatherproofing layers, and high R-value insulation keep spaces efficient and protected in all climates."
-              },
-              {
-                img: "/system-cladding.jpg",
-                label: "Finish",
-                title: "Exterior Cladding Options",
-                desc: "Choose from natural timber, concealed-fix steel, or fiber cement panels — all customizable to reflect your site and style."
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="group overflow-hidden rounded-xl shadow hover:shadow-md transition bg-white">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="p-5">
-                  <h4 className="text-sm uppercase tracking-wide text-gray-500 mb-1">{item.label}</h4>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{item.desc}</p>
-                  <a href="/our-system" className="text-[#ff5c36] font-medium text-sm hover:underline">Read more →</a>
-                </div>
-              </div>
-            ))}
+    {/* Heading + CTA row */}
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+      <div className="max-w-2xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+          How We Build Modular Lightweight Steel Homes
+        </h2>
+        <p className="text-gray-600 text-base md:text-lg">
+          Lightweight steel framing, modular components, and curated finishes.
+        </p>
+      </div>
+      <div className="mt-6 md:mt-0">
+        <Link
+          href="/our-system"
+          className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
+        >
+          Learn More
+        </Link>
+      </div>
+    </div>
+
+    {/* Grid of features */}
+    <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+      {[
+        {
+          img: "/system-structure.jpg",
+          label: "Structure",
+          title: "The Framework of the Building",
+          desc: "Precision-engineered steel frames form the durable, rust-resistant skeleton of each unit—built off-site and assembled quickly on location."
+        },
+        {
+          img: "/system-insulation.jpg",
+          label: "Envelope",
+          title: "Sheathing & Insulation",
+          desc: "Breathable wall systems, weatherproofing layers, and high R-value insulation keep spaces efficient and protected in all climates."
+        },
+        {
+          img: "/system-cladding.jpg",
+          label: "Finish",
+          title: "Exterior Cladding Options",
+          desc: "Choose from natural timber, concealed-fix steel, or fiber cement panels — all customizable to reflect your site and style."
+        }
+      ].map((item, idx) => (
+        <div
+          key={idx}
+          className="group flex flex-col overflow-hidden rounded-2xl border hover:shadow-md transition bg-white"
+        >
+          <div className="overflow-hidden">
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
-        </section>
+          <div className="p-6 flex flex-col flex-grow">
+            <h4 className="text-sm uppercase tracking-wide text-gray-500 mb-1">
+              {item.label}
+            </h4>
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+              {item.title}
+            </h3>
+            <p className="text-sm text-gray-600 flex-grow">
+              {item.desc}
+            </p>
+            <a
+              href="/our-system"
+              className="mt-4 text-[#ff5c36] font-medium text-sm hover:underline"
+            >
+              Read more →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         {/* CTA STEEL */}
      <section className="bg-[#f5f5f5] py-20 w-full">
