@@ -176,7 +176,7 @@ return (
 
 {/* CTA STEEL */}
 <section className="w-[95%] mx-auto mt-24">
-  <div className="rounded-3xl border p-8 md:p-12 shadow-sm grid md:grid-cols-2 gap-12 items-center">
+  <div className="rounded-3xl border-transparent border p-8 md:p-12 grid md:grid-cols-2 gap-12 items-center">
     
     {/* Left: Text */}
     <div className="space-y-6">
