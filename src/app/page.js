@@ -211,64 +211,87 @@ return (
 </section>
 
 
-        {/* NEWS SECTION */}
-        <section className="mt-24 max-w-7xl mx-auto px-6 space-y-12 pb-22">
-          {[
-            {
-              title: "Exploring Modular Architecture",
-              desc: "A look at how modular structures are reshaping the South African landscape — fast, sustainable, and beautiful.",
-              link: "/articles/modular-architecture",
-              img: "/images/modular.jpg"
-            },
-            {
-              title: "Designing for Harsh Environments",
-              desc: "See how we engineer steel-frame homes that withstand the heat, wind, and weather extremes of remote locations.",
-              link: "/news/designing-for-environment",
-              img: "/images/harsh.jpg"
-            },
-            {
-              title: "Off-Grid Building: Our Approach",
-              desc: "Our off-grid ready designs include solar, rainwater harvesting, and passive design principles.",
-              link: "/news/off-grid-approach",
-              img: "/images/off-grid.jpg"
-            }
-          ].map((item, idx) => (
-            <div key={idx} className="grid md:grid-cols-3 gap-8 items-start">
-              {idx === 0 ? (
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-bold uppercase">Catch up on the latest news</h2>
-                  <a href="/news" className="text-black font-medium underline hover:text-[#ff5c36] transition">
-                    View more news →
-                  </a>
-                  <p className="text-gray-600 text-sm">
-                    Insights, updates, and behind-the-scenes content from our design and construction process.
-                    Built around lightweight steel framing.
-                  </p>
-                </div>
-              ) : (
-                <div></div>
-              )}
-              <div className="overflow-hidden rounded group">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-53 object-cover rounded transition-transform duration-500 group-hover:scale-101"
-                />
-              </div>
-              <div>
-                <h4 className="text-sm uppercase text-gray-500 mb-1">Structure</h4>
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-sm text-gray-600 mb-2">{item.desc}</p>
-                <a
-                  href={item.link}
-                  className="text-sm font-medium underline text-black hover:text-[#ff5c36] transition"
-                >
-                  Read article →
-                </a>
-              </div>
-            </div>
-          ))}
-        </section>
+{/* NEWS SECTION */}
+<section className="w-[95%] mx-auto mt-24">
+  <div className="rounded-3xl border p-8 md:p-12 shadow-sm space-y-12">
+    
+    {/* Header */}
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="max-w-xl space-y-3">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          Catch up on the latest news
+        </h2>
+        <p className="text-gray-600 text-sm md:text-base">
+          Insights, updates, and behind-the-scenes content from our design 
+          and construction process — all built around lightweight steel framing.
+        </p>
+      </div>
+      <a
+        href="/news"
+        className="mt-6 md:mt-0 inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
+      >
+        View More News
+      </a>
+    </div>
+
+    {/* Articles Grid */}
+    <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+      {[
+        {
+          title: "Exploring Modular Architecture",
+          desc: "A look at how modular structures are reshaping the South African landscape — fast, sustainable, and beautiful.",
+          link: "/articles/modular-architecture",
+          img: "/images/modular.jpg"
+        },
+        {
+          title: "Designing for Harsh Environments",
+          desc: "See how we engineer steel-frame homes that withstand the heat, wind, and weather extremes of remote locations.",
+          link: "/news/designing-for-environment",
+          img: "/images/harsh.jpg"
+        },
+        {
+          title: "Off-Grid Building: Our Approach",
+          desc: "Our off-grid ready designs include solar, rainwater harvesting, and passive design principles.",
+          link: "/news/off-grid-approach",
+          img: "/images/off-grid.jpg"
+        }
+      ].map((item, idx) => (
+        <div
+          key={idx}
+          className="group flex flex-col overflow-hidden rounded-2xl border hover:shadow-md transition bg-white"
+        >
+          {/* Image */}
+          <div className="overflow-hidden">
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="p-6 flex flex-col flex-grow">
+            <h4 className="text-sm uppercase text-gray-500 mb-1">News</h4>
+            <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
+              {item.title}
+            </h3>
+            <p className="text-sm text-gray-600 flex-grow">
+              {item.desc}
+            </p>
+            <a
+              href={item.link}
+              className="mt-4 text-[#ff5c36] font-medium text-sm hover:underline"
+            >
+              Read article →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
 
         {/* CTA FINAL */}
         <section className="w-full bg-white py-20 border-t border-gray-200">
