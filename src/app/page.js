@@ -174,24 +174,39 @@ return (
 </section>
 
 
-        {/* CTA STEEL */}
-     <section className="bg-[#f5f5f5] py-20 w-full">
-  <div className="max-w-screen-xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+{/* CTA STEEL */}
+<section className="w-[95%] mx-auto mt-24">
+  <div className="rounded-3xl border p-8 md:p-12 shadow-sm grid md:grid-cols-2 gap-12 items-center">
+    
+    {/* Left: Text */}
     <div className="space-y-6">
-      <h2 className="text-4xl font-bold leading-tight text-black">
-        Realise your design ambitions<br />with Modular Lightweight Steel Homes
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+        Realise your dream<br />with Modular Lightweight Steel Homes
       </h2>
-      <p className="text-gray-700 text-lg">
-        Frames are lightweight, durable, strong, and versatile in design. Lightweight Steel’s high strength-to-weight ratio is ideal for projects that feature large spans and modern open plan spaces.
+      <p className="text-gray-600 text-base md:text-lg">
+        Frames are lightweight, durable, strong, and versatile in design. 
+        Lightweight Steel’s high strength-to-weight ratio is ideal for projects 
+        that feature large spans and modern open plan spaces.
       </p>
+
+      {/* Optional CTA button */}
+      <Link
+        href="/our-system"
+        className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
+      >
+        Explore Our System
+      </Link>
     </div>
-    <div className="rounded overflow-hidden group">
+
+    {/* Right: Image */}
+    <div className="rounded-2xl overflow-hidden group">
       <img
         src="/steel-framing.jpg"
         alt="Lightweight Steel Framing"
-        className="w-full h-auto rounded shadow-lg transition-transform duration-500 group-hover:scale-105"
+        className="w-full h-auto rounded-2xl object-cover shadow-sm transition-transform duration-500 group-hover:scale-105"
       />
     </div>
+
   </div>
 </section>
 
