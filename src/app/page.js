@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from 'next/link';
 import SocialProofStrip from "@/components/SocialProofStrip";
+import AboutSection from "@/components/AboutSection";
 import { Typewriter } from 'react-simple-typewriter'
 
 export default function Page() {
@@ -91,6 +92,10 @@ return (
 
    {/* Social proof strip */}
       <SocialProofStrip />
+
+   {/* ABOUT SECTION */}
+
+      <AboutSection />           
 
        
 {/* OUR BUILDING SYSTEM */}
