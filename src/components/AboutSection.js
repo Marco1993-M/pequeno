@@ -12,8 +12,8 @@ export default function AboutSection() {
 
           <p className="text-gray-600 text-lg leading-relaxed">
             Quality modular homes often face challenges with longevity and adaptability
-            across South Africa's diverse landscapes. Pequeño is trusted by landowners,{" "}
-            <strong>architects, engineers, steel fabricators,</strong> and{" "}
+            across South Africa&apos;s diverse landscapes. Pequeño is trusted by
+            landowners, <strong>architects, engineers, steel fabricators,</strong> and{" "}
             <strong>construction companies</strong> to deliver architect-designed,
             prefabricated, and lightweight steel homes that are modern, resilient, and
             fast to construct. Our steel-framed, sustainable homes are fully scalable
@@ -22,7 +22,7 @@ export default function AboutSection() {
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Whether you’re an <strong>architect</strong> shaping new communities, an{" "}
+            Whether you&apos;re an <strong>architect</strong> shaping new communities, an{" "}
             <strong>engineer</strong> ensuring structural integrity, a{" "}
             <strong>steel fabricator</strong> driving precision, or a{" "}
             <strong>construction company</strong> bringing designs to life — Pequeño is
