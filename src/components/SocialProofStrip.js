@@ -71,16 +71,10 @@ export default function SocialProofStrip() {
 <div className="grid grid-cols-1 md:grid-cols-3 mb-6">
   <div className="col-start-2 col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-end text-gray-600 text-sm leading-relaxed">
     <p>
-     Pequeño cabins and homes are built to outperform ordinary living. 
-     Every project is crafted with precision-engineered lightweight steel, premium finishes, 
-     and sustainable materials that ensure long-term durability.
+     Pequeño designs and builds architect-led lightweight steel homes, cabins, and modular living spaces in South Africa. Our precision-engineered steel-framed houses marry modern design, sustainability, and rapid construction to deliver durable, energy-efficient homes that exceed traditional builds.
     </p>
     <p>
-      Open layouts and modular flexibility create homes that feel larger than their footprint
-      while energy-efficient systems keep living costs low. 
-      From off-grid cabins to fully equipped modern houses, Pequeño delivers stylish, 
-      functional spaces designed for everyday comfort, 
-      weekend escapes, or investment opportunities.
+      From off-grid retreats to fully customised residential homes, Pequeño creates living spaces that are stylish, functional, and tailored to your lifestyle — whether you’re dreaming of your first home, a weekend escape, or a smart investment.
     </p>
   </div>
 </div>
