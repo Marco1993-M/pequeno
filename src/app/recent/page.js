@@ -88,7 +88,7 @@ export default function RecentProjects() {
   };
 
   return (
-    <main className="font-sans text-gray-800 px-4 py-12 bg-white">
+    <main className="font-sans text-gray-800 px-4 py-24 bg-white">
       {/* Header */}
       <section className="max-w-6xl mx-auto mb-10">
         <h1 className="text-4xl font-bold mb-4 text-left">Project Gallery</h1>
