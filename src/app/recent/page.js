@@ -22,6 +22,26 @@ const projects = [
     description:
       'Nestled in the heart of urban tranquility, Spa & Coffee redefines relaxation with its innovative fusion of wellness and café culture, delivered through cutting-edge modular construction...'
   },
+
+      {
+    image: '/projects/staff courters.jpg',
+    gallery: [
+      '/projects/staff courters1.jpg',
+      '/projects/staff courters2.jpg',
+      '/projects/staff courters3.jpg',
+      '/projects/staff courters4.jpg',
+      '/projects/staff courters5.jpg'
+    ],
+    title: 'Staff Courters',
+    tag: 'Residential',
+    keywords: ['Infrastructure', 'Roof Construction'],
+    architect: 'Designed by Pequeño Home',
+    builder: 'Pequeño Home',
+    fabricator: 'Smart Steel',
+    description:
+      'Staff quarters for a private game reserve, designed to provide comfortable and functional living spaces for the  staff. The design incorporates lightweight steel construction to create a modern and efficient structure that complements the surrounding environment...'
+  },
+  
   {
     image: '/projects/residential1.jpg',
     gallery: [
