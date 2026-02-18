@@ -30,7 +30,8 @@ const projects = [
       '/projects/staff courters2.jpg',
       '/projects/staff courters3.jpg',
       '/projects/staff courters4.jpg',
-      '/projects/staff courters5.jpg'
+      '/projects/staff courters5.jpg',
+      '/projects/staff courters6.jpg'
     ],
     title: 'Staff Courters',
     tag: 'Residential',
