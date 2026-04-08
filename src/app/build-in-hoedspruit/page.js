@@ -162,6 +162,84 @@ export default function HoedspruitPage() {
           </div>
         </section>
 
+        {/* PRICING / INVESTMENT SECTION - Hoedspruit Specific */}
+<section className="w-[95%] mx-auto mt-24">
+  <div className="rounded-3xl border p-8 md:p-12 shadow-sm">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+        Investment Guide for Homes in Hoedspruit
+      </h2>
+      <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        Transparent pricing for architect-designed lightweight steel homes tailored to the Lowveld and bushveld lifestyle.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {/* Package 1 */}
+      <div className="bg-white border rounded-2xl p-8 flex flex-col">
+        <div className="uppercase text-sm tracking-widest text-gray-500 mb-2">Starter / Cabin</div>
+        <div className="text-4xl font-bold text-gray-900 mb-1">From R850,000</div>
+        <div className="text-gray-500 mb-6">~60–90 m² • 1–2 bedrooms</div>
+        
+        <ul className="space-y-3 text-sm flex-grow">
+          <li className="flex items-start gap-2">✓ Basic steel frame + insulation</li>
+          <li className="flex items-start gap-2">✓ Standard finishes</li>
+          <li className="flex items-start gap-2">✓ Ideal for guest cabins or starter homes on wildlife estates</li>
+        </ul>
+        
+        <a href="/onboarding" className="mt-8 block text-center bg-black text-white py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition">
+          Get Price for Your Site
+        </a>
+      </div>
+
+      {/* Package 2 - Most Popular */}
+      <div className="bg-white border-2 border-[#ff5c36] rounded-2xl p-8 flex flex-col relative">
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff5c36] text-white text-xs font-bold px-6 py-1 rounded-full">
+          MOST POPULAR
+        </div>
+        <div className="uppercase text-sm tracking-widest text-gray-500 mb-2">Family Home</div>
+        <div className="text-4xl font-bold text-gray-900 mb-1">From R1.45m – R2.4m</div>
+        <div className="text-gray-500 mb-6">~120–180 m² • 3 bedrooms</div>
+        
+        <ul className="space-y-3 text-sm flex-grow">
+          <li className="flex items-start gap-2">✓ Full lightweight steel structure</li>
+          <li className="flex items-start gap-2">✓ High insulation for Lowveld climate</li>
+          <li className="flex items-start gap-2">✓ Customisable bushveld / modern design</li>
+          <li className="flex items-start gap-2">✓ Off-grid ready options available</li>
+        </ul>
+        
+        <a href="/onboarding" className="mt-8 block text-center bg-[#ff5c36] text-white py-3 rounded-full font-semibold hover:bg-black transition">
+          Get Your Free 3D Mockup + Quote
+        </a>
+      </div>
+
+      {/* Package 3 */}
+      <div className="bg-white border rounded-2xl p-8 flex flex-col">
+        <div className="uppercase text-sm tracking-widest text-gray-500 mb-2">Premium / Estate</div>
+        <div className="text-4xl font-bold text-gray-900 mb-1">From R2.8m+</div>
+        <div className="text-gray-500 mb-6">180 m²+ • 4+ bedrooms</div>
+        
+        <ul className="space-y-3 text-sm flex-grow">
+          <li className="flex items-start gap-2">✓ Luxury finishes & cladding</li>
+          <li className="flex items-start gap-2">✓ Large open-plan living with views</li>
+          <li className="flex items-start gap-2">✓ Full off-grid systems (solar + water)</li>
+          <li className="flex items-start gap-2">✓ Perfect for private wildlife estates near Blyde Canyon</li>
+        </ul>
+        
+        <a href="/onboarding" className="mt-8 block text-center bg-black text-white py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition">
+          Discuss Your Dream Home
+        </a>
+      </div>
+    </div>
+
+    <div className="mt-12 text-center text-sm text-gray-500 max-w-md mx-auto">
+      Prices are indicative and exclude site preparation, foundations, transport, and VAT. 
+      Final cost depends on your specific site in Hoedspruit and custom choices. 
+      <span className="text-black font-medium">We provide accurate quotes after a quick site assessment.</span>
+    </div>
+  </div>
+</section>
+
         {/* CTA STEEL - Localised */}
         <section className="w-[95%] mx-auto mt-24">
           <div className="rounded-3xl border-transparent border p-8 md:p-12 grid md:grid-cols-2 gap-12 items-center">
