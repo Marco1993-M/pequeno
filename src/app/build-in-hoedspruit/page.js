@@ -1,6 +1,8 @@
 'use client';
 import { useState } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
+import Script from 'next/script';
 import SocialProofStrip from "@/components/SocialProofStrip";
 import { Typewriter } from 'react-simple-typewriter';
 import AboutSection from "@/components/AboutSection";
@@ -8,8 +10,95 @@ import AboutSection from "@/components/AboutSection";
 export default function HoedspruitPage() {
   const [showMore, setShowMore] = useState(false);
 
+  // Main Schema for Hoedspruit
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Smart Steel Modular Homes",
+    "url": "https://www.smartsteel.co.za/hoedspruit",
+    "logo": "https://www.smartsteel.co.za/logo.png",
+    "image": "https://www.smartsteel.co.za/hoedspruit.webp",
+    "description": "Architect-designed modular lightweight steel homes in Hoedspruit, Limpopo Lowveld. Homes built for bushveld retreats, wildlife estates, and warm climate living.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hoedspruit",
+      "addressRegion": "Limpopo",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27-11-123-4567",
+    "sameAs": [
+      "https://www.facebook.com/smartsteel",
+      "https://www.instagram.com/smartsteel",
+      "https://www.linkedin.com/company/smartsteel"
+    ],
+    "priceRange": "R850,000 – R2,800,000+",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Starter / Cabin",
+        "description": "Basic steel frame + insulation, standard finishes. Ideal for bushveld retreats or weekend cabins in Hoedspruit.",
+        "price": "850000",
+        "priceCurrency": "ZAR",
+        "url": "https://www.smartsteel.co.za/onboarding",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Starter / Cabin",
+          "category": "Modular Home",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Size","value":"60–90 m²"},
+            {"@type":"PropertyValue","name":"Bedrooms","value":"1–2"}
+          ]
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Family / Weekend Home",
+        "description": "Full lightweight steel structure, excellent insulation, open-plan design, perfect for family bushveld estates.",
+        "price": "1450000",
+        "priceCurrency": "ZAR",
+        "url": "https://www.smartsteel.co.za/onboarding",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Family / Weekend Home",
+          "category": "Modular Home",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Size","value":"120–180 m²"},
+            {"@type":"PropertyValue","name":"Bedrooms","value":"3"}
+          ]
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Premium / Estate",
+        "description": "Luxury finishes & cladding, large open-plan living, energy-efficient, ideal for private bushveld estates or wildlife properties.",
+        "price": "2800000",
+        "priceCurrency": "ZAR",
+        "url": "https://www.smartsteel.co.za/onboarding",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Premium / Estate",
+          "category": "Modular Home",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Size","value":"180 m²+"},
+            {"@type":"PropertyValue","name":"Bedrooms","value":"4+"}
+          ]
+        },
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen text-gray-900 font-sans">
+      {/* JSON-LD Schema */}
+      <Script
+        id="hoedspruit-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+
       <main className="w-full px-0 py-0">
         {/* HERO SECTION - Personalised for Hoedspruit */}
         <section className="relative w-full h-screen flex flex-col justify-between items-center text-center text-black px-4">
