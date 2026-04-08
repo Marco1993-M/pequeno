@@ -52,6 +52,7 @@ export default function DullstroomPage() {
     }
   ];
 
+  // Main Schema
   const schema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -72,9 +73,64 @@ export default function DullstroomPage() {
       "https://www.instagram.com/smartsteel",
       "https://www.linkedin.com/company/smartsteel"
     ],
-    "priceRange": "R850,000 – R2,800,000+"
+    "priceRange": "R850,000 – R2,800,000+",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Starter / Cabin",
+        "description": "Basic steel frame + insulation, standard finishes. Ideal for trout estate cabins or weekend retreats.",
+        "price": "850000",
+        "priceCurrency": "ZAR",
+        "url": "https://www.smartsteel.co.za/onboarding",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Starter / Cabin",
+          "category": "Modular Home",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Size","value":"60–90 m²"},
+            {"@type":"PropertyValue","name":"Bedrooms","value":"1–2"}
+          ]
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Family / Weekend Home",
+        "description": "Full lightweight steel structure, excellent insulation, customisable Highlands/cozy design, perfect for fly-fishing estates.",
+        "price": "1450000",
+        "priceCurrency": "ZAR",
+        "url": "https://www.smartsteel.co.za/onboarding",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Family / Weekend Home",
+          "category": "Modular Home",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Size","value":"120–180 m²"},
+            {"@type":"PropertyValue","name":"Bedrooms","value":"3"}
+          ]
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Premium / Estate",
+        "description": "Luxury finishes & cladding, large open-plan living, high-performance heating & energy efficiency, ideal for private estates in the Highlands Meander.",
+        "price": "2800000",
+        "priceCurrency": "ZAR",
+        "url": "https://www.smartsteel.co.za/onboarding",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Premium / Estate",
+          "category": "Modular Home",
+          "additionalProperty": [
+            {"@type":"PropertyValue","name":"Size","value":"180 m²+"},
+            {"@type":"PropertyValue","name":"Bedrooms","value":"4+"}
+          ]
+        },
+        "availability": "https://schema.org/InStock"
+      }
+    ]
   };
-
 
   return (
     <div className="min-h-screen text-gray-900 font-sans">
