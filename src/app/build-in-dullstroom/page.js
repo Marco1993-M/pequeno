@@ -1,6 +1,8 @@
 'use client';
 import { useState } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
+import Script from 'next/script';
 import SocialProofStrip from "@/components/SocialProofStrip";
 import { Typewriter } from 'react-simple-typewriter';
 import AboutSection from "@/components/AboutSection";
@@ -8,27 +10,88 @@ import AboutSection from "@/components/AboutSection";
 export default function DullstroomPage() {
   const [showMore, setShowMore] = useState(false);
 
+  const buildingSystemItems = [
+    {
+      img: "/system-structure.jpg",
+      label: "Structure",
+      title: "The Framework of the Building",
+      desc: "Precision-engineered steel frames create a strong, lightweight skeleton — perfect for Dullstroom’s high-altitude terrain and estates."
+    },
+    {
+      img: "/system-insulation.jpg",
+      label: "Envelope",
+      title: "Sheathing & Insulation",
+      desc: "Superior insulation keeps homes warm during misty winters and cool on crisp summer days — essential for the Highlands climate."
+    },
+    {
+      img: "/system-cladding.jpg",
+      label: "Finish",
+      title: "Exterior Cladding Options",
+      desc: "Natural timber, steel, or fiber cement cladding that blends beautifully with rolling hills, beech trees, and the Scottish-like landscape."
+    }
+  ];
+
+  const newsItems = [
+    {
+      title: "Exploring Modular Architecture",
+      desc: "How modular steel homes are bringing modern comfort to the misty Highlands of Dullstroom.",
+      link: "/articles/modular-architecture",
+      img: "/images/modular.jpg"
+    },
+    {
+      title: "Designing for Cool Highlands Climate",
+      desc: "Engineering well-insulated homes that stay warm through misty winters and crisp summers.",
+      link: "/news/designing-for-environment",
+      img: "/images/harsh.jpg"
+    },
+    {
+      title: "Weekend Homes in Dullstroom",
+      desc: "Creating the perfect trout estate or Highlands retreat for Gauteng escape-seekers.",
+      link: "/news/off-grid-approach",
+      img: "/images/off-grid.jpg"
+    }
+  ];
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Smart Steel Modular Homes",
+    "url": "https://www.smartsteel.co.za/dullstroom",
+    "logo": "https://www.smartsteel.co.za/logo.png",
+    "image": "https://www.smartsteel.co.za/dullstroom.webp",
+    "description": "Architect-designed modular lightweight steel homes in Dullstroom, Mpumalanga Highlands. Cozy, sustainable homes built for weekend retreats, trout estates, and highland living.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dullstroom",
+      "addressRegion": "Mpumalanga",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27-11-123-4567",
+    "sameAs": [
+      "https://www.facebook.com/smartsteel",
+      "https://www.instagram.com/smartsteel",
+      "https://www.linkedin.com/company/smartsteel"
+    ],
+    "priceRange": "R850,000 – R2,800,000+"
+  };
+
+
   return (
     <div className="min-h-screen text-gray-900 font-sans">
       <main className="w-full px-0 py-0">
-        {/* HERO SECTION - Personalised for Dullstroom */}
+        {/* HERO SECTION */}
         <section className="relative w-full h-screen flex flex-col justify-between items-center text-center text-black px-4">
-          {/* Card Background */}
           <div
             className="absolute left-6 right-6 top-18 bottom-6 rounded-3xl overflow-hidden shadow-xl"
             style={{
-              backgroundImage: "url('/dullstroom.webp')", // ← Change to your actual Dullstroom hero image
+              backgroundImage: "url('/dullstroom.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           ></div>
-
-          {/* Overlay Gradient */}
           <div className="absolute inset-0 m-6 rounded-3xl bg-gradient-to-t from-black/70 via-black/0 to-transparent pointer-events-none"></div>
 
-          {/* Content Wrapper */}
           <div className="relative z-10 flex flex-col justify-center items-center h-full w-full">
-            {/* Eyebrow - Localised */}
             <p className="text-sm font-light tracking-wider text-black">
               Architect-designed. Highlands-ready. Perfectly insulated.
             </p>
@@ -38,7 +101,13 @@ export default function DullstroomPage() {
               <span className="block">Dullstroom</span>
               <span className="block">
                 <Typewriter
-                  words={['in the Misty Highlands', 'by the Trout Streams', 'Built for Weekend Escapes', 'Cozy & Sustainable', 'Tailored for Mpumalanga Highlands']}
+                  words={[
+                    'in the Misty Highlands',
+                    'by the Trout Streams',
+                    'Built for Weekend Escapes',
+                    'Cozy & Sustainable',
+                    'Tailored for Mpumalanga Highlands'
+                  ]}
                   loop={0}
                   cursor
                   cursorStyle="_"
@@ -52,7 +121,6 @@ export default function DullstroomPage() {
               </span>
             </h1>
 
-            {/* Subheading + CTAs */}
             <div className="absolute bottom-[5%] w-full px-4 flex flex-col items-center">
               <p className="text-base md:text-lg text-white">
                 Tailored for Dullstroom’s cool highlands lifestyle • Timeless • Energy-efficient
@@ -60,27 +128,18 @@ export default function DullstroomPage() {
               <p className="text-base md:text-lg text-white">
                 Private homes, trout estate cabins & modular retreats in the Highlands Meander.
               </p>
-
               <div className="flex justify-center gap-4 flex-wrap mt-4 items-center">
-               
-                {/* Secondary button: Get Started */}
-                <a href="/onboarding">
+                <Link href="/onboarding">
                   <button className="bg-white text-[#ff5c36] px-8 py-3 rounded-full font-semibold shadow-md hover:bg-[#ff5c36] hover:text-white hover:scale-105 transition duration-300">
                     Get Started
                   </button>
-                </a>
-
-                {/* Arrow button: Recent Projects */}
-               
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Social proof strip */}
         <SocialProofStrip />
-
-        {/* ABOUT SECTION */}
         <AboutSection />
 
         {/* OUR BUILDING SYSTEM */}
@@ -106,53 +165,27 @@ export default function DullstroomPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-              {[
-                {
-                  img: "/system-structure.jpg",
-                  label: "Structure",
-                  title: "The Framework of the Building",
-                  desc: "Precision-engineered steel frames create a strong, lightweight skeleton — perfect for Dullstroom’s high-altitude terrain and estates."
-                },
-                {
-                  img: "/system-insulation.jpg",
-                  label: "Envelope",
-                  title: "Sheathing & Insulation",
-                  desc: "Superior insulation keeps homes warm during misty winters and cool on crisp summer days — essential for the Highlands climate."
-                },
-                {
-                  img: "/system-cladding.jpg",
-                  label: "Finish",
-                  title: "Exterior Cladding Options",
-                  desc: "Natural timber, steel, or fiber cement cladding that blends beautifully with rolling hills, beech trees, and the Scottish-like landscape."
-                }
-              ].map((item, idx) => (
+              {buildingSystemItems.map((item, idx) => (
                 <div
                   key={idx}
                   className="group flex flex-col overflow-hidden rounded-2xl border hover:shadow-md transition bg-white"
                 >
                   <div className="overflow-hidden">
-                    <img
+                    <Image
                       src={item.img}
                       alt={item.title}
+                      width={500}
+                      height={300}
                       className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <h4 className="text-sm uppercase tracking-wide text-gray-500 mb-1">
-                      {item.label}
-                    </h4>
-                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 flex-grow">
-                      {item.desc}
-                    </p>
-                    <a
-                      href="/our-system"
-                      className="mt-4 text-[#ff5c36] font-medium text-sm hover:underline"
-                    >
+                    <h4 className="text-sm uppercase tracking-wide text-gray-500 mb-1">{item.label}</h4>
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                    <p className="text-sm text-gray-600 flex-grow">{item.desc}</p>
+                    <Link href="/our-system" className="mt-4 text-[#ff5c36] font-medium text-sm hover:underline">
                       Read more →
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}
