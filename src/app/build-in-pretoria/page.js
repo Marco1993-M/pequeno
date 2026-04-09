@@ -11,84 +11,70 @@ export default function PretoriaPage() {
   const [showMore, setShowMore] = useState(false);
 
   // Main Schema for Pretoria
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "Smart Steel Modular Homes",
-    "url": "https://www.smartsteel.co.za/pretoria",
-    "logo": "https://www.smartsteel.co.za/logo.png",
-    "image": "https://www.smartsteel.co.za/pretoria.webp",
-    "description": "Architect-designed modular lightweight steel homes in Pretoria, Gauteng. Homes built for suburban living, modern family estates, and energy-efficient urban dwellings.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pretoria",
-      "addressRegion": "Gauteng",
-      "addressCountry": "ZA"
-    },
-    "telephone": "+27-11-123-4567",
-    "sameAs": [
-      "https://www.facebook.com/smartsteel",
-      "https://www.instagram.com/smartsteel",
-      "https://www.linkedin.com/company/smartsteel"
-    ],
-    "priceRange": "R850,000 – R2,800,000+",
-    "makesOffer": [
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Smart Steel Modular Homes",
+  "url": "https://www.smartsteel.co.za/pretoria",
+  "logo": "https://www.smartsteel.co.za/logo.png",
+  "image": "https://www.smartsteel.co.za/pretoria.webp",
+  "description": "Architect-designed modular lightweight steel homes in Pretoria, Gauteng. Homes built for suburban living, modern family estates, and energy-efficient urban dwellings.",
+  "telephone": "+27-11-123-4567",
+
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pretoria",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+
+  "areaServed": {
+    "@type": "City",
+    "name": "Pretoria"
+  },
+
+  "sameAs": [
+    "https://www.facebook.com/smartsteel",
+    "https://www.instagram.com/smartsteel",
+    "https://www.linkedin.com/company/smartsteel"
+  ],
+
+  "priceRange": "R850,000 – R2,800,000+",
+
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Modular Home Packages",
+    "itemListElement": [
       {
         "@type": "Offer",
         "name": "Starter / Townhouse",
         "description": "Basic steel frame + insulation, standard finishes. Ideal for entry-level suburban homes in Pretoria.",
         "price": "850000",
         "priceCurrency": "ZAR",
-        "url": "https://www.smartsteel.co.za/onboarding",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Starter / Townhouse",
-          "category": "Modular Home",
-          "additionalProperty": [
-            {"@type":"PropertyValue","name":"Size","value":"60–90 m²"},
-            {"@type":"PropertyValue","name":"Bedrooms","value":"1–2"}
-          ]
-        },
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.smartsteel.co.za/onboarding"
       },
       {
         "@type": "Offer",
         "name": "Family / Suburban Home",
-        "description": "Full lightweight steel structure, open-plan living, perfect for modern family estates in Pretoria.",
+        "description": "Full lightweight steel structure with open-plan living, ideal for modern family estates in Pretoria.",
         "price": "1450000",
         "priceCurrency": "ZAR",
-        "url": "https://www.smartsteel.co.za/onboarding",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Family / Suburban Home",
-          "category": "Modular Home",
-          "additionalProperty": [
-            {"@type":"PropertyValue","name":"Size","value":"120–180 m²"},
-            {"@type":"PropertyValue","name":"Bedrooms","value":"3"}
-          ]
-        },
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.smartsteel.co.za/onboarding"
       },
       {
         "@type": "Offer",
         "name": "Premium / Executive",
-        "description": "Luxury finishes, large open-plan living, energy-efficient, ideal for executive suburban estates in Pretoria.",
+        "description": "Luxury finishes, large open-plan layouts, and energy-efficient design for executive homes in Pretoria.",
         "price": "2800000",
         "priceCurrency": "ZAR",
-        "url": "https://www.smartsteel.co.za/onboarding",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Premium / Executive",
-          "category": "Modular Home",
-          "additionalProperty": [
-            {"@type":"PropertyValue","name":"Size","value":"180 m²+"},
-            {"@type":"PropertyValue","name":"Bedrooms","value":"4+"}
-          ]
-        },
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.smartsteel.co.za/onboarding"
       }
     ]
-  };
+  }
+};
 
   return (
     <div className="min-h-screen text-gray-900 font-sans">
