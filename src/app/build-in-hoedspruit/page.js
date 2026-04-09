@@ -118,7 +118,7 @@ export default function HoedspruitPage() {
           {/* Content Wrapper */}
           <div className="relative z-10 flex flex-col justify-center items-center h-full w-full">
             {/* Eyebrow - Localised */}
-            <p className="text-sm font-light tracking-wider text-black">
+            <p className="text-sm font-light tracking-wider text-white">
               Architect-designed. Bushveld-ready. Off-grid capable.
             </p>
 
