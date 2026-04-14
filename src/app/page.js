@@ -5,9 +5,11 @@ import Link from 'next/link';
 import SocialProofStrip from "@/components/SocialProofStrip";
 import AboutSection from "@/components/AboutSection";
 import { Typewriter } from 'react-simple-typewriter'
+import { getFeaturedLocationPages } from "@/data/locationPages";
 
 export default function Page() {
   const [showMore, setShowMore] = useState(false);
+  const featuredLocations = getFeaturedLocationPages(8);
 
 return (
     <div className="min-h-screen text-gray-900 font-sans">
@@ -216,6 +218,51 @@ return (
 </section>
 
 
+{/* LOCATIONS HUB */}
+<section className="w-[95%] mx-auto mt-24">
+  <div className="rounded-3xl border p-8 md:p-12 shadow-sm bg-white">
+    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div className="max-w-3xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+          Explore the towns and regions we serve
+        </h2>
+        <p className="text-gray-600 text-base md:text-lg">
+          Browse local pages built around real climate, site, and planning considerations across South Africa.
+        </p>
+      </div>
+      <div className="mt-4 md:mt-0">
+        <Link
+          href="/locations"
+          className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
+        >
+          View All Locations
+        </Link>
+      </div>
+    </div>
+
+    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10">
+      {featuredLocations.map((location) => (
+        <Link
+          key={location.slug}
+          href={`/${location.slug}`}
+          className="rounded-2xl bg-[#f7f2ec] p-6 transition hover:-translate-y-0.5 hover:shadow-sm"
+        >
+          <p className="text-xs uppercase tracking-[0.22em] text-gray-500">
+            {location.province}
+          </p>
+          <h3 className="text-2xl font-semibold text-gray-900 mt-3">
+            Build in {location.place}
+          </h3>
+          <p className="text-sm text-gray-700 leading-6 mt-3">
+            Homes designed around {location.region}, with locally grounded planning and climate notes.
+          </p>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 {/* NEWS SECTION */}
 <section className="w-[95%] mx-auto mt-24">
   <div className="rounded-3xl border p-8 md:p-12 shadow-sm space-y-12">
@@ -232,10 +279,10 @@ return (
         </p>
       </div>
       <a
-        href="/news"
+        href="/articles"
         className="mt-6 md:mt-0 inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
       >
-        View More News
+        View More Articles
       </a>
     </div>
 
@@ -251,13 +298,13 @@ return (
         {
           title: "Designing for Harsh Environments",
           desc: "See how we engineer steel-frame homes that withstand the heat, wind, and weather extremes of remote locations.",
-          link: "/news/designing-for-environment",
+          link: "/our-system",
           img: "/images/harsh.jpg"
         },
         {
           title: "Off-Grid Building: Our Approach",
           desc: "Our off-grid ready designs include solar, rainwater harvesting, and passive design principles.",
-          link: "/news/off-grid-approach",
+          link: "/resources",
           img: "/images/off-grid.jpg"
         }
       ].map((item, idx) => (
