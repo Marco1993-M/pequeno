@@ -131,9 +131,10 @@ export default function RecentProjects() {
               <Image
                 src={project.image}
                 alt={project.title}
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="rounded-t-lg"
+                style={{ objectFit: 'cover' }}
               />
             </div>
             <div className="p-6">
@@ -181,8 +182,9 @@ export default function RecentProjects() {
               <Image
                 src={modalProject.gallery[currentImageIdx]}
                 alt={modalProject.title}
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="100vw"
+                style={{ objectFit: 'cover' }}
               />
               <button
                 className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
@@ -210,7 +212,13 @@ export default function RecentProjects() {
                   } cursor-pointer flex-shrink-0`}
                   onClick={() => setCurrentImageIdx(i)}
                 >
-                  <Image src={thumb} alt={`thumb-${i}`} layout="fill" objectFit="cover" />
+                  <Image
+                    src={thumb}
+                    alt={`thumb-${i}`}
+                    fill
+                    sizes="80px"
+                    style={{ objectFit: 'cover' }}
+                  />
                 </div>
               ))}
             </div>
