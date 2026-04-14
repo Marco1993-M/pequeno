@@ -29,6 +29,9 @@ export default function Navbar() {
             <Link href="/architecture" className="hover:text-[#ff5c36]">
               Architecture
             </Link>
+            <Link href="/locations" className="hover:text-[#ff5c36]">
+              Locations
+            </Link>
             <Link href="/resources" className="hover:text-[#ff5c36]">
               Resources
             </Link>
@@ -59,6 +62,15 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Architecture
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/locations"
+                className="hover:text-[#ff5c36]"
+                onClick={() => setIsOpen(false)}
+              >
+                Locations
               </Link>
             </li>
             <li>

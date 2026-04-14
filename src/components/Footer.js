@@ -2,8 +2,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { getFeaturedLocationPages } from '@/data/locationPages';
 
 export default function Footer() {
+  const featuredLocations = getFeaturedLocationPages(6);
+
   return (
     <footer className="bg-[#000000] text-white py-12 px-6 w-full">
       {/* Full-width wrapper */}
@@ -24,17 +27,23 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link href="/architecture" className="hover:text-[#da1a33]">Architecture</Link></li>
+              <li><Link href="/locations" className="hover:text-[#da1a33]">Locations</Link></li>
               <li><Link href="/resources" className="hover:text-[#da1a33]">Resources</Link></li>
               <li><Link href="/enquire" className="hover:text-[#da1a33]">Enquire</Link></li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Locations */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <h4 className="text-lg font-semibold mb-4">Popular Areas</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/resources#technical" className="hover:text-[#da1a33]">Technical Info</Link></li>
-              <li><Link href="/resources#guides" className="hover:text-[#da1a33]">Guides</Link></li>
+              {featuredLocations.map((location) => (
+                <li key={location.slug}>
+                  <Link href={`/${location.slug}`} className="hover:text-[#da1a33]">
+                    Build in {location.place}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
