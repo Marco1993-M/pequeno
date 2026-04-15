@@ -437,7 +437,7 @@ export const locationPages = Object.fromEntries([
     place: "Hermanus",
     province: "Western Cape",
     region: "the Overberg and Whale Coast",
-    heroImage: "/images/hermanus.webp",
+    heroImage: "/hermanus.webp",
     localContext: "coastal homes, holiday properties, and retirement living",
     climaticFocus: "coastal winds, salt-laden air, changing weather, and strong sea-facing conditions",
     regulatoryFocus: "site exposure, design controls in some areas, and the demands of coastal durability",
