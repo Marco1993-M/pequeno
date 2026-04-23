@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { basePackages, getRelatedLocationPages } from "@/data/locationPages";
+import { getProjectByKey } from "@/data/projects";
 
 function buildJsonLd(location) {
   const pageUrl = `https://www.pequenohome.com/${location.slug}`;
@@ -86,6 +87,9 @@ function buildJsonLd(location) {
 export default function LocationLandingPage({ location }) {
   const jsonLd = buildJsonLd(location);
   const relatedLocations = getRelatedLocationPages(location.slug);
+  const featuredProject = location.featuredProjectKey
+    ? getProjectByKey(location.featuredProjectKey)
+    : null;
 
   return (
     <main className="pb-20 text-gray-900">
@@ -262,6 +266,65 @@ export default function LocationLandingPage({ location }) {
             <p className="mt-4 max-w-4xl text-lg leading-8 text-gray-700">
               {location.featuredSnippet}
             </p>
+          </div>
+        </section>
+      ) : null}
+
+      {featuredProject ? (
+        <section className="mx-auto mt-10 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+                Featured Project
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+                {featuredProject.name}
+              </h2>
+              <p className="mt-4 text-sm uppercase tracking-[0.22em] text-gray-500">
+                {featuredProject.location}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3 text-sm text-gray-700">
+                <span className="rounded-full bg-[#f7f2ec] px-4 py-2">
+                  {featuredProject.projectType}
+                </span>
+                <span className="rounded-full bg-[#f7f2ec] px-4 py-2">
+                  {featuredProject.size}
+                </span>
+              </div>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                {featuredProject.summary}
+              </p>
+              <ul className="mt-8 space-y-4">
+                {featuredProject.highlights.map((item) => (
+                  <li key={item} className="flex gap-3 text-base leading-7 text-gray-700">
+                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#ff5c36]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 rounded-2xl bg-[#fff5f1] p-5 text-sm leading-7 text-gray-700">
+                <strong className="text-gray-900">Trust note:</strong> {featuredProject.trustLine}
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {featuredProject.gallery.slice(0, 4).map((image, index) => (
+                <div
+                  key={image}
+                  className={`relative overflow-hidden rounded-[1.5rem] ${
+                    index === 0 ? "sm:col-span-2 aspect-[16/10]" : "aspect-[4/3]"
+                  }`}
+                >
+                  <Image
+                    src={image}
+                    alt={`${featuredProject.name} project image ${index + 1}`}
+                    fill
+                    sizes={index === 0 ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 640px) 25vw, 50vw"}
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       ) : null}
