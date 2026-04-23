@@ -101,6 +101,7 @@ export function createLocationPage({
   nearbyAreas,
   faq,
   featuredSnippet,
+  featuredProjectKey,
   supportingSearchTerms = [
     "modern family homes",
     "off-grid retreats",
@@ -145,6 +146,7 @@ export function createLocationPage({
       nearbyAreas,
       faq,
       featuredSnippet,
+      featuredProjectKey,
       localContext,
       climaticFocus,
       regulatoryFocus,
@@ -227,6 +229,7 @@ export const locationPages = Object.fromEntries([
     ],
     featuredSnippet:
       "A typical Hoedspruit brief might be a modern bushveld home on or near a wildlife estate, where shaded outdoor living, solar readiness, and practical delivery to a more remote site all matter from the first concept sketch.",
+    featuredProjectKey: "staff-compound",
   }),
   createLocationPage({
     key: "dullstroom",
@@ -363,6 +366,7 @@ export const locationPages = Object.fromEntries([
     ],
     featuredSnippet:
       "A Pretoria project may need to reconcile estate rules, west-facing afternoon sun, and the realities of suburban family life, especially on stands in the eastern parts of the greater Tshwane area.",
+    featuredProjectKey: "coffee-spa",
   }),
   createLocationPage({
     key: "stellenbosch",
@@ -437,7 +441,7 @@ export const locationPages = Object.fromEntries([
     place: "Hermanus",
     province: "Western Cape",
     region: "the Overberg and Whale Coast",
-    heroImage: "/hermanus.webp",
+    heroImage: "/images/off-grid.jpg",
     localContext: "coastal homes, holiday properties, and retirement living",
     climaticFocus: "coastal winds, salt-laden air, changing weather, and strong sea-facing conditions",
     regulatoryFocus: "site exposure, design controls in some areas, and the demands of coastal durability",
