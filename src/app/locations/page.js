@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import ProjectProofGrid from "@/components/ProjectProofGrid";
 import { getFeaturedLocationPages, locationPageList } from "@/data/locationPages";
 
 export const metadata = {
@@ -99,6 +100,28 @@ export default function LocationsPage() {
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+              Built Projects
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+              Real projects in South African conditions
+            </h2>
+          </div>
+          <Link
+            href="/projects"
+            className="inline-block rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ff5c36]"
+          >
+            View Projects
+          </Link>
+        </div>
+        <div className="mt-10">
+          <ProjectProofGrid limit={2} compact />
         </div>
       </section>
 

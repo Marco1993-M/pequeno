@@ -6,6 +6,7 @@ import SocialProofStrip from "@/components/SocialProofStrip";
 import AboutSection from "@/components/AboutSection";
 import { Typewriter } from 'react-simple-typewriter'
 import { getFeaturedLocationPages } from "@/data/locationPages";
+import ProjectProofGrid from "@/components/ProjectProofGrid";
 
 export default function Page() {
   const [showMore, setShowMore] = useState(false);
@@ -198,10 +199,10 @@ return (
 
       {/* Optional CTA button */}
       <Link
-        href="/our-system"
+        href="/lightweight-steel-frame-homes-south-africa"
         className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
       >
-        Explore Our System
+        Explore LSF Homes
       </Link>
     </div>
 
@@ -214,6 +215,31 @@ return (
       />
     </div>
 
+  </div>
+</section>
+
+
+{/* PROJECTS */}
+<section className="w-[95%] mx-auto mt-24">
+  <div className="rounded-3xl border p-8 md:p-12 shadow-sm bg-white">
+    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
+      <div className="max-w-3xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+          See what we have built
+        </h2>
+        <p className="text-gray-600 text-base md:text-lg">
+          Explore completed lightweight steel frame projects shaped around real
+          South African sites, climates, and client briefs.
+        </p>
+      </div>
+      <Link
+        href="/projects"
+        className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-[#ff5c36] transition"
+      >
+        View Projects
+      </Link>
+    </div>
+    <ProjectProofGrid limit={2} compact />
   </div>
 </section>
 
