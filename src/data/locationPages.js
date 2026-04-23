@@ -968,7 +968,7 @@ export const exampleLocationPage = createLocationPage({
     },
     {
       question: "Another local buying-stage question?",
-      answer: "Useful answer that helps both SEO and conversion.",
+      answer: "Useful answer that helps people understand fit, scope, and next steps.",
     },
     {
       question: "A design or build process question?",
