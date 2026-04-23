@@ -54,7 +54,7 @@ export const projects = Object.fromEntries([
       "A strong fit for commercial construction outside Pretoria East",
     ],
     trustLine:
-      "A useful proof point that lightweight steel framing can support refined, design-led commercial buildings, not only residential homes.",
+      "A strong example of lightweight steel framing supporting refined, design-led commercial buildings, not only residential homes.",
     gallery: [
       "/projects/Coffee_spa_1.JPG",
       "/projects/Coffee_spa_2.jpg",
