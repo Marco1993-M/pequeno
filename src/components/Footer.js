@@ -27,7 +27,9 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link href="/architecture" className="hover:text-[#da1a33]">Architecture</Link></li>
+              <li><Link href="/lightweight-steel-frame-homes-south-africa" className="hover:text-[#da1a33]">LSF Homes</Link></li>
               <li><Link href="/locations" className="hover:text-[#da1a33]">Locations</Link></li>
+              <li><Link href="/projects" className="hover:text-[#da1a33]">Projects</Link></li>
               <li><Link href="/resources" className="hover:text-[#da1a33]">Resources</Link></li>
               <li><Link href="/enquire" className="hover:text-[#da1a33]">Enquire</Link></li>
             </ul>

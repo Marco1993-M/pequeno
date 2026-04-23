@@ -181,7 +181,7 @@ export default function LocationLandingPage({ location }) {
         <div className="grid gap-5 rounded-[2rem] border border-black/10 bg-white p-6 shadow-sm md:grid-cols-3 md:p-8">
           {[
             `Homes designed around ${location.place}'s local conditions`,
-            "Architect-led planning with realistic service-area coverage",
+            "Architect-led planning for the areas we serve",
             "LSF systems shaped for comfort, durability, and cleaner delivery",
           ].map((item) => (
             <div key={item} className="rounded-2xl bg-[#f7f2ec] p-5">
@@ -209,7 +209,7 @@ export default function LocationLandingPage({ location }) {
 
         <div className="rounded-[2rem] border border-black/10 bg-[#101721] p-8 text-white">
           <p className="text-sm uppercase tracking-[0.22em] text-white/60">
-            Internal links to strengthen relevance
+            Helpful Next Steps
           </p>
           <div className="mt-6 space-y-4 text-sm leading-6 text-white/80">
             <p>
@@ -352,7 +352,7 @@ export default function LocationLandingPage({ location }) {
                 className="rounded-2xl bg-[#f7f2ec] p-6 transition hover:-translate-y-0.5 hover:shadow-sm"
               >
                 <p className="text-xs uppercase tracking-[0.22em] text-gray-500">
-                  Project {index + 1}
+                  Common Brief {index + 1}
                 </p>
                 <p className="mt-3 text-xl font-medium text-gray-900">{item}</p>
               </div>
@@ -420,7 +420,7 @@ export default function LocationLandingPage({ location }) {
       <section className="mx-auto mt-24 grid w-[95%] max-w-7xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="rounded-[2rem] bg-[#101721] p-8 text-white md:p-10">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/60">
-            Service Area Copy
+            Nearby Areas
           </p>
           <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
             Where we work around {location.place}
@@ -485,7 +485,7 @@ export default function LocationLandingPage({ location }) {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
-              FAQ Content
+              Questions
             </p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
               Questions people ask before building in {location.place}
@@ -524,7 +524,7 @@ export default function LocationLandingPage({ location }) {
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/60">
-              Conversion Section
+              Start Planning
             </p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
               Planning a build in {location.place}?
@@ -538,10 +538,10 @@ export default function LocationLandingPage({ location }) {
 
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/free-3d-mockup"
+              href="/enquire"
               className="rounded-full bg-[#ff5c36] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#e44d28]"
             >
-              Claim your free 3D mockup
+              Enquire about your site
             </Link>
             <Link
               href="/onboarding"

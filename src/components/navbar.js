@@ -29,8 +29,14 @@ export default function Navbar() {
             <Link href="/architecture" className="hover:text-[#ff5c36]">
               Architecture
             </Link>
+            <Link href="/lightweight-steel-frame-homes-south-africa" className="hover:text-[#ff5c36]">
+              LSF Homes
+            </Link>
             <Link href="/locations" className="hover:text-[#ff5c36]">
               Locations
+            </Link>
+            <Link href="/projects" className="hover:text-[#ff5c36]">
+              Projects
             </Link>
             <Link href="/resources" className="hover:text-[#ff5c36]">
               Resources
@@ -66,11 +72,29 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                href="/lightweight-steel-frame-homes-south-africa"
+                className="hover:text-[#ff5c36]"
+                onClick={() => setIsOpen(false)}
+              >
+                LSF Homes
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/locations"
                 className="hover:text-[#ff5c36]"
                 onClick={() => setIsOpen(false)}
               >
                 Locations
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/projects"
+                className="hover:text-[#ff5c36]"
+                onClick={() => setIsOpen(false)}
+              >
+                Projects
               </Link>
             </li>
             <li>
