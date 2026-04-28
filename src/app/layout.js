@@ -47,10 +47,10 @@ export const metadata = {
     siteName: "Pequeño",
     images: [
       {
-        url: "https://www.pequenohome.com/og-image.jpg", // Replace with your actual OG image
-        width: 1200,
-        height: 630,
-        alt: "Pequeño steel home exterior",
+        url: "https://www.pequenohome.com/images/modular-hero.jpg",
+        width: 1600,
+        height: 900,
+        alt: "Pequeño lightweight steel home architecture",
       },
     ],
     locale: "en_ZA",
@@ -61,7 +61,7 @@ export const metadata = {
     title: "Pequeño — Lightweight Steel Homes",
     description:
       "Discover beautifully crafted, prefabricated lightweight steel homes designed for smart living.",
-    images: ["https://www.pequenohome.com/og-image.jpg"],
+    images: ["https://www.pequenohome.com/images/modular-hero.jpg"],
     creator: "@pequeno", // Update or remove if not using Twitter
   },
   icons: {
