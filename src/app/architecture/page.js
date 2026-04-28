@@ -100,7 +100,7 @@ export default function ArchitecturePage() {
       <section className="relative w-full h-screen flex flex-col justify-between items-center px-4 text-center text-black">
         <div className="absolute left-6 right-6 top-24 bottom-6 overflow-hidden rounded-3xl shadow-xl">
           <Image
-            src="/images/modular-hero.jpg"
+            src="/images/architecture-hero.jpg"
             alt="Pequeño architecture for lightweight steel frame homes"
             fill
             priority
