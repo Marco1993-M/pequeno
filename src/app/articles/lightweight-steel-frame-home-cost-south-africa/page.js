@@ -13,6 +13,11 @@ const faqs = [
       "A compact Pequeno starter home can begin from around R850,000, depending on size, specification, site access, foundations, services, finishes, and location.",
   },
   {
+    question: "What is the light steel frame cost per m2 in South Africa?",
+    answer:
+      "People often search for a light steel frame cost per m2 in South Africa, but it is only a rough planning shortcut. The real cost depends on the design, structural spans, site conditions, foundations, glazing, insulation, cladding, services, and level of finish.",
+  },
+  {
     question: "Why do LSF home prices vary so much?",
     answer:
       "The frame is only one part of the build. Final cost is shaped by design complexity, site conditions, transport, foundations, insulation, cladding, roofing, windows, services, and interior finishes.",
@@ -30,10 +35,12 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "How Much Does a Lightweight Steel Frame Home Cost in South Africa?",
+  title: "Light Steel Frame Cost per m2 in South Africa | Pequeno",
   description:
-    "Understand lightweight steel frame home costs in South Africa, including budget ranges, what affects pricing, and how Pequeno helps clients plan LSF builds.",
+    "Understand light steel frame cost per m2 in South Africa, plus full project budget ranges, what affects pricing, and how Pequeno helps clients plan LSF builds.",
   keywords: [
+    "light steel frame cost per m2 in south africa",
+    "light steel frame cost per square metre south africa",
     "lightweight steel frame home cost South Africa",
     "LSF home prices South Africa",
     "steel frame house cost South Africa",
@@ -44,9 +51,9 @@ export const metadata = {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "How Much Does a Lightweight Steel Frame Home Cost in South Africa?",
+    title: "Light Steel Frame Cost per m2 in South Africa | Pequeno",
     description:
-      "A practical pricing guide for South Africans considering lightweight steel frame homes, cabins, staff housing, or modular structures.",
+      "A practical guide to light steel frame cost per m2 in South Africa, including full project budgets, pricing variables, and planning advice.",
     url: pageUrl,
     siteName: "Pequeño",
     locale: "en_ZA",
@@ -121,12 +128,14 @@ export default function LsfCostArticlePage() {
           Cost Guide
         </p>
         <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-          How much does a lightweight steel frame home cost in South Africa?
+          Light steel frame cost per m2 in South Africa
         </h1>
         <p className="mt-6 text-xl leading-9 text-gray-600">
-          The honest answer is that cost depends on more than the frame. A good
-          LSF quote needs to account for the site, design, specification,
-          foundations, services, finishes, and how the building will be used.
+          If you are searching for light steel frame cost per m2 in South
+          Africa, the most important thing to understand is that square-metre
+          pricing is only a rough starting point. A good LSF quote needs to
+          account for the site, design, specification, foundations, services,
+          finishes, and how the building will be used.
         </p>
 
         <div className="mt-10 rounded-[2rem] border border-black/10 bg-[#f7f2ec] p-6 md:p-8">
@@ -138,6 +147,45 @@ export default function LsfCostArticlePage() {
             from pricing per square metre in isolation.
           </p>
         </div>
+
+        <section className="mt-16 space-y-6 text-lg leading-8 text-gray-700">
+          <h2 className="text-3xl font-semibold text-gray-900">
+            Light steel frame cost per m2 in South Africa
+          </h2>
+          <p>
+            Many people want a simple cost per m2 for light steel frame homes in
+            South Africa because it feels like an easy way to compare options.
+            The problem is that cost per square metre can be misleading when it
+            is used without context.
+          </p>
+          <p>
+            A basic, efficient layout on an accessible site can land very
+            differently from a more complex design with premium finishes, larger
+            spans, difficult access, or off-grid services. The structural frame
+            itself is only one part of the final number.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl bg-[#f7f2ec] p-6">
+              <h3 className="text-xl font-semibold text-gray-900">
+                Useful for early planning
+              </h3>
+              <p className="mt-3 text-base leading-7 text-gray-700">
+                Cost per m2 can help you sense-check whether your project is
+                likely to fall into a starter, mid-range, or premium category.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-[#f7f2ec] p-6">
+              <h3 className="text-xl font-semibold text-gray-900">
+                Not enough for a real quote
+              </h3>
+              <p className="mt-3 text-base leading-7 text-gray-700">
+                Real quotes should be based on the full project brief, not only
+                the square metre count, because site and specification decisions
+                can shift pricing significantly.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <section className="mt-16">
           <h2 className="text-3xl font-semibold">Indicative budget ranges</h2>
@@ -188,6 +236,24 @@ export default function LsfCostArticlePage() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="mt-16 space-y-6 text-lg leading-8 text-gray-700">
+          <h2 className="text-3xl font-semibold text-gray-900">
+            Cost per m2 vs full project budget
+          </h2>
+          <p>
+            A per-m2 figure can be a quick planning shortcut, but full project
+            budgeting is what actually helps you make decisions. The more useful
+            question is not only “what is the cost per square metre?” but also
+            “what kind of home, on what site, with what level of finish and
+            service requirement?”
+          </p>
+          <p>
+            For that reason, Pequeno prefers to use square-metre thinking only
+            as an early planning tool, then move toward a brief-led budget once
+            the project shape is clearer.
+          </p>
         </section>
 
         <section className="mt-16 space-y-6 text-lg leading-8 text-gray-700">
