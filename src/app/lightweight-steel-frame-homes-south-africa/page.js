@@ -398,8 +398,9 @@ export default function LightweightSteelFrameHomesPage() {
 
       <section className="mx-auto mt-24 w-[95%] max-w-7xl">
         <BuyerIntentCluster
-          title="Answer the questions buyers ask before they enquire"
-          intro="These practical guides help you compare systems, understand approvals, plan around real timelines, and sense-check budget expectations before your brief is final."
+          eyebrow="Learn More"
+          title="Helpful reading if you are still shaping your project"
+          intro="Explore practical articles on cost, approvals, timelines, and how lightweight steel framing compares with more conventional building approaches in South Africa."
         />
       </section>
 
