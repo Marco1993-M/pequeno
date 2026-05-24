@@ -4,6 +4,7 @@ import { buyerIntentArticles } from "@/data/buyerIntentArticles";
 
 export default function BuyerIntentCluster({
   currentHref,
+  eyebrow = "Helpful Reading",
   title = "Explore more planning guides",
   intro = "These articles cover the questions buyers usually ask before they commit to a building system, budget, or site strategy.",
 }) {
@@ -15,7 +16,7 @@ export default function BuyerIntentCluster({
     <section className="mt-16 rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-10">
       <div className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
-          Planning Guides
+          {eyebrow}
         </p>
         <h2 className="mt-4 text-3xl font-semibold leading-tight text-gray-900 md:text-4xl">
           {title}
