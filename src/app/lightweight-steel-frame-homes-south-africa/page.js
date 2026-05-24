@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import BuyerIntentCluster from "@/components/BuyerIntentCluster";
 import ProjectProofGrid from "@/components/ProjectProofGrid";
 import { basePackages, getFeaturedLocationPages } from "@/data/locationPages";
 
@@ -393,6 +394,13 @@ export default function LightweightSteelFrameHomesPage() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto mt-24 w-[95%] max-w-7xl">
+        <BuyerIntentCluster
+          title="Answer the questions buyers ask before they enquire"
+          intro="These practical guides help you compare systems, understand approvals, plan around real timelines, and sense-check budget expectations before your brief is final."
+        />
       </section>
 
       <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
