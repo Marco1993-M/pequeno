@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { buyerIntentArticles } from "@/data/buyerIntentArticles";
+
 export const metadata = {
   title: "Articles | Pequeno",
   description:
@@ -10,13 +12,7 @@ export const metadata = {
 };
 
 const articles = [
-  {
-    title: "How Much Does a Lightweight Steel Frame Home Cost in South Africa?",
-    description:
-      "A practical guide to LSF home pricing, budget ranges, and the site and specification choices that shape final cost.",
-    href: "/articles/lightweight-steel-frame-home-cost-south-africa",
-    category: "Cost Guide",
-  },
+  ...buyerIntentArticles,
   {
     title: "Exploring Modular Architecture",
     description:

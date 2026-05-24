@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import BuyerIntentCluster from "@/components/BuyerIntentCluster";
 import ProjectProofGrid from "@/components/ProjectProofGrid";
 import { basePackages } from "@/data/locationPages";
 
@@ -332,6 +333,12 @@ export default function LsfCostArticlePage() {
             </Link>
           </div>
         </section>
+
+        <BuyerIntentCluster
+          currentHref="/articles/lightweight-steel-frame-home-cost-south-africa"
+          title="Explore the rest of the buyer planning series"
+          intro="If you are still comparing systems or working out whether now is the right time to build, these guides will help you understand approvals, timelines, and how LSF compares with brick."
+        />
       </article>
     </main>
   );
