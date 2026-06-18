@@ -6,28 +6,39 @@ export default function AboutSection() {
       <div className="max-w-screen-xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-black">
-            <span className="font-serif italic">Design</span> Meets{" "}
-            <span className="font-serif italic">Durability</span>
+            Why clients choose
+            <span className="font-serif italic"> architect-led </span>
+            lightweight steel homes
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Quality modular homes often face challenges with longevity and adaptability
-            across South Africa&apos;s diverse landscapes. Pequeño is trusted by
-            landowners, <strong>architects, engineers, steel fabricators,</strong> and{" "}
-            <strong>construction companies</strong> to deliver architect-designed,
-            prefabricated, and lightweight steel homes that are modern, resilient, and
-            fast to construct. Our steel-framed, sustainable homes are fully scalable
-            and built to last — combining sleek design with durability to create living
-            spaces that thrive in any environment.
+            Many people love the idea of a faster, cleaner build process but still
+            worry about whether a modular or lightweight steel home will feel
+            durable, comfortable, or well resolved. Pequeño exists to close that
+            gap, combining real architectural thinking with lightweight steel
+            framing to create homes that are contemporary, resilient, and grounded
+            in the realities of South African building.
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Whether you&apos;re an <strong>architect</strong> shaping new communities, an{" "}
-            <strong>engineer</strong> ensuring structural integrity, a{" "}
-            <strong>steel fabricator</strong> driving precision, or a{" "}
-            <strong>construction company</strong> bringing designs to life — Pequeño is
-            your trusted partner in creating exceptional, enduring spaces.
+            We are strongest on projects where the brief needs both clarity and
+            flexibility: off-grid retreats, private homes, cabins, estate builds,
+            and lightweight structures on demanding or remote sites. The value is
+            not only in the steel frame itself, but in making better design and
+            build decisions before expensive mistakes happen on site.
           </p>
+
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              "A stronger fit for remote and climate-sensitive sites",
+              "Cleaner coordination between design, structure, and delivery",
+              "A calmer process from concept to build",
+            ].map((item) => (
+              <div key={item} className="rounded-2xl bg-[#f9f6f1] p-4 text-sm leading-6 text-gray-700">
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="relative group overflow-hidden rounded-2xl shadow-xl border border-gray-200">

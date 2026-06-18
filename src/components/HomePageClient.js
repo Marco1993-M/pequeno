@@ -11,6 +11,11 @@ import { getFeaturedLocationPages } from "@/data/locationPages";
 
 export default function HomePageClient({ faqItems }) {
   const featuredLocations = getFeaturedLocationPages(8);
+  const heroProofPoints = [
+    "Architect-led design",
+    "Off-grid-ready planning",
+    "Real projects in Pretoria and Hoedspruit",
+  ];
 
   return (
     <div className="min-h-screen font-sans text-gray-900">
@@ -36,12 +41,11 @@ export default function HomePageClient({ faqItems }) {
             </p>
 
             <h1 className="mb-32 text-5xl font-extrabold leading-[1.05] tracking-tight text-white drop-shadow-lg md:text-8xl">
-              Lightweight Steel
-              <span className="font-serif italic text-[#ff5c36]">
-                {" "}
-                Homes
+              Architect-Designed
+              <span className="block font-serif italic text-[#ff5c36]">
+                Lightweight Steel Homes
               </span>
-              <span className="block">Designed for South Africa</span>
+              <span className="block">in South Africa</span>
               <span className="block text-3xl md:text-6xl">
                 <Typewriter
                   words={[
@@ -62,34 +66,67 @@ export default function HomePageClient({ faqItems }) {
 
             <div className="absolute bottom-[5%] flex w-full flex-col items-center px-4">
               <p className="text-base text-white md:text-lg">
-                Architect-designed private homes, cabins, modular buildings, and
-                off-grid retreats.
+                Private homes, cabins, and off-grid retreats designed around the
+                realities of South African building.
               </p>
               <p className="text-base text-white md:text-lg">
-                Lightweight steel framing with a calmer process and a stronger
-                end result.
+                Lightweight steel framing, architect-led thinking, and a calmer
+                path from brief to build.
               </p>
 
-              <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
-                <a href="/free-3d-mockup">
-                  <button className="rounded-full bg-[#ff5c36] px-8 py-3 font-semibold text-white shadow-lg transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff5c36]">
-                    Free 3D Mockup
-                  </button>
-                </a>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-white">
+                {heroProofPoints.map((point) => (
+                  <span
+                    key={point}
+                    className="rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur"
+                  >
+                    {point}
+                  </span>
+                ))}
+              </div>
 
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
                 <a href="/onboarding">
-                  <button className="rounded-full bg-white px-8 py-3 font-semibold text-[#ff5c36] shadow-md transition duration-300 hover:scale-105 hover:bg-[#ff5c36] hover:text-white">
-                    Get Started
+                  <button className="rounded-full bg-[#ff5c36] px-8 py-3 font-semibold text-white shadow-lg transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff5c36]">
+                    Start Your Project
                   </button>
                 </a>
 
-                <a href="/recent">
-                  <button className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-black/90 shadow-md transition duration-300 hover:bg-white hover:text-[#ff5c36]">
-                    <span className="text-lg">→</span>
+                <a href="/projects">
+                  <button className="rounded-full bg-white px-8 py-3 font-semibold text-[#ff5c36] shadow-md transition duration-300 hover:scale-105 hover:bg-[#ff5c36] hover:text-white">
+                    View Built Work
                   </button>
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto -mt-8 w-[95%] relative z-20">
+          <div className="grid gap-4 rounded-[2rem] border border-black/10 bg-white p-6 shadow-lg md:grid-cols-3">
+            {[
+              {
+                title: "Designed around your site",
+                desc: "Bushveld, coastal, estate, and remote briefs need different design decisions from day one.",
+              },
+              {
+                title: "Real South African proof",
+                desc: "Pretoria and Hoedspruit projects already give the brand built work that supports the claims.",
+              },
+              {
+                title: "One clear next step",
+                desc: "If you already have land, a brief, or even just an idea, the onboarding path is the right place to begin.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[1.5rem] bg-[#f9f6f1] p-5">
+                <h2 className="text-xl font-semibold text-[#111827]">
+                  {item.title}
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-gray-700">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
