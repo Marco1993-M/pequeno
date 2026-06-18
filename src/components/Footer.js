@@ -56,7 +56,7 @@ export default function Footer() {
               Email: <a href="mailto:info@pequenohome.com" className="hover:text-[#da1a33]">info@pequenohome.com</a>
             </p>
             <p className="text-sm text-gray-300 mb-6">
-              Phone: <a href="tel:+27210000000" className="hover:text-[#da1a33]">+27 82 846 4555</a>
+              Phone: <a href="tel:+27828464555" className="hover:text-[#da1a33]">+27 82 846 4555</a>
             </p>
 
             <div className="flex space-x-4 text-xl">
