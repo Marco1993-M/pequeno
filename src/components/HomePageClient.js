@@ -102,8 +102,8 @@ export default function HomePageClient({ faqItems }) {
           </div>
         </section>
 
-        <section className="mx-auto -mt-8 w-[95%] relative z-20">
-          <div className="grid gap-4 rounded-[2rem] border border-black/10 bg-white p-6 shadow-lg md:grid-cols-3">
+        <section className="mx-auto mt-20 w-[95%]">
+          <div className="grid gap-4 rounded-3xl border border-black/10 bg-[#f7f2ec] p-6 md:grid-cols-3 md:p-8">
             {[
               {
                 title: "Designed around your site",
@@ -118,7 +118,10 @@ export default function HomePageClient({ faqItems }) {
                 desc: "If you already have land, a brief, or even just an idea, the onboarding path is the right place to begin.",
               },
             ].map((item) => (
-              <div key={item.title} className="rounded-[1.5rem] bg-[#f9f6f1] p-5">
+              <div
+                key={item.title}
+                className="rounded-[1.5rem] border border-black/10 bg-white/70 p-5 backdrop-blur-sm"
+              >
                 <h2 className="text-xl font-semibold text-[#111827]">
                   {item.title}
                 </h2>
