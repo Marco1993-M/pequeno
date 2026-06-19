@@ -32,9 +32,10 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Lightweight Steel Frame Homes South Africa | Pequeno",
+  title:
+    "Lightweight Steel Frame Homes in South Africa | Architect-Led LSF",
   description:
-    "Explore lightweight steel frame homes in South Africa. Learn how Pequeno designs LSF homes, cabins, staff housing, and commercial structures for local sites and climates.",
+    "Explore architect-led lightweight steel frame homes in South Africa. See real projects, cost guidance, and where LSF suits homes, cabins, staff housing, and commercial builds.",
   keywords: [
     "lightweight steel frame homes South Africa",
     "LSF homes South Africa",
@@ -48,9 +49,10 @@ export const metadata = {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "Lightweight Steel Frame Homes South Africa | Pequeno",
+    title:
+      "Lightweight Steel Frame Homes in South Africa | Architect-Led LSF",
     description:
-      "A practical guide to Pequeno lightweight steel frame homes, projects, locations, and building considerations in South Africa.",
+      "See how Pequeno approaches lightweight steel frame homes in South Africa, with real project proof, cost guidance, and location-specific planning.",
     url: pageUrl,
     siteName: "Pequeño",
     locale: "en_ZA",
@@ -133,7 +135,7 @@ export default function LightweightSteelFrameHomesPage() {
 
           <div className="mx-auto my-auto max-w-5xl space-y-6">
             <p className="text-sm font-medium uppercase tracking-[0.26em] text-white/75">
-              A practical guide to building smarter with LSF
+              Architect-led homes for South African conditions
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl lg:text-7xl">
               Lightweight Steel Frame Homes in{" "}
@@ -145,6 +147,10 @@ export default function LightweightSteelFrameHomesPage() {
               Pequeno designs lightweight steel frame homes, cabins, staff
               accommodation, and commercial structures for South African sites,
               climates, and lifestyles.
+            </p>
+            <p className="mx-auto max-w-3xl text-sm font-medium uppercase tracking-[0.22em] text-white/72 md:text-base">
+              Real projects in Pretoria and Hoedspruit. Practical guidance on
+              cost, approvals, timelines, and local fit.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 pt-2">
@@ -168,15 +174,29 @@ export default function LightweightSteelFrameHomesPage() {
       <section className="mx-auto mt-8 w-[95%] max-w-7xl">
         <div className="grid gap-4 md:grid-cols-3">
           {[
-            "Designed for homes, cabins, staff housing, and commercial structures.",
-            "Built around site conditions, climate, budget, and long-term use.",
-            "A precise structural system that supports modern architecture.",
+            {
+              title: "Real project proof",
+              text: "See built work from Pretoria and Hoedspruit, not only concept-led marketing copy.",
+            },
+            {
+              title: "Planned for local fit",
+              text: "Every project still depends on climate, site access, foundations, budget, and intended long-term use.",
+            },
+            {
+              title: "Useful before you enquire",
+              text: "Use this page to understand where LSF works well, what it can look like, and what to plan for early.",
+            },
           ].map((item) => (
             <div
-              key={item}
+              key={item.title}
               className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm"
             >
-              <p className="text-base leading-7 text-gray-700">{item}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+                {item.title}
+              </p>
+              <p className="mt-3 text-base leading-7 text-gray-700">
+                {item.text}
+              </p>
             </div>
           ))}
         </div>
