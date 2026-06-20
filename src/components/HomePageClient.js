@@ -13,7 +13,7 @@ export default function HomePageClient({ faqItems }) {
   const featuredLocations = getFeaturedLocationPages(8);
   const heroProofPoints = [
     "Architect-led design",
-    "Off-grid-ready planning",
+    "Design and construction under one roof",
     "Real projects in Pretoria and Hoedspruit",
   ];
 
@@ -36,8 +36,8 @@ export default function HomePageClient({ faqItems }) {
 
           <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
             <p className="text-sm font-light tracking-wider text-black">
-              Architect-led homes shaped for South African sites, climates, and
-              off-grid living.
+              Premium homes and retreats shaped for South African sites,
+              climates, and private ways of living.
             </p>
 
             <h1 className="mb-32 text-5xl font-extrabold leading-[1.05] tracking-tight text-white drop-shadow-lg md:text-8xl">
@@ -49,10 +49,10 @@ export default function HomePageClient({ faqItems }) {
               <span className="block text-3xl md:text-6xl">
                 <Typewriter
                   words={[
-                    "Tailored",
+                    "Private",
+                    "Considered",
                     "Off-grid-ready",
-                    "Built To Love",
-                    "Built To Last",
+                    "Built to last",
                   ]}
                   loop={0}
                   cursor
@@ -66,12 +66,12 @@ export default function HomePageClient({ faqItems }) {
 
             <div className="absolute bottom-[5%] flex w-full flex-col items-center px-4">
               <p className="text-base text-white md:text-lg">
-                Private homes, cabins, and off-grid retreats designed around the
-                realities of South African building.
+                Architect-led private homes, retreats, and lifestyle buildings
+                designed around the realities of South African construction.
               </p>
               <p className="text-base text-white md:text-lg">
-                Lightweight steel framing, architect-led thinking, and a calmer
-                path from brief to build.
+                Lightweight steel framing, premium detailing, and a calmer path
+                from brief to completed build.
               </p>
 
               <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-white">
@@ -107,15 +107,15 @@ export default function HomePageClient({ faqItems }) {
             {[
               {
                 title: "Designed around your site",
-                desc: "Bushveld, coastal, estate, and remote briefs need different design decisions from day one.",
+                desc: "Bushveld, coastal, estate, and remote briefs need thoughtful architectural decisions from day one.",
               },
               {
-                title: "Real South African proof",
-                desc: "Pretoria and Hoedspruit projects already give the brand built work that supports the claims.",
+                title: "Built proof, not brochure promises",
+                desc: "Pretoria and Hoedspruit projects already show how the brand performs in real South African conditions.",
               },
               {
-                title: "One clear next step",
-                desc: "If you already have land, a brief, or even just an idea, the onboarding path is the right place to begin.",
+                title: "A clear start for serious projects",
+                desc: "If you already have land, a brief, or a location in mind, the onboarding path is where a more considered project begins.",
               },
             ].map((item) => (
               <div
@@ -144,8 +144,9 @@ export default function HomePageClient({ faqItems }) {
                   How We Build Lightweight Steel Homes
                 </h2>
                 <p className="text-base text-gray-600 md:text-lg">
-                  Lightweight steel framing, modular components, and curated
-                  finishes designed for South African conditions.
+                  A precise structural system, performance-led envelopes, and
+                  carefully resolved finishes designed for demanding South
+                  African sites.
                 </p>
               </div>
               <div className="mt-6 md:mt-0">
@@ -164,19 +165,19 @@ export default function HomePageClient({ faqItems }) {
                   img: "/system-structure.jpg",
                   label: "Structure",
                   title: "The Framework of the Building",
-                  desc: "Precision-engineered steel frames form the durable, rust-resistant skeleton of each unit, built off-site and assembled efficiently on location.",
+                  desc: "Precision-engineered steel frames form the durable structural skeleton of each project, supporting cleaner coordination and tighter architectural control.",
                 },
                 {
                   img: "/system-insulation.jpg",
                   label: "Envelope",
                   title: "Sheathing & Insulation",
-                  desc: "Breathable wall systems, weatherproofing layers, and high R-value insulation help each home stay efficient and protected in demanding climates.",
+                  desc: "Breathable wall systems, weatherproofing layers, and well-resolved insulation strategies help each home perform comfortably in demanding climates.",
                 },
                 {
                   img: "/system-cladding.jpg",
                   label: "Finish",
                   title: "Exterior Cladding Options",
-                  desc: "Choose from natural timber, concealed-fix steel, or fibre cement panels, all selected to suit the site, architecture, and long-term performance.",
+                  desc: "Natural timber, concealed-fix steel, and refined cladding palettes are selected to suit the architecture, the landscape, and long-term performance.",
                 },
               ].map((item, idx) => (
                 <div
@@ -217,15 +218,14 @@ export default function HomePageClient({ faqItems }) {
           <div className="grid items-center gap-12 rounded-3xl border border-transparent p-8 md:grid-cols-2 md:p-12">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
-                Realise your home
+                A premium home
                 <br />
-                with lightweight steel framing
+                begins with the right system
               </h2>
               <p className="text-base text-gray-600 md:text-lg">
-                Frames are lightweight, durable, strong, and versatile in design.
-                Lightweight steel&apos;s high strength-to-weight ratio suits modern
-                homes, open-plan spaces, remote sites, and carefully detailed
-                architectural work.
+                Lightweight steel framing suits modern homes, open-plan spaces,
+                remote sites, and carefully detailed architectural work where
+                performance, precision, and long-term durability all matter.
               </p>
 
               <Link
@@ -255,7 +255,8 @@ export default function HomePageClient({ faqItems }) {
                 </h2>
                 <p className="text-base text-gray-600 md:text-lg">
                   Explore completed lightweight steel frame projects shaped around
-                  real South African sites, climates, and client briefs.
+                  real South African sites, private briefs, and the level of
+                  detail serious clients expect.
                 </p>
               </div>
               <Link
@@ -277,8 +278,8 @@ export default function HomePageClient({ faqItems }) {
                   Explore the towns and regions we serve
                 </h2>
                 <p className="text-base text-gray-600 md:text-lg">
-                  Browse local pages built around real climate, site, and planning
-                  considerations across South Africa.
+                  Browse local pages built around real climate, site, estate,
+                  and planning considerations across South Africa.
                 </p>
               </div>
               <div className="mt-4 md:mt-0">
@@ -322,9 +323,9 @@ export default function HomePageClient({ faqItems }) {
                   Catch up on the latest news
                 </h2>
                 <p className="text-sm text-gray-600 md:text-base">
-                  Insights, updates, and behind-the-scenes content from our
-                  design and construction process, all built around lightweight
-                  steel framing.
+                  Practical guidance on design, planning, cost, and delivery for
+                  clients considering architect-led lightweight steel homes in
+                  South Africa.
                 </p>
               </div>
               <a
@@ -401,7 +402,7 @@ export default function HomePageClient({ faqItems }) {
               <p className="mt-4 text-base text-gray-600 md:text-lg">
                 These are some of the first questions clients ask when comparing
                 lightweight steel homes, off-grid planning, and architect-led
-                modular building in South Africa.
+                design and construction in South Africa.
               </p>
             </div>
 
@@ -427,9 +428,9 @@ export default function HomePageClient({ faqItems }) {
           <div className="mx-auto max-w-5xl px-6 text-center">
             <h2 className="mb-4 text-4xl font-bold">Have a project in mind?</h2>
             <p className="mx-auto mb-6 max-w-2xl text-gray-700">
-              Whether you&apos;re planning a private home, an off-grid retreat, a
-              compact cabin, or a lightweight steel structure for a remote site,
-              we can help shape the brief and the next step.
+              Whether you&apos;re planning a private home, an off-grid retreat, or
+              a carefully considered building for a demanding site, we can help
+              shape the brief and the right next step.
             </p>
             <a
               href="/onboarding"

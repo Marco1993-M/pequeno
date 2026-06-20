@@ -116,7 +116,7 @@ export default function LocationLandingPage({ location }) {
                 {location.place}, {location.province}
               </span>
               <span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 backdrop-blur-sm">
-                Architect-led LSF homes
+                Architect-led homes
               </span>
               <span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 backdrop-blur-sm">
                 Built for local conditions
@@ -133,7 +133,7 @@ export default function LocationLandingPage({ location }) {
                   {location.place}
                 </span>
               </h1>
-              <p className="max-w-3xl text-base leading-7 text-white/88 md:text-xl md:leading-8">
+            <p className="max-w-3xl text-base leading-7 text-white/88 md:text-xl md:leading-8">
                 {location.intro}
               </p>
 
@@ -181,8 +181,8 @@ export default function LocationLandingPage({ location }) {
         <div className="grid gap-5 rounded-[2rem] border border-black/10 bg-white p-6 shadow-sm md:grid-cols-3 md:p-8">
           {[
             `Homes designed around ${location.place}'s local conditions`,
-            "Architect-led planning for the areas we serve",
-            "LSF systems shaped for comfort, durability, and cleaner delivery",
+            "Architect-led planning for private briefs and demanding sites",
+            "Precision-built systems shaped for comfort, durability, and refined delivery",
           ].map((item) => (
             <div key={item} className="rounded-2xl bg-[#f7f2ec] p-5">
               <p className="text-sm leading-6 text-gray-700">{item}</p>
@@ -200,10 +200,10 @@ export default function LocationLandingPage({ location }) {
             {location.localNeedTitle}
           </h2>
           <p className="max-w-3xl text-lg leading-8 text-gray-600">
-            Good local pages should answer the real questions people have before
-            they enquire. In practice, that means showing how climate, site
-            conditions, approvals, and lifestyle needs shape the brief in
-            {` ${location.place}`}.
+            The right project in {location.place} depends on more than style
+            alone. Climate, site conditions, approvals, privacy, and the way
+            the building will be used all shape whether the final outcome feels
+            calm, durable, and worth the investment.
           </p>
         </div>
 
@@ -213,8 +213,8 @@ export default function LocationLandingPage({ location }) {
           </p>
           <div className="mt-6 space-y-4 text-sm leading-6 text-white/80">
             <p>
-              Explore how our building system, project process, and early design
-              tools support homes planned for {location.place}.
+              Explore how our building system, project process, and early
+              planning approach support more considered homes in {location.place}.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -339,9 +339,10 @@ export default function LocationLandingPage({ location }) {
               Homes we commonly plan for {location.place}
             </h2>
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              From full-time homes to retreats and secondary dwellings, these
-              are the kinds of briefs we commonly shape for clients in and
-              around {location.place}.
+              These are the kinds of briefs we most often shape for clients in
+              and around {location.place}, with an emphasis on homes and
+              buildings that justify a more considered design and construction
+              process.
             </p>
           </div>
 
@@ -425,10 +426,11 @@ export default function LocationLandingPage({ location }) {
           <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
             Where we work around {location.place}
           </h2>
-          <p className="mt-5 text-lg leading-8 text-white/78">
-            We work selectively across nearby plots, estates, and surrounding
-            neighbourhoods where the site and brief align with our process.
-          </p>
+            <p className="mt-5 text-lg leading-8 text-white/78">
+              We work selectively across nearby plots, estates, and surrounding
+            neighbourhoods where the site, brief, and level of ambition align
+            with our process.
+            </p>
         </div>
 
         <div className="rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-10">
