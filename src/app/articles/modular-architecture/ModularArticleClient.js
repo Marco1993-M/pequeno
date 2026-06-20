@@ -73,7 +73,7 @@ export default function ModularArticleClient() {
     "@type": "Article",
     headline: "Exploring Modular Architecture: Reshaping the South African Landscape",
     description:
-      "Modular architecture is revolutionizing South Africa with fast, eco-friendly building methods. Learn about its benefits and Pequeño’s unique approach.",
+      "Modular architecture is reshaping South Africa with cleaner delivery, stronger design control, and more efficient building methods. Learn about its benefits and Pequeño’s approach.",
     image: "https://www.pequenohome.com/images/modular-hero.jpg",
     author: {
       "@type": "Organization",
@@ -138,7 +138,7 @@ export default function ModularArticleClient() {
         name: "Can I customise the design?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Absolutely. Each home is tailored to your lifestyle, land conditions, and budget.",
+          text: "Absolutely. Each home is tailored to your lifestyle, land conditions, and architectural brief.",
         },
       },
       {
@@ -146,7 +146,7 @@ export default function ModularArticleClient() {
         name: "Are modular homes more affordable than traditional homes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Modular homes often result in cost savings due to streamlined processes and reduced labour time.",
+          text: "They can support cost and programme efficiencies, but the real value depends on the site, specification, and the level of finish or design ambition.",
         },
       },
       {
@@ -166,7 +166,7 @@ export default function ModularArticleClient() {
         <title>Exploring Modular Architecture | Pequeño</title>
         <meta
           name="description"
-          content="Explore how modular steel architecture is reshaping South Africa’s housing landscape. Fast, sustainable, and modern — discover Pequeño’s unique modular approach."
+          content="Explore how modular steel architecture is reshaping South Africa’s building landscape through cleaner delivery, stronger design control, and a more considered approach to modern homes."
         />
       </Head>
 
@@ -215,10 +215,10 @@ export default function ModularArticleClient() {
   {/* Keep article content centered within max width */}
   <div className="max-w-5xl mx-auto">
     <p className="text-lg mb-8 leading-relaxed">
-          Modular architecture is rapidly becoming a symbol of innovation,
-          sustainability, and efficiency across South Africa. As urban growth
-          accelerates and housing demands intensify, modular structures provide
-          a fast, beautiful, and eco-conscious building solution.
+          Modular architecture is becoming a more serious part of the South
+          African building conversation. At its best, it offers cleaner
+          delivery, stronger design control, and a more efficient route to
+          contemporary buildings without giving up architectural quality.
         </p>
 
         <blockquote className="border-l-4 border-black pl-6 italic mb-12 text-xl text-gray-700 max-w-3xl">
@@ -235,7 +235,7 @@ export default function ModularArticleClient() {
             Modular architecture involves constructing buildings from prefabricated
             sections manufactured off-site, then assembled onsite. This method
             speeds up construction, reduces waste, and allows high precision and
-            flexibility.
+            flexibility when it is handled with the right design discipline.
           </p>
           <h3 className="text-2xl font-semibold mb-4">Key Benefits:</h3>
           <ul className="list-disc list-inside max-w-3xl space-y-2">
@@ -247,7 +247,7 @@ export default function ModularArticleClient() {
               and lower emissions.
             </li>
             <li>
-              <strong>Cost-Efficiency:</strong> Reduced labour and time expenses.
+              <strong>Cost discipline:</strong> Better control over programme, labour, and coordination when the brief is resolved early.
             </li>
             <li>
               <strong>Scalability:</strong> Easily expanded or adapted as needs
@@ -261,21 +261,19 @@ export default function ModularArticleClient() {
         <section className="mb-16">
           <h2 className="text-3xl font-semibold mb-6">Why It Matters in South Africa</h2>
           <p className="mb-6 max-w-3xl">
-            South Africa faces challenges such as housing shortages, urban population
-            growth, and climate resilience needs. Modular architecture addresses
-            these by providing:
+            South Africa faces a wide range of building pressures, from climate
+            resilience and remote-site logistics to the need for cleaner, more
+            predictable delivery. Modular architecture can respond well by providing:
           </p>
           <ul className="list-disc list-inside max-w-3xl space-y-2 mb-6">
             <li>
-              <strong>Quick-deploy housing</strong> for underserved communities.
+              <strong>Cleaner delivery</strong> on sites where programme and disruption matter.
             </li>
             <li>
-              <strong>Eco-friendly alternatives</strong> for developers and local
-              governments.
+              <strong>Lower-waste construction</strong> for clients who care about better resource use and site discipline.
             </li>
             <li>
-              <strong>Custom, beautiful designs</strong> reflecting local climate and
-              culture.
+              <strong>Design-led outcomes</strong> that still respond to local climate, site conditions, and lifestyle.
             </li>
           </ul>
         </section>
@@ -287,14 +285,16 @@ export default function ModularArticleClient() {
             Pequeño&apos;s Approach to Modular Living
           </h2>
           <p className="mb-6 max-w-3xl">
-            At Pequeño, small means smarter. Our lightweight steel modular homes
-            are crafted for:
+            At Pequeño, modular thinking is not about chasing the smallest or
+            cheapest outcome. It is about using precision, off-site control,
+            and strong architectural thinking to deliver better buildings. Our
+            lightweight steel approach is especially useful for:
           </p>
           <ul className="list-disc list-inside max-w-3xl space-y-2 mb-6">
             <li>Precision manufacturing for exacting quality.</li>
             <li>Minimal site impact to preserve natural surroundings.</li>
             <li>Off-grid ready options for sustainable living.</li>
-            <li>Modern architectural flair that stands out.</li>
+            <li>Modern architecture with a stronger link between design and delivery.</li>
           </ul>
           <blockquote className="border-l-4 border-black pl-6 italic text-gray-700 text-lg max-w-3xl">
             “We don&apos;t just build homes. We build systems that evolve with your
@@ -312,12 +312,10 @@ export default function ModularArticleClient() {
               to remote coastal sites with minimal environmental disruption.
             </li>
             <li>
-              <strong>Urban Infill Projects:</strong> Backyard units and gap housing
-              in metropolitan areas like Cape Town and Johannesburg.
+              <strong>Urban Infill Projects:</strong> Carefully planned city and suburban projects where cleaner sequencing and tighter site control matter.
             </li>
             <li>
-              <strong>Community Projects:</strong> Temporary classrooms and clinics
-              in rural areas, constructed rapidly.
+              <strong>Accommodation And Support Buildings:</strong> Guest accommodation, staff buildings, and related uses where repeatable quality is valuable.
             </li>
           </ul>
         </section>
@@ -346,17 +344,17 @@ export default function ModularArticleClient() {
         </section>
 
         <section className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl font-bold mb-6">Join the Modular Movement</h2>
+          <h2 className="text-3xl font-bold mb-6">Explore A More Considered Modular Approach</h2>
           <p className="mb-8 max-w-xl mx-auto">
-            Whether you&apos;re a homeowner, developer, or municipality, modular
-            architecture opens up a world of opportunity. It&apos;s time to build
-            smarter, faster, and more sustainably.
+            Whether you&apos;re planning a private home, retreat, or a more
+            ambitious accommodation brief, modular architecture opens up a more
+            considered way to build with speed, clarity, and design control.
           </p>
           <Link
             href="https://www.pequenohome.com"
             className="inline-block bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
           >
-            Explore Our Modular Living Solutions
+            Explore Our Approach
           </Link>
         </section>
       </div>

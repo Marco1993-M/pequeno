@@ -5,7 +5,7 @@ import { buyerIntentArticles } from "@/data/buyerIntentArticles";
 export const metadata = {
   title: "Articles | Pequeno",
   description:
-    "Read Pequeno articles on modular architecture, lightweight steel frame homes, and design ideas for building in South Africa.",
+    "Read Pequeno articles on lightweight steel frame homes, modular architecture, off-grid planning, and architect-led building in South Africa.",
   alternates: {
     canonical: "https://www.pequenohome.com/articles",
   },
@@ -16,7 +16,7 @@ const articles = [
   {
     title: "Exploring Modular Architecture",
     description:
-      "A look at how modular structures are reshaping the South African landscape through faster delivery, better efficiency, and stronger design control.",
+      "A look at how modular architecture can support better design control, cleaner delivery, and more considered building outcomes in South Africa.",
     href: "/articles/modular-architecture",
     category: "Architecture",
   },
@@ -34,9 +34,9 @@ export default function ArticlesPage() {
             Ideas, insights, and building guidance
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Explore articles from Pequeno on modular architecture, lightweight
-            steel frame homes, and the practical thinking behind better homes in
-            South Africa.
+            Explore articles from Pequeno on lightweight steel frame homes,
+            modular architecture, and the practical thinking behind more
+            considered homes and buildings in South Africa.
           </p>
         </div>
 

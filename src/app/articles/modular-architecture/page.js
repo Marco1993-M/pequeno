@@ -4,11 +4,11 @@ import ModularArticleClient from "./ModularArticleClient";
 export const metadata = {
   title: "Exploring Modular Architecture — Pequeño",
   description:
-    "A look at how modular structures are reshaping the South African landscape — fast, sustainable, and beautiful.",
+    "A look at how modular architecture can support faster delivery, cleaner coordination, and design-led building outcomes in South Africa.",
   openGraph: {
     title: "Exploring Modular Architecture — Pequeño",
     description:
-      "Discover how modular structures are transforming South Africa with speed, sustainability, and design innovation.",
+      "Discover how modular architecture is shaping more considered building outcomes in South Africa through speed, sustainability, and design control.",
     url: "https://www.pequenohome.com/articles/modular-architecture",
     siteName: "Pequeño",
     images: [
@@ -41,7 +41,7 @@ const schema = {
   },
   headline: "Exploring Modular Architecture: Reshaping the South African Landscape",
   description:
-    "A deep dive into how modular structures are transforming South Africa with speed, sustainability, and design innovation.",
+    "A deep dive into how modular architecture is transforming South Africa with speed, sustainability, and stronger design control.",
   image: "https://www.pequenohome.com/images/modular-home-hero.jpg",
   author: {
     "@type": "Organization",

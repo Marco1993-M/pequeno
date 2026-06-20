@@ -3,13 +3,13 @@ import HomePageClient from "@/components/HomePageClient";
 const homeTitle =
   "Architect-Designed Lightweight Steel Homes in South Africa | Pequeño";
 const homeDescription =
-  "Pequeño designs and builds architect-led lightweight steel homes in South Africa, including off-grid homes, cabins, private houses, and modular structures shaped for local conditions.";
+  "Pequeño designs and builds architect-led lightweight steel homes in South Africa, including premium homes, off-grid retreats, private houses, and selected lifestyle buildings shaped for local conditions.";
 
 const faqItems = [
   {
     question: "What does Pequeño build?",
     answer:
-      "Pequeño designs and builds architect-led lightweight steel homes, cabins, off-grid retreats, and selected commercial structures in South Africa.",
+      "Pequeño designs and builds architect-led lightweight steel homes, retreats, off-grid homes, and selected lifestyle or commercial structures in South Africa.",
   },
   {
     question: "Why use lightweight steel framing for a home?",

@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "What is the starting cost of a lightweight steel frame home?",
     answer:
-      "A compact Pequeno starter home can begin from around R850,000, depending on size, specification, site access, foundations, services, finishes, and location.",
+      "An entry-level Pequeno home can begin from around R850,000, depending on size, specification, site access, foundations, services, finishes, and location.",
   },
   {
     question: "What is the light steel frame cost per m2 in South Africa?",
@@ -141,8 +141,8 @@ export default function LsfCostArticlePage() {
 
         <div className="mt-10 rounded-[2rem] border border-black/10 bg-[#f7f2ec] p-6 md:p-8">
           <p className="text-lg leading-8 text-gray-700">
-            As an early planning guide, Pequeno projects can range from compact
-            starter homes around <strong>R850,000</strong> to larger custom homes
+            As an early planning guide, Pequeno projects can range from
+            entry-level homes around <strong>R850,000</strong> to larger custom homes
             and premium builds from <strong>R2.8m+</strong>. The right number
             comes from matching the building system to your actual brief, not
             from pricing per square metre in isolation.

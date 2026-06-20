@@ -146,7 +146,7 @@ export default function LsfTimelineArticlePage() {
             There is no single timeline for every LSF project
           </h2>
           <p>
-            A compact, efficient home on an accessible site will move very
+            A more straightforward home on an accessible site will move very
             differently from a custom bushveld home, a staff accommodation
             programme, or a commercial structure with a more demanding
             specification.
