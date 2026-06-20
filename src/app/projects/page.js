@@ -1,16 +1,16 @@
 import ProjectProofGrid from "@/components/ProjectProofGrid";
 
 export const metadata = {
-  title: "Projects | Pequeno",
+  title: "Projects | Premium Homes And Buildings | Pequeno",
   description:
-    "Explore Pequeno lightweight steel frame projects, including commercial, residential, and staff accommodation structures built for South African conditions.",
+    "Explore Pequeno projects, including premium homes, lifestyle buildings, and staff accommodation designed and built for South African conditions.",
   alternates: {
     canonical: "https://www.pequenohome.com/projects",
   },
   openGraph: {
-    title: "Projects | Pequeno",
+    title: "Projects | Premium Homes And Buildings | Pequeno",
     description:
-      "Project examples from Pequeno lightweight steel frame builds.",
+      "Project examples from Pequeno architect-led homes and buildings.",
     url: "https://www.pequenohome.com/projects",
     siteName: "Pequeño",
     locale: "en_ZA",
@@ -27,12 +27,12 @@ export default function ProjectsPage() {
             Projects
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
-            Real projects built with lightweight steel framing
+            Real projects for clients who expect more than a standard build
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
-            See how Pequeno uses lightweight steel framing across commercial,
-            residential, and accommodation projects designed for real South
-            African sites and conditions.
+            See how Pequeno approaches premium homes, lifestyle buildings, and
+            accommodation projects with architect-led thinking, lightweight
+            steel framing, and real South African build conditions.
           </p>
         </div>
       </section>

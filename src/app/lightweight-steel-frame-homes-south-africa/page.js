@@ -33,9 +33,9 @@ const faqs = [
 
 export const metadata = {
   title:
-    "Lightweight Steel Frame Homes in South Africa | Architect-Led LSF",
+    "Premium Lightweight Steel Frame Homes in South Africa | Pequeno",
   description:
-    "Explore architect-led lightweight steel frame homes in South Africa. See real projects, cost guidance, and where LSF suits homes, cabins, staff housing, and commercial builds.",
+    "Explore architect-led lightweight steel frame homes in South Africa. See real projects, cost guidance, and where LSF suits premium homes, retreats, staff accommodation, and selected lifestyle buildings.",
   keywords: [
     "lightweight steel frame homes South Africa",
     "LSF homes South Africa",
@@ -50,9 +50,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Lightweight Steel Frame Homes in South Africa | Architect-Led LSF",
+      "Premium Lightweight Steel Frame Homes in South Africa | Pequeno",
     description:
-      "See how Pequeno approaches lightweight steel frame homes in South Africa, with real project proof, cost guidance, and location-specific planning.",
+      "See how Pequeno approaches premium lightweight steel frame homes in South Africa, with real project proof, cost guidance, and location-specific planning.",
     url: pageUrl,
     siteName: "Pequeño",
     locale: "en_ZA",
@@ -135,7 +135,7 @@ export default function LightweightSteelFrameHomesPage() {
 
           <div className="mx-auto my-auto max-w-5xl space-y-6">
             <p className="text-sm font-medium uppercase tracking-[0.26em] text-white/75">
-              Architect-led homes for South African conditions
+              Premium homes and retreats for South African conditions
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl lg:text-7xl">
               Lightweight Steel Frame Homes in{" "}
@@ -145,8 +145,8 @@ export default function LightweightSteelFrameHomesPage() {
             </h1>
             <p className="mx-auto max-w-3xl text-base leading-7 text-white/88 md:text-xl md:leading-8">
               Pequeno designs lightweight steel frame homes, cabins, staff
-              accommodation, and commercial structures for South African sites,
-              climates, and lifestyles.
+              accommodation, and selected lifestyle buildings for South African
+              sites, climates, and ways of living.
             </p>
             <p className="mx-auto max-w-3xl text-sm font-medium uppercase tracking-[0.22em] text-white/72 md:text-base">
               Real projects in Pretoria and Hoedspruit. Practical guidance on
@@ -180,11 +180,11 @@ export default function LightweightSteelFrameHomesPage() {
             },
             {
               title: "Planned for local fit",
-              text: "Every project still depends on climate, site access, foundations, budget, and intended long-term use.",
+              text: "Every project still depends on climate, site access, foundations, budget, and the standard of outcome you expect.",
             },
             {
               title: "Useful before you enquire",
-              text: "Use this page to understand where LSF works well, what it can look like, and what to plan for early.",
+              text: "Use this page to understand where LSF works well, what a premium outcome can look like, and what to plan for early.",
             },
           ].map((item) => (
             <div
@@ -221,7 +221,8 @@ export default function LightweightSteelFrameHomesPage() {
           <p>
             For Pequeno, LSF is not about producing generic boxes. It is a way
             to deliver architect-led spaces with greater precision, cleaner site
-            coordination, and flexibility across very different South African
+            coordination, and the level of architectural control premium
+            residential work demands across very different South African
             conditions.
           </p>
         </div>
@@ -252,7 +253,7 @@ export default function LightweightSteelFrameHomesPage() {
               },
               {
                 title: "Design flexibility",
-                text: "LSF supports compact homes, larger family layouts, staff housing, guest units, and selected commercial structures.",
+                text: "LSF supports private homes, larger family layouts, staff accommodation, retreat buildings, and selected lifestyle structures.",
               },
               {
                 title: "Comfort and performance",
@@ -260,7 +261,7 @@ export default function LightweightSteelFrameHomesPage() {
               },
               {
                 title: "Cleaner site work",
-                text: "A lighter, more precise structure can be helpful on estate sites, remote sites, and projects where access or disruption matters.",
+                text: "A lighter, more precise structure can be especially valuable on estate sites, remote sites, and projects where access, finish quality, or disruption matter.",
               },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl bg-[#f7f2ec] p-6">

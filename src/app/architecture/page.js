@@ -25,9 +25,9 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Architecture | Pequeno",
+  title: "Architecture | Premium Design And Construction | Pequeno",
   description:
-    "Explore Pequeno's architecture approach for lightweight steel frame homes, cabins, staff accommodation, and design-led structures built for South African conditions.",
+    "Explore Pequeno's architect-led design and construction approach for premium lightweight steel frame homes, retreats, and selected lifestyle buildings in South Africa.",
   keywords: [
     "architecture South Africa",
     "lightweight steel frame architecture",
@@ -39,9 +39,9 @@ export const metadata = {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "Architecture | Pequeno",
+    title: "Architecture | Premium Design And Construction | Pequeno",
     description:
-      "Architect-led design for lightweight steel frame homes and buildings in South Africa.",
+      "Architect-led design and construction for premium lightweight steel frame homes and buildings in South Africa.",
     url: pageUrl,
     siteName: "Pequeño",
     locale: "en_ZA",
@@ -124,20 +124,20 @@ export default function ArchitecturePage() {
 
           <div className="mx-auto my-auto max-w-5xl space-y-6">
             <p className="text-sm font-medium uppercase tracking-[0.26em] text-white/75">
-              Design shaped by site, climate, and the way you want to live
+              Architect-led homes and buildings shaped by site, climate, and way of living
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl lg:text-7xl">
-              Architecture that feels{" "}
+              Architecture and construction that feel{" "}
               <span className="font-serif italic text-[#ff8b6e]">
                 intentional
               </span>
             </h1>
             <p className="mx-auto max-w-3xl text-base leading-7 text-white/88 md:text-xl md:leading-8">
-              Pequeno designs homes and buildings that respond to South African
-              conditions with clarity, comfort, and a strong architectural point
-              of view. Our work combines thoughtful planning with lightweight
-              steel framing to create spaces that are practical, durable, and
-              beautiful to live in.
+              Pequeno works as a premium design and construction studio for
+              clients who want a well-resolved home, retreat, or lifestyle
+              building. Our work combines architectural clarity with
+              lightweight steel framing to create buildings that are refined,
+              durable, and deeply responsive to South African conditions.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 pt-2">
@@ -161,9 +161,9 @@ export default function ArchitecturePage() {
       <section className="mx-auto mt-8 w-[95%] max-w-7xl">
         <div className="grid gap-4 md:grid-cols-3">
           {[
-            "Architecture that responds to climate, orientation, and daily use.",
-            "Designs shaped around lightweight steel framing from the outset.",
-            "A clear process from concept thinking to a buildable outcome.",
+            "Architecture that responds to climate, orientation, privacy, and daily use.",
+            "Design thinking and construction logic resolved together from the outset.",
+            "A more considered path from concept, to technical resolution, to site delivery.",
           ].map((item) => (
             <div
               key={item}
@@ -192,10 +192,11 @@ export default function ArchitecturePage() {
           </p>
           <p>
             For Pequeno, design means resolving those realities into spaces that
-            feel calm, efficient, and well-proportioned. Lightweight steel
+            feel calm, refined, and well-proportioned. Lightweight steel
             framing supports that process by giving us a precise structural
-            system that works well with contemporary design, performance-led
-            envelopes, and cleaner coordination on site.
+            system that works well with contemporary architecture,
+            performance-led envelopes, and cleaner coordination from design
+            through construction.
           </p>
         </div>
       </section>
@@ -210,9 +211,10 @@ export default function ArchitecturePage() {
               Different briefs, one consistent design standard
             </h2>
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              Our architecture work spans residential, retreat, accommodation,
-              and selected commercial briefs. The common thread is careful
-              planning and a strong fit between the building and the site.
+              Our work spans private homes, retreats, accommodation, and
+              selected lifestyle or hospitality briefs. The common thread is a
+              high standard of design, a strong fit between building and site,
+              and a clear route into construction.
             </p>
           </div>
 
@@ -220,19 +222,19 @@ export default function ArchitecturePage() {
             {[
               {
                 title: "Family homes",
-                text: "Permanent homes designed for comfort, flow, and long-term daily use.",
+                text: "Permanent homes designed for comfort, flow, privacy, and long-term daily use.",
               },
               {
                 title: "Cabins and retreats",
-                text: "Compact or mid-scale spaces shaped for privacy, landscape, and escape.",
+                text: "Retreat spaces shaped for privacy, landscape, and a strong sense of escape.",
               },
               {
                 title: "Staff accommodation",
-                text: "Larger accommodation programmes designed for consistency, durability, and efficient delivery.",
+                text: "Larger accommodation programmes designed for consistency, durability, and disciplined delivery.",
               },
               {
-                title: "Commercial spaces",
-                text: "Selected hospitality or lifestyle-oriented buildings where design quality matters.",
+                title: "Lifestyle and hospitality buildings",
+                text: "Selected hospitality or lifestyle-oriented buildings where architectural quality matters.",
               },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl bg-[#f7f2ec] p-6">
