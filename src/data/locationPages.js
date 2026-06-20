@@ -291,7 +291,7 @@ export const locationPages = Object.fromEntries([
           "Yes. Estate homes are a good fit for our process, especially when the brief values design consistency, energy performance, and efficient delivery.",
       },
       {
-        question: "Can you help with a compact retreat as well as a larger house?",
+        question: "Can you help with a retreat as well as a larger house?",
         answer:
           "Yes. We work across a range of scales, from smaller getaway homes to larger custom family houses, as long as the brief aligns with our architecture and system.",
       },
@@ -404,7 +404,7 @@ export const locationPages = Object.fromEntries([
     projectTypes: [
       "Contemporary family homes on residential and estate plots",
       "Winelands lifestyle homes and guest accommodation",
-      "Design-led secondary dwellings and compact rental units",
+      "Design-led guest suites, secondary pavilions, and refined ancillary buildings",
     ],
     localPlanning: [
       "Some Stellenbosch projects are shaped by heritage, visual character, or estate architectural guidelines.",
@@ -430,7 +430,7 @@ export const locationPages = Object.fromEntries([
       {
         question: "Can this approach suit both a main home and a second property?",
         answer:
-          "Yes. The same system can work for permanent family homes, smaller guest accommodation, or a carefully designed secondary dwelling, depending on the brief.",
+          "Yes. The same system can work for permanent family homes, guest accommodation, or a carefully designed ancillary building, depending on the brief.",
       },
     ],
     featuredSnippet:
@@ -472,7 +472,7 @@ export const locationPages = Object.fromEntries([
     projectTypes: [
       "Permanent coastal homes for families and retirees",
       "Holiday houses and second homes near the coast",
-      "Compact ancillary dwellings and guest accommodation",
+      "Ancillary coastal buildings and guest accommodation",
     ],
     localPlanning: [
       "Coastal exposure and salt air should influence cladding, fixings, and maintenance planning.",
@@ -540,7 +540,7 @@ export const locationPages = Object.fromEntries([
     projectTypes: [
       "Suburban family homes across the greater George area",
       "Estate houses and lifestyle-focused residences",
-      "Compact secondary dwellings and rental units",
+      "Guest accommodation, ancillary buildings, and secondary pavilions",
     ],
     localPlanning: [
       "Homes in George should be detailed for moisture, airflow, and shifting weather conditions.",
@@ -608,7 +608,7 @@ export const locationPages = Object.fromEntries([
     projectTypes: [
       "Primary residences in and around Knysna neighbourhoods",
       "Lifestyle homes with lagoon, forest, or garden outlooks",
-      "Smaller secondary dwellings and guest-use buildings",
+      "Guest-use buildings, ancillary pavilions, and secondary accommodation",
     ],
     localPlanning: [
       "Slope, vegetation, drainage, and privacy can heavily influence how a Knysna home is planned.",
@@ -681,7 +681,7 @@ export const locationPages = Object.fromEntries([
     localPlanning: [
       "Ocean exposure, sea air, and strong view lines should all inform the design from the outset.",
       "Homes in Plett often benefit from sheltered terraces, durable material palettes, and strong privacy planning.",
-      "A compact, carefully resolved layout can outperform a larger generic plan on many coastal plots.",
+      "A carefully resolved layout can outperform a larger generic plan on many coastal plots.",
     ],
     nearbyAreas: [
       "Plettenberg Bay town and established residential areas",
@@ -744,7 +744,7 @@ export const locationPages = Object.fromEntries([
     projectTypes: [
       "Full-time family homes on suburban and estate plots",
       "Modern lifestyle homes in the greater Lowveld catchment",
-      "Compact additional dwellings and rental units",
+      "Guest suites, additional accommodation, and ancillary buildings",
     ],
     localPlanning: [
       "Subtropical heat and rainfall should influence roof design, shading, and material decisions from the start.",
@@ -770,7 +770,7 @@ export const locationPages = Object.fromEntries([
       {
         question: "Can you help with a modern permanent home rather than a prefab cabin?",
         answer:
-          "Yes. Our approach is intended for real homes with proper architectural planning, not only compact modular cabins.",
+          "Yes. Our approach is intended for real homes with proper architectural planning, not only smaller modular cabins.",
       },
     ],
     featuredSnippet:
@@ -812,7 +812,7 @@ export const locationPages = Object.fromEntries([
     projectTypes: [
       "Modern family homes in Ballito and nearby estates",
       "Coastal lifestyle residences and second homes",
-      "Compact secondary dwellings and support units",
+      "Secondary accommodation, support buildings, and ancillary structures",
     ],
     localPlanning: [
       "Coastal maintenance and specification choices should be resolved carefully on Ballito projects.",
