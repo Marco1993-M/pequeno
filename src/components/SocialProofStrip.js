@@ -71,10 +71,10 @@ export default function SocialProofStrip() {
 <div className="grid grid-cols-1 md:grid-cols-3 mb-6">
   <div className="col-start-2 col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-end text-gray-600 text-sm leading-relaxed">
     <p>
-     Pequeño designs and builds architect-led lightweight steel homes, cabins, and modular living spaces in South Africa. Our precision-engineered steel-framed houses marry modern design, sustainability, and rapid construction to deliver durable, energy-efficient homes that exceed traditional builds.
+     Pequeño designs and builds architect-led lightweight steel homes, retreats, and lifestyle buildings in South Africa. Our precision-engineered structural system supports modern design, strong performance, and a cleaner construction process for demanding sites.
     </p>
     <p>
-      From off-grid retreats to fully customised residential homes, Pequeño creates living spaces that are stylish, functional, and tailored to your lifestyle — whether you’re dreaming of your first home, a weekend escape, or a smart investment.
+      From off-grid retreats to fully customised residential homes, Pequeño creates living spaces that are stylish, functional, and tailored to the way you want to live, host, and spend time on the land.
     </p>
   </div>
 </div>
@@ -107,7 +107,7 @@ export default function SocialProofStrip() {
               </svg>
             </span>
             <p className="text-gray-700">
-              <strong>Economical Luxury:</strong> Smart use of space with premium finishes and efficient layouts.
+              <strong>Refined comfort:</strong> Premium finishes, efficient layouts, and better everyday livability.
             </p>
           </li>
           <li className="flex items-start space-x-3">
@@ -117,7 +117,7 @@ export default function SocialProofStrip() {
               </svg>
             </span>
             <p className="text-gray-700">
-              <strong>Modular design:</strong> Expand or adapt your Pequeño with modules that grow with your lifestyle.
+              <strong>Flexible design:</strong> Spaces can be shaped around family life, retreat use, guest accommodation, or longer-term growth.
             </p>
           </li>
           <li className="flex items-start space-x-3">

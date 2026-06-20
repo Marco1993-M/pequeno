@@ -18,7 +18,9 @@ export default function Footer() {
               <Image src="/LogoWhite.png" alt="Pequeño Logo" width={50} height={50} />
             </Link>
             <p className="text-sm text-gray-300">
-              Pequeño offers beautifully crafted compact homes that blend minimalist living with architectural design.
+              Pequeño designs and builds premium lightweight steel homes and
+              lifestyle buildings shaped for South African sites, climates, and
+              long-term living.
             </p>
           </div>
 

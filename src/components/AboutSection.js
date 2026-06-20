@@ -13,8 +13,8 @@ export default function AboutSection() {
 
           <p className="text-gray-600 text-lg leading-relaxed">
             Many people love the idea of a faster, cleaner build process but still
-            worry about whether a modular or lightweight steel home will feel
-            durable, comfortable, or well resolved. Pequeño exists to close that
+            worry about whether a lightweight steel home will feel durable,
+            comfortable, or properly resolved. Pequeño exists to close that
             gap, combining real architectural thinking with lightweight steel
             framing to create homes that are contemporary, resilient, and grounded
             in the realities of South African building.
