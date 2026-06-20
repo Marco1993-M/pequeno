@@ -5,8 +5,8 @@ export const basePackages = [
     size: "Approx. 60-90 m2",
     details: [
       "Efficient lightweight steel frame shell",
-      "Well suited to compact primary homes, cottages, or rental units",
-      "Best for straightforward sites and streamlined finishes",
+      "Well suited to smaller private homes, refined cottages, or guest-use buildings",
+      "Best for straightforward sites and disciplined, well-considered finishes",
     ],
   },
   {
@@ -60,7 +60,7 @@ function inferIntro({
   regulatoryFocus,
   serviceAreaType,
 }) {
-  return `Pequeño designs and builds lightweight steel frame homes in ${place} for clients who want faster, cleaner construction without sacrificing good architecture. This page is written to compete well in local search, but it stays useful by reflecting the realities of the area: ${climaticFocus}, ${regulatoryFocus}, and the practical demands of ${serviceAreaType}.`;
+  return `Pequeño designs and builds lightweight steel frame homes in ${place} for clients who want a more considered architectural outcome without sacrificing build quality or delivery discipline. Our approach is shaped by the realities of the area: ${climaticFocus}, ${regulatoryFocus}, and the practical demands of ${serviceAreaType}.`;
 }
 
 function inferLocalNeedTitle(place) {
@@ -198,7 +198,7 @@ export const locationPages = Object.fromEntries([
     projectTypes: [
       "Permanent family homes on bushveld and lifestyle estates",
       "Weekend houses and safari-style retreats",
-      "Guest cottages, ancillary units, and rental cabins",
+      "Guest cottages, ancillary buildings, and private retreat spaces",
     ],
     localPlanning: [
       "Estate design guidelines often shape roof forms, materials, and colour palettes.",
@@ -329,13 +329,13 @@ export const locationPages = Object.fromEntries([
       {
         title: "Works for modern architecture",
         description:
-          "From compact family homes to larger executive houses, LSF works well when the brief calls for clean detailing, open-plan living, and faster build momentum.",
+          "From contemporary family homes to larger executive residences, LSF works well when the brief calls for clean detailing, open-plan living, and disciplined delivery momentum.",
       },
     ],
     projectTypes: [
       "Suburban family homes on standalone stands",
       "Estate houses for modern lifestyles",
-      "Compact secondary dwellings and rental units",
+      "Guest suites, pavilions, and ancillary buildings on premium residential properties",
     ],
     localPlanning: [
       "Estate approval rules can shape materials, massing, and facade character.",
@@ -365,7 +365,7 @@ export const locationPages = Object.fromEntries([
       },
     ],
     featuredSnippet:
-      "A Pretoria project may need to reconcile estate rules, west-facing afternoon sun, and the realities of suburban family life, especially on stands in the eastern parts of the greater Tshwane area.",
+      "A Pretoria project may need to reconcile estate rules, west-facing afternoon sun, and the expectations of modern suburban family life, especially on better stands in the eastern parts of the greater Tshwane area.",
     featuredProjectKey: "coffee-spa",
   }),
   createLocationPage({
