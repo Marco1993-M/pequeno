@@ -99,7 +99,7 @@ export default function KeywordLandingPage({ slug }) {
       />
 
       <section className="relative flex h-screen w-full flex-col items-center justify-between px-4 text-center text-black">
-        <div className="absolute left-6 right-6 top-24 bottom-6 overflow-hidden rounded-3xl shadow-xl">
+        <div className="absolute inset-x-6 bottom-6 top-18 overflow-hidden rounded-3xl shadow-xl">
           <Image
             src={page.image}
             alt={page.shortTitle}
@@ -108,46 +108,48 @@ export default function KeywordLandingPage({ slug }) {
             className="object-cover"
           />
         </div>
-        <div className="pointer-events-none absolute inset-0 m-6 rounded-3xl bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 m-6 rounded-3xl bg-gradient-to-t from-black/70 via-black/0 to-transparent" />
 
-        <div className="relative z-10 flex h-full w-full flex-col justify-between px-6 py-10 md:px-10 lg:px-14">
-          <div className="flex flex-wrap justify-center gap-3 pt-20 text-xs uppercase tracking-[0.22em] text-white/80">
-            {page.chips.map((chip) => (
-              <span
-                key={chip}
-                className="rounded-full border border-white/25 bg-white/10 px-4 py-2 backdrop-blur-sm"
-              >
-                {chip}
-              </span>
-            ))}
-          </div>
+        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
+          <p className="text-sm font-light tracking-wider text-black">
+            {page.eyebrow}
+          </p>
 
-          <div className="mx-auto my-auto max-w-5xl space-y-6">
-            <p className="text-sm font-medium uppercase tracking-[0.26em] text-white/75">
-              {page.eyebrow}
-            </p>
-            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl lg:text-7xl">
-              {page.heroTitle}
-            </h1>
-            <p className="mx-auto max-w-3xl text-base leading-7 text-white/88 md:text-xl md:leading-8">
+          <h1 className="mb-32 max-w-6xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white drop-shadow-lg md:text-7xl lg:text-8xl">
+            {page.heroTitle}
+          </h1>
+
+          <div className="absolute bottom-[5%] flex w-full flex-col items-center px-4">
+            <p className="mx-auto max-w-4xl text-base text-white md:text-lg">
               {page.heroIntro}
             </p>
-            <p className="mx-auto max-w-3xl text-sm font-medium uppercase tracking-[0.22em] text-white/72 md:text-base">
+            <p className="mx-auto mt-2 max-w-4xl text-base text-white md:text-lg">
               {page.heroProof}
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 pt-2">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-white">
+              {page.chips.map((chip) => (
+                <span
+                  key={chip}
+                  className="rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur"
+                >
+                  {chip}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/enquire"
-                className="rounded-full bg-[#ff5c36] px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#ff5c36]"
+                className="rounded-full bg-[#ff5c36] px-8 py-3 font-semibold text-white shadow-lg transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff5c36]"
               >
                 Talk about your project
               </Link>
               <Link
                 href="/projects"
-                className="rounded-full border border-white/35 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-gray-900"
+                className="rounded-full bg-white px-8 py-3 font-semibold text-[#ff5c36] shadow-md transition duration-300 hover:scale-105 hover:bg-[#ff5c36] hover:text-white"
               >
-                View built projects
+                View built work
               </Link>
             </div>
           </div>
@@ -158,16 +160,16 @@ export default function KeywordLandingPage({ slug }) {
         <div className="grid gap-4 md:grid-cols-3">
           {[
             {
-              title: "Broader search, better filter",
-              text: `This page targets ${page.keyword} while helping the right clients understand what a more premium, architect-led route actually looks like.`,
+              title: "A better way to begin",
+              text: "This page is here to help you understand what a more premium, architect-led route can look like before you commit to the wrong building path.",
             },
             {
               title: "Real South African proof",
-              text: "Pretoria and Hoedspruit projects already give the brand built work that grounds the broader search terms in something credible.",
+              text: "Pretoria and Hoedspruit projects already give the brand built work that grounds the ideas here in something credible.",
             },
             {
-              title: "Connected next steps",
-              text: "Every page links back into projects, locations, LSF guidance, and enquiry so this cluster strengthens the rest of the site as well.",
+              title: "Clear next steps",
+              text: "From here you can move into projects, locations, pricing guidance, and the broader LSF approach depending on where you are in the process.",
             },
           ].map((item) => (
             <div
@@ -232,7 +234,7 @@ export default function KeywordLandingPage({ slug }) {
               Built Projects
             </p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
-              Built proof for a more premium interpretation of the keyword
+              Built work that makes the approach real
             </h2>
           </div>
           <Link
@@ -251,10 +253,10 @@ export default function KeywordLandingPage({ slug }) {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
-              Helpful Internal Links
+              Explore Further
             </p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
-              Continue into the parts of the site that help qualify fit
+              Continue into the parts of the site that help shape the brief
             </h2>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -272,7 +274,7 @@ export default function KeywordLandingPage({ slug }) {
               {
                 href: "/projects",
                 title: "Built projects",
-                text: "See real South African proof before you decide whether the keyword fit is genuine.",
+                text: "See real South African proof before you decide whether the approach feels right for your project.",
               },
               {
                 href: "/locations",
@@ -324,12 +326,12 @@ export default function KeywordLandingPage({ slug }) {
         <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
-                Related Searches
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
-                Closely related pages in this SEO cluster
-              </h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+              More To Explore
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+              Other pages that may help you shape the right route
+            </h2>
             </div>
           </div>
 
@@ -341,7 +343,7 @@ export default function KeywordLandingPage({ slug }) {
                 className="rounded-2xl bg-[#f7f2ec] p-6 transition hover:bg-[#efe6dc]"
               >
                 <p className="text-xs uppercase tracking-[0.22em] text-gray-500">
-                  SEO landing page
+                  More reading
                 </p>
                 <h3 className="mt-3 text-2xl font-semibold text-gray-900">
                   {item.shortTitle}
@@ -395,7 +397,7 @@ export default function KeywordLandingPage({ slug }) {
               Start Planning
             </p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
-              Looking for the right premium fit, not only the right keyword?
+              Looking for the right fit for the project?
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-white/78">
               Tell us about your land, your intended use, and the level of
