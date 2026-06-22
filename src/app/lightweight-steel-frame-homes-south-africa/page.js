@@ -4,6 +4,7 @@ import Link from "next/link";
 import BuyerIntentCluster from "@/components/BuyerIntentCluster";
 import ProjectProofGrid from "@/components/ProjectProofGrid";
 import { basePackages, getFeaturedLocationPages } from "@/data/locationPages";
+import { keywordLandingPageList } from "@/data/keywordLandingPages";
 
 const pageUrl =
   "https://www.pequenohome.com/lightweight-steel-frame-homes-south-africa";
@@ -99,6 +100,7 @@ function buildJsonLd() {
 
 export default function LightweightSteelFrameHomesPage() {
   const featuredLocations = getFeaturedLocationPages(8);
+  const keywordPages = keywordLandingPageList;
   const jsonLd = buildJsonLd();
 
   return (
@@ -423,6 +425,44 @@ export default function LightweightSteelFrameHomesPage() {
           title="Helpful reading if you are still shaping your project"
           intro="Explore practical articles on cost, approvals, timelines, and how lightweight steel framing compares with more conventional building approaches in South Africa."
         />
+      </section>
+
+      <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+              Popular Searches
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+              Premium answers to the broader terms people actually search
+            </h2>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-600">
+              These pages target broader South African search demand around
+              prefab, modular, off-grid, and luxury cabin searches, while still
+              explaining Pequeno through a more selective, architect-led lens.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {keywordPages.map((item) => (
+            <Link
+              key={item.slug}
+              href={`/${item.slug}`}
+              className="rounded-2xl bg-[#f7f2ec] p-6 transition hover:bg-[#efe6dc]"
+            >
+              <p className="text-xs uppercase tracking-[0.22em] text-gray-500">
+                SEO landing page
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold text-gray-900">
+                {item.shortTitle}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-gray-700">
+                {item.description}
+              </p>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
