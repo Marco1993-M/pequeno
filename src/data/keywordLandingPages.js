@@ -13,7 +13,7 @@ export const keywordLandingPages = {
       "Many people searching for prefab homes in South Africa are really looking for a faster, cleaner, more predictable way to build. Pequeno takes that intent seriously, but approaches it through architect-led design, lightweight steel framing, and a far more considered standard of outcome.",
     heroProof:
       "Real projects in Pretoria and Hoedspruit. Designed for private homes, retreats, and demanding sites.",
-    image: "/heroC.jpg",
+    image: "/images/architecture-hero.jpg",
     chips: ["Prefab homes", "Architect-led", "South Africa"],
     keyword: "prefab homes south africa",
     related: [
@@ -90,7 +90,7 @@ export const keywordLandingPages = {
       "Modular homes in South Africa can mean many things, from simple prefabricated products to far more considered buildings with off-site precision and stronger delivery control. Pequeno sits in the second category, using modular thinking to support architect-led homes and buildings rather than generic stock models.",
     heroProof:
       "For private homes, retreats, and lifestyle buildings where design still matters.",
-    image: "/images/modular-hero.jpg",
+    image: "/images/architecture-hero.jpg",
     chips: ["Modular homes", "Premium design", "South Africa"],
     keyword: "modular homes south africa",
     related: [
@@ -167,7 +167,7 @@ export const keywordLandingPages = {
       "People searching for prefab home prices in South Africa usually want a quick benchmark. That is reasonable, but real budgets depend on far more than a broad prefab label. Site access, foundations, design ambition, services, finishes, and the level of architectural resolution all change the number materially.",
     heroProof:
       "Use price ranges as a planning tool, not as a substitute for a proper brief.",
-    image: "/steel-framing.jpg",
+    image: "/images/architecture-hero.jpg",
     chips: ["Prefab prices", "Budget planning", "South Africa"],
     keyword: "prefab homes prices south africa",
     related: [
@@ -237,7 +237,7 @@ export const keywordLandingPages = {
       "A serious off-grid home is a whole-system project. It should be planned around orientation, solar gain, shading, insulation, water storage, backup systems, and the day-to-day realities of how the building will actually be used. Pequeno approaches off-grid homes as premium, architect-led projects rather than simple technical add-ons.",
     heroProof:
       "Best suited to remote sites, private retreats, and clients who want performance without compromising architecture.",
-    image: "/images/off-grid.jpg",
+    image: "/images/architecture-hero.jpg",
     chips: ["Off-grid homes", "Solar and water planning", "South Africa"],
     keyword: "off grid homes south africa",
     related: [
@@ -307,7 +307,7 @@ export const keywordLandingPages = {
       "The best luxury cabins are not small because they are cheap. They are compact or carefully scaled because the architecture is disciplined, the setting matters, and the brief is focused. Pequeno approaches luxury cabins as private retreats with real material quality, site response, and long-term comfort.",
     heroProof:
       "For private escapes, safari-style retreats, and refined accommodation in exceptional settings.",
-    image: "/images/modular.jpg",
+    image: "/images/architecture-hero.jpg",
     chips: ["Luxury cabins", "Private retreats", "South Africa"],
     keyword: "luxury cabins south africa",
     related: [
