@@ -20,6 +20,7 @@ export function getKeywordMetadata(page) {
       "lightweight steel homes south africa",
       "architect-led homes south africa",
       "premium prefab homes south africa",
+      ...(page.extraKeywords || []),
     ],
     alternates: {
       canonical: url,
