@@ -1,16 +1,16 @@
 export const keywordLandingPages = {
   "prefab-homes-south-africa": {
     slug: "prefab-homes-south-africa",
-    title: "Prefab Homes South Africa | A Premium Architect-Led Alternative",
+    title: "Prefab Homes and Houses South Africa | A Premium Architect-Led Alternative",
     shortTitle: "Prefab Homes South Africa",
     description:
-      "Searching for prefab homes in South Africa? Explore a more premium, architect-led approach to lightweight steel homes, with real projects, practical planning guidance, and South African site insight.",
+      "Searching for prefab homes or prefab houses in South Africa? Explore a more premium, architect-led approach to lightweight steel homes, with real projects, practical planning guidance, and South African site insight.",
     ogDescription:
-      "A premium, architect-led take on prefab homes in South Africa, with project proof, planning guidance, and site-driven design thinking.",
+      "A premium, architect-led take on prefab homes and prefab houses in South Africa, with project proof, planning guidance, and site-driven design thinking.",
     eyebrow: "Prefab Homes South Africa",
-    heroTitle: "Prefab homes in South Africa, rethought for premium clients",
+    heroTitle: "Prefab homes and houses in South Africa, rethought for premium clients",
     heroIntro:
-      "Many people searching for prefab homes in South Africa are really looking for a faster, cleaner, more predictable way to build. Pequeno takes that intent seriously, but approaches it through architect-led design, lightweight steel framing, and a far more considered standard of outcome.",
+      "Many people searching for prefab homes or prefab houses in South Africa are really looking for a faster, cleaner, more predictable way to build. Pequeno takes that intent seriously, but approaches it through architect-led design, lightweight steel framing, and a far more considered standard of outcome.",
     heroProof:
       "Real projects in Pretoria and Hoedspruit. Designed for private homes, retreats, and demanding sites.",
     image: "/images/architecture-hero.jpg",
@@ -19,6 +19,7 @@ export const keywordLandingPages = {
     related: [
       "modular-homes-south-africa",
       "prefab-home-prices-south-africa",
+      "modular-homes-prices-south-africa",
       "off-grid-homes-south-africa",
     ],
     sections: [
@@ -26,7 +27,7 @@ export const keywordLandingPages = {
         label: "What People Usually Mean",
         title: "Most prefab searches are really about speed, control, and cleaner delivery",
         body: [
-          "When someone searches for prefab homes in South Africa, they are often trying to avoid the uncertainty, delays, and mess of a traditional build. They want a process that feels more controlled without giving up design quality.",
+          "When someone searches for prefab homes or prefab houses in South Africa, they are often trying to avoid the uncertainty, delays, and mess of a traditional build. They want a process that feels more controlled without giving up design quality.",
           "That is where Pequeno sits differently. We are not positioned as a catalogue-style prefab supplier. We use lightweight steel framing and disciplined planning to create more refined homes and buildings for clients who still care deeply about architecture, site response, and finish quality.",
         ],
       },
@@ -60,7 +61,7 @@ export const keywordLandingPages = {
     ],
     faqs: [
       {
-        question: "Are prefab homes and lightweight steel homes the same thing?",
+        question: "Are prefab homes, prefab houses, and lightweight steel homes the same thing?",
         answer:
           "Not always. People often use prefab as a broad term for faster, more controlled building methods. Pequeno uses lightweight steel framing and disciplined off-site coordination, but the design outcome is still architect-led and site-specific.",
       },
@@ -74,6 +75,14 @@ export const keywordLandingPages = {
         answer:
           "No. The same structural logic can support private homes, retreats, guest accommodation, and larger custom briefs depending on the site and architectural direction.",
       },
+    ],
+    extraKeywords: [
+      "prefab houses south africa",
+      "prefabricated houses south africa",
+      "luxury prefab homes south africa",
+      "modern prefab homes south africa",
+      "architect designed homes south africa",
+      "steel frame homes south africa",
     ],
   },
   "modular-homes-south-africa": {
@@ -96,6 +105,7 @@ export const keywordLandingPages = {
     related: [
       "prefab-homes-south-africa",
       "prefab-home-prices-south-africa",
+      "modular-homes-prices-south-africa",
       "luxury-cabins-south-africa",
     ],
     sections: [
@@ -105,6 +115,7 @@ export const keywordLandingPages = {
         body: [
           "The appeal of modular homes in South Africa is easy to understand: faster sequencing, stronger quality control, reduced site disruption, and more predictability than conventional site-heavy building.",
           "Those benefits become even more valuable on remote, coastal, estate, or climate-sensitive sites where coordination mistakes are expensive and slow to correct.",
+          "For clients comparing modern modular homes or luxury modular homes in South Africa, the real question is whether the architecture and structure have been resolved together from the start.",
         ],
       },
       {
@@ -142,6 +153,11 @@ export const keywordLandingPages = {
           "A premium modular home is shaped by the quality of the design, detailing, materials, site response, and build coordination. The modular logic supports the outcome, but it does not replace architecture.",
       },
       {
+        question: "Can modular homes feel modern and luxurious?",
+        answer:
+          "Yes. Modern modular homes in South Africa can feel highly resolved when the architecture, structure, and envelope are designed together from the start.",
+      },
+      {
         question: "Can modular homes work on estates or remote land?",
         answer:
           "Yes. Those sites can benefit significantly from cleaner sequencing, reduced disruption, and better control over what arrives on site and when.",
@@ -151,6 +167,12 @@ export const keywordLandingPages = {
         answer:
           "No. We position modular thinking as part of a more tailored, architect-led process rather than a fixed menu of standard products.",
       },
+    ],
+    extraKeywords: [
+      "modern modular homes south africa",
+      "luxury modular homes south africa",
+      "architect designed homes south africa",
+      "steel frame homes south africa",
     ],
   },
   "prefab-home-prices-south-africa": {
@@ -164,7 +186,7 @@ export const keywordLandingPages = {
     eyebrow: "Prefab Home Prices South Africa",
     heroTitle: "Prefab home prices in South Africa are only useful when you add context",
     heroIntro:
-      "People searching for prefab home prices in South Africa usually want a quick benchmark. That is reasonable, but real budgets depend on far more than a broad prefab label. Site access, foundations, design ambition, services, finishes, and the level of architectural resolution all change the number materially.",
+      "People searching for prefab home prices in South Africa usually want a quick benchmark. That is reasonable, but real budgets depend on far more than a broad prefab label. Site access, foundations, design ambition, services, finishes, and the level of architectural resolution all change the number materially. The same applies when you compare prefab houses prices South Africa or prefabricated houses prices South Africa.",
     heroProof:
       "Use price ranges as a planning tool, not as a substitute for a proper brief.",
     image: "/images/architecture-hero.jpg",
@@ -173,6 +195,7 @@ export const keywordLandingPages = {
     related: [
       "prefab-homes-south-africa",
       "modular-homes-south-africa",
+      "modular-homes-prices-south-africa",
       "off-grid-homes-south-africa",
     ],
     sections: [
@@ -182,6 +205,7 @@ export const keywordLandingPages = {
         body: [
           "Some prefab home searches are price-led, but high-ticket clients need a different lens. The real question is not only what a structure costs. It is what level of comfort, finish, site response, and long-term performance the project is intended to achieve.",
           "Pequeno uses early budget ranges to help clients plan properly, then refines those numbers as the site, scope, and specification become clearer.",
+          "That is true whether you are comparing prefab home prices South Africa, prefab houses prices South Africa, or prefabricated houses prices South Africa.",
         ],
       },
       {
@@ -221,6 +245,81 @@ export const keywordLandingPages = {
         answer:
           "Usually better design resolution, stronger envelopes, higher-quality finishes, more difficult sites, and a calmer, more controlled delivery process.",
       },
+    ],
+  },
+  "modular-homes-prices-south-africa": {
+    slug: "modular-homes-prices-south-africa",
+    title: "Modular Homes Prices South Africa | Premium Project Budgets",
+    shortTitle: "Modular Homes Prices South Africa",
+    description:
+      "Need modular homes prices in South Africa? Explore a premium budget guide that also speaks to prefab houses prices and prefabricated houses prices, with practical planning ranges and cost drivers.",
+    ogDescription:
+      "A premium guide to modular homes prices in South Africa, including how prefab houses prices and prefabricated houses prices should be read in context.",
+    eyebrow: "Modular Homes Prices South Africa",
+    heroTitle: "Modular homes prices in South Africa need context, not just a quick number",
+    heroIntro:
+      "When people search for modular homes prices in South Africa, they are usually trying to understand whether the project sits in a starter, mid-range, or premium category. The same applies to prefab houses prices and prefabricated houses prices. The number only becomes meaningful once the site, design brief, and finish level are known.",
+    heroProof:
+      "A useful guide for serious planning, not a shortcut to the cheapest build.",
+    image: "/images/architecture-hero.jpg",
+    chips: ["Modular prices", "Budget planning", "South Africa"],
+    keyword: "modular homes prices south africa",
+    related: [
+      "prefab-home-prices-south-africa",
+      "modular-homes-south-africa",
+      "prefab-homes-south-africa",
+    ],
+    sections: [
+      {
+        label: "How To Read The Numbers",
+        title: "Prices are only useful when the whole brief is visible",
+        body: [
+          "Two homes can both be called modular and still price very differently. Site access, foundations, spans, cladding, glazing, services, and the level of finish all shift the number.",
+          "That is why modular homes prices in South Africa should always be read as a planning tool, not as a fixed promise.",
+        ],
+      },
+      {
+        label: "What The Price Usually Reflects",
+        title: "Prefab houses prices and prefabricated houses prices are shaped by more than the frame",
+        body: [
+          "If you are comparing prefab houses prices South Africa or prefabricated houses prices South Africa, make sure you are comparing like with like. A premium architect-led build with better envelope performance and higher-quality finishes will never sit in the same place as a simple shell product.",
+        ],
+        bullets: [
+          "Site access and transport",
+          "Foundations and ground conditions",
+          "Glazing, insulation, and external finishes",
+          "Solar, water, and other off-grid or low-reliance services",
+        ],
+      },
+      {
+        label: "Best Fit",
+        title: "A pricing guide for clients who want to plan intelligently",
+        body: [
+          "This page is for people who want a real budget conversation before the brief grows too large or too vague. It is especially useful for private homes, retreats, and higher-value projects where architectural quality matters.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What do modular homes prices in South Africa usually depend on?",
+        answer:
+          "The final number depends on the site, structural complexity, services, finishes, access, and the level of architectural resolution in the project.",
+      },
+      {
+        question: "Are prefab houses prices in South Africa always lower than custom builds?",
+        answer:
+          "Not always. The system can improve efficiency, but premium design, difficult sites, or higher-end finishes can still move the cost significantly.",
+      },
+      {
+        question: "Can I use a pricing guide before I know the exact design?",
+        answer:
+          "Yes, but only as a planning guide. The more serious the project, the more important it is to move from rough pricing to a proper brief and site-led discussion.",
+      },
+    ],
+    extraKeywords: [
+      "prefab houses prices south africa",
+      "prefabricated houses south africa prices",
+      "prefab homes prices south africa",
     ],
   },
   "off-grid-homes-south-africa": {
@@ -321,6 +420,7 @@ export const keywordLandingPages = {
         title: "A luxury cabin is usually defined by restraint, setting, and quality",
         body: [
           "In the South African market, the word cabin can mean anything from a basic timber unit to a fully resolved private retreat. For the right client, luxury sits in the calmness of the layout, the quality of the material palette, the relationship to the landscape, and the comfort of staying there over time.",
+          "That is equally true if you are comparing luxury prefab homes in South Africa or more cabin-like retreat buildings. The right answer is still the same: strong design, good material judgment, and a building that feels right on the site.",
         ],
       },
       {
@@ -360,6 +460,10 @@ export const keywordLandingPages = {
         answer:
           "No. The same logic can suit private retreats, second homes, guest accommodation, or select hospitality settings depending on the land and the brief.",
       },
+    ],
+    extraKeywords: [
+      "luxury prefab homes south africa",
+      "luxury modular homes south africa",
     ],
   },
 };
