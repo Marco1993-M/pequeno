@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import ProjectProofGrid from "@/components/ProjectProofGrid";
@@ -99,88 +98,73 @@ export default function KeywordLandingPage({ slug }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="relative flex h-screen w-full flex-col items-center justify-between px-4 text-center text-black">
-        <div className="absolute inset-x-6 bottom-6 top-18 overflow-hidden rounded-3xl shadow-xl">
-          <Image
-            src={page.image}
-            alt={page.shortTitle}
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
-        <div className="pointer-events-none absolute inset-0 m-6 rounded-3xl bg-gradient-to-t from-black/70 via-black/0 to-transparent" />
-
-        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
-          <p className="text-sm font-light tracking-wider text-black">
+      <section className="mx-auto w-[95%] max-w-7xl px-0 pt-20 md:pt-24">
+        <div className="max-w-4xl">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#c45734]">
             {page.eyebrow}
           </p>
-
-          <h1 className="mb-32 max-w-6xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white drop-shadow-lg md:text-7xl lg:text-8xl">
+          <h1 className="mt-4 text-4xl font-semibold leading-[1.02] tracking-tight text-gray-900 md:text-6xl">
             {page.heroTitle}
           </h1>
+          <p className="mt-6 max-w-3xl text-[1.05rem] leading-8 text-gray-700 md:text-[1.18rem]">
+            {page.heroIntro}
+          </p>
+          <p className="mt-4 text-[0.72rem] font-medium uppercase tracking-[0.24em] text-gray-500">
+            {page.heroProof}
+          </p>
 
-          <div className="absolute bottom-[5%] flex w-full flex-col items-center px-4">
-            <p className="mx-auto max-w-4xl text-base text-white md:text-lg">
-              {page.heroIntro}
-            </p>
-            <p className="mx-auto mt-2 max-w-4xl text-base text-white md:text-lg">
-              {page.heroProof}
-            </p>
-
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-white">
-              {page.chips.map((chip) => (
-                <span
-                  key={chip}
-                  className="rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur"
-                >
-                  {chip}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/enquire"
-                className="rounded-full bg-[#ff5c36] px-8 py-3 font-semibold text-white shadow-lg transition duration-300 hover:scale-105 hover:bg-white hover:text-[#ff5c36]"
+          <div className="mt-6 flex flex-wrap gap-2.5">
+            {page.chips.map((chip) => (
+              <span
+                key={chip}
+                className="rounded-full border border-black/10 bg-white px-4 py-2 text-[0.68rem] uppercase tracking-[0.24em] text-gray-600 shadow-sm"
               >
-                Talk about your project
-              </Link>
-              <Link
-                href="/projects"
-                className="rounded-full bg-white px-8 py-3 font-semibold text-[#ff5c36] shadow-md transition duration-300 hover:scale-105 hover:bg-[#ff5c36] hover:text-white"
-              >
-                View built work
-              </Link>
-            </div>
+                {chip}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/enquire"
+              className="rounded-full bg-[#ff5c36] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#e44d28]"
+            >
+              Talk about your project
+            </Link>
+            <Link
+              href="/projects"
+              className="rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:border-[#ff5c36] hover:text-[#ff5c36]"
+            >
+              View built projects
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto mt-8 w-[95%] max-w-7xl">
-        <div className="grid gap-4 md:grid-cols-3">
+      <section className="mx-auto mt-10 w-[95%] max-w-7xl">
+        <div className="grid gap-5 md:grid-cols-3">
           {[
             {
-              title: "A better way to begin",
-              text: "This page is here to help you understand what a more premium, architect-led route can look like before you commit to the wrong building path.",
+              title: "Premium framing",
+              text: "Architect-led homes and buildings rather than commodity prefab units.",
             },
             {
-              title: "Real South African proof",
-              text: "Pretoria and Hoedspruit projects already give the brand built work that grounds the ideas here in something credible.",
+              title: "Useful context",
+              text: "See how design, site, and budget influence the right brief before you commit to the wrong route.",
             },
             {
               title: "Clear next steps",
-              text: "From here you can move into projects, locations, pricing guidance, and the broader LSF approach depending on where you are in the process.",
+              text: "Move into projects, pricing, or the main LSF guide depending on where you are in the process.",
             },
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm"
+              className="rounded-[1.75rem] border border-black/10 bg-white p-7 shadow-[0_1px_0_rgba(0,0,0,0.02)]"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c45734]">
                 {item.title}
               </p>
-              <p className="mt-3 text-base leading-7 text-gray-700">
+              <p className="mt-3 text-[0.98rem] leading-7 text-gray-700">
                 {item.text}
               </p>
             </div>
@@ -191,22 +175,22 @@ export default function KeywordLandingPage({ slug }) {
       {page.sections.map((section, index) => (
         <section
           key={section.title}
-          className={`mx-auto mt-24 w-[95%] max-w-7xl ${
+          className={`mx-auto mt-20 w-[95%] max-w-7xl ${
             index % 2 === 1
               ? "rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12"
               : ""
           }`}
         >
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c45734]">
                 {section.label}
               </p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
                 {section.title}
               </h2>
             </div>
-            <div className="space-y-5 text-lg leading-8 text-gray-700">
+            <div className="space-y-5 text-[1.02rem] leading-8 text-gray-700">
               {section.body.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -215,9 +199,9 @@ export default function KeywordLandingPage({ slug }) {
                   {section.bullets.map((item) => (
                     <li
                       key={item}
-                      className="flex gap-3 text-base leading-7 text-gray-700"
+                      className="flex gap-3 text-[0.98rem] leading-7 text-gray-700"
                     >
-                      <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#ff5c36]" />
+                      <span className="mt-2 h-2 w-2 rounded-full bg-[#ff5c36]" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -228,13 +212,13 @@ export default function KeywordLandingPage({ slug }) {
         </section>
       ))}
 
-      <section className="mx-auto mt-24 w-[95%] max-w-7xl">
+      <section className="mx-auto mt-20 w-[95%] max-w-7xl">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+          <div className="max-w-2xl">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c45734]">
               Built Projects
             </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
               Built work that makes the approach real
             </h2>
           </div>
@@ -250,13 +234,13 @@ export default function KeywordLandingPage({ slug }) {
         </div>
       </section>
 
-      <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+      <section className="mx-auto mt-20 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="max-w-2xl">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c45734]">
               Explore Further
             </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
               Continue into the parts of the site that help shape the brief
             </h2>
           </div>
@@ -268,14 +252,14 @@ export default function KeywordLandingPage({ slug }) {
                 text: "The main national pillar page for the system, process, and project fit.",
               },
               {
-                href: "/articles/lightweight-steel-frame-home-cost-south-africa",
-                title: "Cost planning",
-                text: "Use pricing guidance to understand how scope and site affect the budget.",
+                href: "/architecture",
+                title: "Architecture",
+                text: "See how the design thinking behind Pequeno works before the brief is fixed.",
               },
               {
                 href: "/projects",
                 title: "Built projects",
-                text: "See real South African proof before you decide whether the approach feels right for your project.",
+                text: "Review real South African proof across private homes, retreats, and lifestyle buildings.",
               },
               {
                 href: "/locations",
@@ -286,9 +270,9 @@ export default function KeywordLandingPage({ slug }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-2xl bg-[#f7f2ec] p-6 transition hover:bg-[#efe6dc]"
+                className="rounded-[1.5rem] bg-[#faf6f1] p-6 ring-1 ring-black/5 transition hover:bg-[#f3ece3]"
               >
-                <p className="text-xl font-semibold text-gray-900">
+                <p className="text-lg font-semibold tracking-tight text-gray-900">
                   {item.title}
                 </p>
                 <p className="mt-3 text-sm leading-6 text-gray-700">
@@ -300,18 +284,18 @@ export default function KeywordLandingPage({ slug }) {
         </div>
       </section>
 
-      <section className="mx-auto mt-24 w-[95%] max-w-7xl">
+      <section className="mx-auto mt-20 w-[95%] max-w-7xl">
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {featuredLocations.map((location) => (
             <Link
               key={location.slug}
               href={`/${location.slug}`}
-              className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              className="rounded-[1.5rem] border border-black/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
             >
-              <p className="text-xs uppercase tracking-[0.22em] text-gray-500">
+              <p className="text-[0.7rem] uppercase tracking-[0.24em] text-gray-500">
                 {location.province}
               </p>
-              <h3 className="mt-3 text-2xl font-semibold text-gray-900">
+              <h3 className="mt-3 text-xl font-semibold tracking-tight text-gray-900">
                 Build in {location.place}
               </h3>
               <p className="mt-3 text-sm leading-6 text-gray-700">
@@ -324,15 +308,15 @@ export default function KeywordLandingPage({ slug }) {
       </section>
 
       {relatedPages.length ? (
-        <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
+        <section className="mx-auto mt-20 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
-              More To Explore
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
-              Other pages that may help you shape the right route
-            </h2>
+            <div className="max-w-2xl">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c45734]">
+                More To Explore
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
+                Other pages that may help shape the brief
+              </h2>
             </div>
           </div>
 
@@ -341,12 +325,12 @@ export default function KeywordLandingPage({ slug }) {
               <Link
                 key={item.slug}
                 href={`/${item.slug}`}
-                className="rounded-2xl bg-[#f7f2ec] p-6 transition hover:bg-[#efe6dc]"
+                className="rounded-[1.5rem] bg-[#faf6f1] p-6 ring-1 ring-black/5 transition hover:bg-[#f3ece3]"
               >
-                <p className="text-xs uppercase tracking-[0.22em] text-gray-500">
+                <p className="text-[0.7rem] uppercase tracking-[0.24em] text-gray-500">
                   More reading
                 </p>
-                <h3 className="mt-3 text-2xl font-semibold text-gray-900">
+                <h3 className="mt-3 text-lg font-semibold tracking-tight text-gray-900">
                   {item.shortTitle}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-gray-700">
@@ -358,13 +342,13 @@ export default function KeywordLandingPage({ slug }) {
         </section>
       ) : null}
 
-      <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+      <section className="mx-auto mt-20 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="max-w-2xl">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c45734]">
               Questions
             </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
               Common questions around {page.shortTitle.toLowerCase()}
             </h2>
           </div>
@@ -372,9 +356,9 @@ export default function KeywordLandingPage({ slug }) {
             {page.faqs.map((item) => (
               <details
                 key={item.question}
-                className="group rounded-2xl border border-black/10 bg-[#f7f2ec] p-6"
+                className="group rounded-[1.5rem] border border-black/10 bg-[#faf6f1] p-6"
               >
-                <summary className="cursor-pointer list-none text-lg font-medium text-gray-900">
+                <summary className="cursor-pointer list-none text-[1.02rem] font-medium tracking-tight text-gray-900">
                   <span className="flex items-start justify-between gap-4">
                     <span>{item.question}</span>
                     <span className="text-[#ff5c36] transition group-open:rotate-45">
@@ -382,7 +366,7 @@ export default function KeywordLandingPage({ slug }) {
                     </span>
                   </span>
                 </summary>
-                <p className="mt-4 text-base leading-7 text-gray-700">
+                <p className="mt-4 text-[0.98rem] leading-7 text-gray-700">
                   {item.answer}
                 </p>
               </details>
@@ -391,16 +375,16 @@ export default function KeywordLandingPage({ slug }) {
         </div>
       </section>
 
-      <section className="mx-auto mt-24 w-[95%] max-w-7xl rounded-[2rem] bg-[linear-gradient(135deg,#111827,#1f2937)] px-8 py-12 text-white md:px-12 md:py-16">
+      <section className="mx-auto mt-20 w-[95%] max-w-7xl rounded-[2rem] bg-[linear-gradient(135deg,#111827,#1f2937)] px-8 py-12 text-white md:px-12 md:py-16">
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/60">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-white/60">
               Start Planning
             </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-tight md:text-4xl lg:text-5xl">
               Looking for the right fit for the project?
             </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-white/78">
+            <p className="mt-5 max-w-3xl text-[1.02rem] leading-8 text-white/78">
               Tell us about your land, your intended use, and the level of
               outcome you want. We can help decide whether Pequeno is the right
               design and construction partner for the brief.
