@@ -32,6 +32,8 @@ export const metadata = {
     "architecture South Africa",
     "lightweight steel frame architecture",
     "architect designed modular homes South Africa",
+    "architect designed homes South Africa",
+    "steel frame homes South Africa",
     "Pequeno architecture",
     "LSF architecture South Africa",
   ],

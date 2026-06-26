@@ -31,6 +31,12 @@ const faqItems = [
 export const metadata = {
   title: homeTitle,
   description: homeDescription,
+  keywords: [
+    "architect designed homes south africa",
+    "steel frame homes south africa",
+    "lightweight steel homes south africa",
+    "premium homes south africa",
+  ],
   alternates: {
     canonical: "/",
   },
