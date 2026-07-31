@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import ProjectProofGrid from "@/components/ProjectProofGrid";
-import { getFeaturedLocationPages } from "@/data/locationPages";
+import { basePackages, getFeaturedLocationPages } from "@/data/locationPages";
 import {
   getKeywordLandingPage,
   keywordLandingPageList,
@@ -51,8 +51,7 @@ export function getKeywordMetadata(page) {
 
 export function buildKeywordJsonLd(page) {
   const pageUrl = `https://www.pequenohome.com/${page.slug}`;
-
-  return [
+  const jsonLd = [
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -78,6 +77,42 @@ export function buildKeywordJsonLd(page) {
       })),
     },
   ];
+
+  if (page.priceIntent) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: page.shortTitle,
+      serviceType: "Architect-led lightweight steel frame homes",
+      areaServed: {
+        "@type": "Country",
+        name: "South Africa",
+      },
+      provider: {
+        "@type": "Organization",
+        name: "Pequeño",
+        url: "https://www.pequenohome.com",
+      },
+      offers: basePackages.map((pkg) => ({
+        "@type": "Offer",
+        name: pkg.name,
+        priceCurrency: "ZAR",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "ZAR",
+          minPrice:
+            pkg.name === "Starter Home"
+              ? 850000
+              : pkg.name === "Family Home"
+                ? 1450000
+                : 2800000,
+        },
+        description: `${pkg.price}. ${pkg.size}.`,
+      })),
+    });
+  }
+
+  return jsonLd;
 }
 
 export default function KeywordLandingPage({ slug }) {
@@ -211,6 +246,87 @@ export default function KeywordLandingPage({ slug }) {
           </div>
         </section>
       ))}
+
+      {page.priceIntent ? (
+        <section className="mx-auto mt-20 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-12">
+          <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+            <div>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-[#c45734]">
+                Price Snapshot
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
+                {page.priceSnapshotTitle ||
+                  "Planning ranges before the detailed quote"}
+              </h2>
+              <p className="mt-5 text-[1.02rem] leading-8 text-gray-700">
+                {page.priceSnapshotIntro ||
+                  "Use these as early budget bands. A proper quote still depends on the site, design scope, specification, access, foundations, services, and finish level."}
+              </p>
+              <Link
+                href="/articles/lightweight-steel-frame-home-cost-south-africa"
+                className="mt-6 inline-block text-sm font-medium text-[#ff5c36] hover:underline"
+              >
+                Read the full LSF cost guide →
+              </Link>
+            </div>
+
+            <div className="grid gap-4">
+              {basePackages.map((pkg) => (
+                <article
+                  key={pkg.name}
+                  className={`rounded-[1.5rem] border p-6 ${
+                    pkg.featured
+                      ? "border-[#ff5c36] bg-[#fff5f1]"
+                      : "border-black/10 bg-[#faf6f1]"
+                  }`}
+                >
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <p className="text-[0.7rem] uppercase tracking-[0.24em] text-gray-500">
+                        {pkg.featured ? "Most requested" : "Planning range"}
+                      </p>
+                      <h3 className="mt-2 text-2xl font-semibold tracking-tight text-gray-900">
+                        {pkg.name}
+                      </h3>
+                    </div>
+                    <div className="sm:text-right">
+                      <p className="text-2xl font-semibold text-gray-900">
+                        {pkg.price}
+                      </p>
+                      <p className="mt-1 text-sm text-gray-500">{pkg.size}</p>
+                    </div>
+                  </div>
+                  <ul className="mt-5 grid gap-3 text-sm leading-6 text-gray-700 md:grid-cols-3">
+                    {pkg.details.map((detail) => (
+                      <li key={detail} className="rounded-2xl bg-white p-4">
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {page.searchQuestions?.length ? (
+            <div className="mt-10 rounded-[1.5rem] bg-[#101721] p-6 text-white md:p-8">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-white/60">
+                Searches This Page Answers
+              </p>
+              <div className="mt-5 grid gap-3 md:grid-cols-2">
+                {page.searchQuestions.map((item) => (
+                  <p
+                    key={item}
+                    className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm leading-6 text-white/82"
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </section>
+      ) : null}
 
       <section className="mx-auto mt-20 w-[95%] max-w-7xl">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">

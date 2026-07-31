@@ -17,6 +17,8 @@ function buildJsonLd(location) {
       about: [
         "Lightweight steel frame homes",
         `Residential construction in ${location.place}`,
+        `Home builders in ${location.place}`,
+        `Build in ${location.place}`,
         "Architect-designed modular housing",
       ],
     },
@@ -188,6 +190,39 @@ export default function LocationLandingPage({ location }) {
               <p className="text-sm leading-6 text-gray-700">{item}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto mt-10 w-[95%] max-w-7xl rounded-[2rem] border border-black/10 bg-white p-8 shadow-sm md:p-10">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+              Local Search Fit
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+              For clients comparing home builders in {location.place}
+            </h2>
+          </div>
+
+          <div className="space-y-5 text-base leading-7 text-gray-700 md:text-lg md:leading-8">
+            <p>
+              If you are comparing new home builders, residential construction
+              options, prefab homes, modular homes, or steel frame homes in{" "}
+              {location.place}, the useful question is not only who can build
+              quickly. It is who can shape the right brief for the site,
+              approval route, climate, budget, and level of finish you expect.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {location.localCommercialTerms.map((term) => (
+                <span
+                  key={term}
+                  className="rounded-2xl bg-[#f7f2ec] px-4 py-3 text-sm font-medium text-gray-700"
+                >
+                  {term}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
