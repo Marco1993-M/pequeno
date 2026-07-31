@@ -1,8 +1,7 @@
 // app/layout.js or app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/Footer";
+import AppChrome from "@/components/AppChrome";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Pequeño — Modular Lightweight Steel Homes",
+  title: "Pequeno Home | Pequeño Lightweight Steel Homes South Africa",
   description:
-    "Pequeño designs and builds sustainable, Modular Lightweight Steel Homes with precision and purpose. Engineered for speed, strength, and beautiful simplicity.",
+    "Pequeno Home, also styled Pequeño, designs and builds architect-led modular lightweight steel homes in South Africa with precision, speed, and considered architectural detail.",
   keywords: [
+    "Pequeno",
+    "Pequeno Home",
     "Pequeño",
     "lightweight steel homes",
     "steel construction",
@@ -40,9 +41,9 @@ export const metadata = {
   creator: "Pequeño",
   metadataBase: new URL("https://www.pequenohome.com"),
   openGraph: {
-    title: "Pequeño — Lightweight Steel Homes",
+    title: "Pequeno Home | Pequeño Lightweight Steel Homes South Africa",
     description:
-      "Discover beautifully crafted, prefabricated lightweight steel homes designed for smart living.",
+      "Discover architect-led lightweight steel homes, prefab-style builds, and modular steel homes designed for South African conditions.",
     url: "https://www.pequenohome.com",
     siteName: "Pequeño",
     images: [
@@ -58,9 +59,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pequeño — Lightweight Steel Homes",
+    title: "Pequeno Home | Pequeño Lightweight Steel Homes South Africa",
     description:
-      "Discover beautifully crafted, prefabricated lightweight steel homes designed for smart living.",
+      "Discover architect-led lightweight steel homes and modular steel homes designed for South African conditions.",
     images: ["https://www.pequenohome.com/images/modular-hero.jpg"],
     creator: "@pequeno", // Update or remove if not using Twitter
   },
@@ -84,11 +85,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased text-gray-900`}
       >
-        <Navbar />
-        <div style={{ maxWidth: "100vw", width: "100%", margin: "0 auto" }}>
-          {children}
-          <Footer />
-        </div>
+        <AppChrome>{children}</AppChrome>
       </body>
     </html>
   );

@@ -7,6 +7,37 @@ import { basePackages } from "@/data/locationPages";
 const pageUrl =
   "https://www.pequenohome.com/articles/lightweight-steel-frame-home-cost-south-africa";
 
+const quickAnswers = [
+  "Pequeno lightweight steel frame homes start from around R850,000 for compact, efficient briefs.",
+  "A family-home planning range starts from around R1.45m for roughly 120-180 m2.",
+  "Larger custom homes usually start from around R2.8m+ before premium specification, site, and services are fully resolved.",
+  "Cost per m2 is useful for early sense-checking, but final pricing depends on site access, foundations, design complexity, services, glazing, cladding, insulation, and finish level.",
+];
+
+const priceBands = [
+  {
+    label: "Starter LSF home",
+    budget: "From R850,000",
+    size: "Approx. 60-90 m2",
+    perM2: "Approx. R9,500-R14,200 per m2",
+    fit: "Compact private homes, refined cottages, guest units, or simple sites with disciplined finishes.",
+  },
+  {
+    label: "Family LSF home",
+    budget: "From R1.45m",
+    size: "Approx. 120-180 m2",
+    perM2: "Approx. R8,100-R12,100 per m2",
+    fit: "Permanent homes, estate living, and multibedroom layouts with stronger comfort and finish requirements.",
+  },
+  {
+    label: "Large custom LSF home",
+    budget: "From R2.8m+",
+    size: "180 m2 and up",
+    perM2: "From approx. R15,600 per m2",
+    fit: "Architect-led custom homes, larger spans, view-focused sites, premium finishes, and off-grid-ready systems.",
+  },
+];
+
 const faqs = [
   {
     question: "What is the starting cost of a lightweight steel frame home?",
@@ -36,25 +67,28 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Light Steel Frame Cost per m2 in South Africa | Pequeno",
+  title: "Light Steel Frame Cost per m2 South Africa | Prices & Ranges",
   description:
-    "Understand light steel frame cost per m2 in South Africa, plus full project budget ranges, what affects pricing, and how Pequeno helps clients plan LSF builds.",
+    "Light steel frame cost per m2 in South Africa, with Pequeno planning ranges from R850,000, R1.45m and R2.8m+, plus the cost drivers that affect an LSF quote.",
   keywords: [
     "light steel frame cost per m2 in south africa",
     "light steel frame cost per square metre south africa",
+    "light steel frame price South Africa",
     "lightweight steel frame home cost South Africa",
     "LSF home prices South Africa",
     "steel frame house cost South Africa",
+    "steel frame building cost per square metre",
     "modular home cost South Africa",
     "prefab home prices South Africa",
+    "steel frame house kits South Africa prices",
   ],
   alternates: {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "Light Steel Frame Cost per m2 in South Africa | Pequeno",
+    title: "Light Steel Frame Cost per m2 South Africa | Prices & Ranges",
     description:
-      "A practical guide to light steel frame cost per m2 in South Africa, including full project budgets, pricing variables, and planning advice.",
+      "A practical guide to light steel frame cost per m2 in South Africa, with budget ranges, price drivers, and planning advice for LSF homes.",
     url: pageUrl,
     siteName: "Pequeño",
     locale: "en_ZA",
@@ -86,6 +120,51 @@ function buildJsonLd() {
           url: "https://www.pequenohome.com/logo.png",
         },
       },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.pequenohome.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Articles",
+          item: "https://www.pequenohome.com/articles",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Light steel frame cost per m2",
+          item: pageUrl,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Lightweight steel frame home design and construction",
+      serviceType: "Lightweight steel frame homes",
+      areaServed: {
+        "@type": "Country",
+        name: "South Africa",
+      },
+      provider: {
+        "@type": "Organization",
+        name: "Pequeño",
+        url: "https://www.pequenohome.com",
+      },
+      offers: priceBands.map((band) => ({
+        "@type": "Offer",
+        name: band.label,
+        priceCurrency: "ZAR",
+        description: `${band.budget}. ${band.size}. ${band.fit}`,
+      })),
     },
     {
       "@context": "https://schema.org",
@@ -129,7 +208,7 @@ export default function LsfCostArticlePage() {
           Cost Guide
         </p>
         <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-          Light steel frame cost per m2 in South Africa
+          Light steel frame cost per m2 in South Africa: prices, ranges and budget guide
         </h1>
         <p className="mt-6 text-xl leading-9 text-gray-600">
           If you are searching for light steel frame cost per m2 in South
@@ -138,6 +217,22 @@ export default function LsfCostArticlePage() {
           account for the site, design, specification, foundations, services,
           finishes, and how the building will be used.
         </p>
+
+        <section className="mt-10 rounded-[2rem] border border-[#ff5c36]/35 bg-white p-6 shadow-sm md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#c45734]">
+            Quick Answer
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold text-gray-900 md:text-3xl">
+            What should you budget for an LSF home?
+          </h2>
+          <ul className="mt-5 grid gap-3 text-base leading-7 text-gray-700 md:grid-cols-2">
+            {quickAnswers.map((item) => (
+              <li key={item} className="rounded-2xl bg-[#f7f2ec] p-4">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <div className="mt-10 rounded-[2rem] border border-black/10 bg-[#f7f2ec] p-6 md:p-8">
           <p className="text-lg leading-8 text-gray-700">
@@ -206,6 +301,53 @@ export default function LsfCostArticlePage() {
                 <h3 className="mt-3 text-2xl font-semibold">{pkg.name}</h3>
                 <p className="mt-2 text-3xl font-semibold">{pkg.price}</p>
                 <p className="mt-1 text-sm text-gray-500">{pkg.size}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-16">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-semibold text-gray-900">
+              LSF price list for early planning
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-gray-700">
+              These ranges are not a fixed price list, but they give buyers a
+              clearer starting point than a vague square-metre number. Use them
+              to decide whether your brief is closer to a compact starter home,
+              a full family home, or a larger custom build.
+            </p>
+          </div>
+
+          <div className="mt-8 overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-sm">
+            <div className="grid bg-[#101721] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/72 md:grid-cols-[1fr_0.8fr_0.8fr_1.35fr]">
+              <span>Project type</span>
+              <span className="hidden md:block">Budget</span>
+              <span className="hidden md:block">Per m2 signal</span>
+              <span className="hidden md:block">Best fit</span>
+            </div>
+            {priceBands.map((band) => (
+              <div
+                key={band.label}
+                className="grid gap-3 border-t border-black/10 px-5 py-5 text-sm leading-6 text-gray-700 md:grid-cols-[1fr_0.8fr_0.8fr_1.35fr]"
+              >
+                <div>
+                  <p className="font-semibold text-gray-900">{band.label}</p>
+                  <p className="mt-1 text-gray-500">{band.size}</p>
+                </div>
+                <p>
+                  <span className="font-medium text-gray-900 md:hidden">
+                    Budget:{" "}
+                  </span>
+                  {band.budget}
+                </p>
+                <p>
+                  <span className="font-medium text-gray-900 md:hidden">
+                    Per m2 signal:{" "}
+                  </span>
+                  {band.perM2}
+                </p>
+                <p>{band.fit}</p>
               </div>
             ))}
           </div>

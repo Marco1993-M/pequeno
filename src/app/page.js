@@ -56,6 +56,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Pequeño",
+    alternateName: ["Pequeno", "Pequeno Home", "Pequeño Home"],
     url: "https://www.pequenohome.com",
     logo: "https://www.pequenohome.com/logo.png",
     email: "info@pequenohome.com",
