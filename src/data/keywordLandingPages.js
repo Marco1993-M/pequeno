@@ -177,12 +177,12 @@ export const keywordLandingPages = {
   },
   "prefab-home-prices-south-africa": {
     slug: "prefab-home-prices-south-africa",
-    title: "Prefab Home Prices South Africa | What Premium Projects Cost",
+    title: "Prefab Home Prices South Africa | Price Ranges & Cost Drivers",
     shortTitle: "Prefab Home Prices South Africa",
     description:
-      "Looking for prefab home prices in South Africa? Understand how pricing really works for architect-led lightweight steel homes, from entry-level budgets to premium custom projects.",
+      "Looking for prefab home prices in South Africa? Compare planning ranges from R850,000, R1.45m and R2.8m+, plus the site, finish and service choices that shape the quote.",
     ogDescription:
-      "A practical guide to prefab home prices in South Africa, including budget ranges, cost drivers, and why premium projects should not be judged on square metres alone.",
+      "A practical guide to prefab home prices in South Africa, including planning ranges, cost drivers, and why serious projects should not be judged on square metres alone.",
     eyebrow: "Prefab Home Prices South Africa",
     heroTitle: "Prefab home prices in South Africa are only useful when you add context",
     heroIntro:
@@ -192,6 +192,17 @@ export const keywordLandingPages = {
     image: "/images/architecture-hero.jpg",
     chips: ["Prefab prices", "Budget planning", "South Africa"],
     keyword: "prefab homes prices south africa",
+    priceIntent: true,
+    priceSnapshotTitle:
+      "Prefab home prices usually sit in bands, not one fixed price",
+    priceSnapshotIntro:
+      "Searches for prefab home prices, prefab houses prices and prefabricated houses South Africa prices usually need the same answer: start with a realistic band, then test it against site access, foundations, envelope, services, finishes and design ambition.",
+    searchQuestions: [
+      "prefab home prices South Africa",
+      "prefab houses prices South Africa",
+      "prefabricated houses South Africa prices",
+      "3 bedroom prefab buildings prices South Africa",
+    ],
     related: [
       "prefab-homes-south-africa",
       "modular-homes-south-africa",
@@ -226,6 +237,7 @@ export const keywordLandingPages = {
         title: "Use early pricing to define the right project, not to chase the lowest number",
         body: [
           "If you are planning a serious home or retreat, early budget guidance should help you size the brief correctly, decide where to invest, and avoid designing something misaligned with the site or budget.",
+          "For a 3 bedroom prefab-style home, the right comparison is rarely just a shell price. Bathrooms, kitchens, glazing, covered outdoor spaces, insulation, services, and local site work usually decide whether the budget remains modest or moves into a more premium category.",
         ],
       },
     ],
@@ -245,14 +257,26 @@ export const keywordLandingPages = {
         answer:
           "Usually better design resolution, stronger envelopes, higher-quality finishes, more difficult sites, and a calmer, more controlled delivery process.",
       },
+      {
+        question: "How much is a 3 bedroom prefab home in South Africa?",
+        answer:
+          "A 3 bedroom prefab-style home can vary widely because size, bathrooms, kitchens, glazing, foundations, services, finishes and site access all affect the budget. Pequeno uses early planning bands before moving into a proper site-led quote.",
+      },
+    ],
+    extraKeywords: [
+      "prefab houses prices south africa",
+      "prefabricated houses south africa prices",
+      "prefab buildings prices south africa",
+      "3 bedroom prefab buildings prices south africa",
+      "low cost prefab houses south africa",
     ],
   },
   "modular-homes-prices-south-africa": {
     slug: "modular-homes-prices-south-africa",
-    title: "Modular Homes Prices South Africa | Premium Project Budgets",
+    title: "Modular Homes Prices South Africa | Price Ranges & Budgets",
     shortTitle: "Modular Homes Prices South Africa",
     description:
-      "Need modular homes prices in South Africa? Explore a premium budget guide that also speaks to prefab houses prices and prefabricated houses prices, with practical planning ranges and cost drivers.",
+      "Need modular homes prices in South Africa? See practical planning ranges from R850,000, R1.45m and R2.8m+, plus prefab, site and finish cost drivers.",
     ogDescription:
       "A premium guide to modular homes prices in South Africa, including how prefab houses prices and prefabricated houses prices should be read in context.",
     eyebrow: "Modular Homes Prices South Africa",
@@ -264,6 +288,17 @@ export const keywordLandingPages = {
     image: "/images/architecture-hero.jpg",
     chips: ["Modular prices", "Budget planning", "South Africa"],
     keyword: "modular homes prices south africa",
+    priceIntent: true,
+    priceSnapshotTitle:
+      "Modular home budgets become useful when the scope is visible",
+    priceSnapshotIntro:
+      "Use the ranges below to sense-check starter, family and large custom projects. The final number depends on the design, structure, envelope, services, site access, foundations and finish level.",
+    searchQuestions: [
+      "modular homes prices South Africa",
+      "modern modular homes South Africa prices",
+      "prefab houses prices South Africa",
+      "prefabricated houses prices South Africa",
+    ],
     related: [
       "prefab-home-prices-south-africa",
       "modular-homes-south-africa",
@@ -315,11 +350,18 @@ export const keywordLandingPages = {
         answer:
           "Yes, but only as a planning guide. The more serious the project, the more important it is to move from rough pricing to a proper brief and site-led discussion.",
       },
+      {
+        question: "Are modern modular homes in South Africa priced per square metre?",
+        answer:
+          "They can be discussed per square metre for early planning, but the real quote should account for the full project scope, including foundations, services, envelope, finishes, access, and the level of design resolution.",
+      },
     ],
     extraKeywords: [
       "prefab houses prices south africa",
       "prefabricated houses south africa prices",
       "prefab homes prices south africa",
+      "modern modular homes south africa prices",
+      "modular homes cost south africa",
     ],
   },
   "off-grid-homes-south-africa": {

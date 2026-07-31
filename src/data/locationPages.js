@@ -50,7 +50,7 @@ function inferHeroEyebrow(place, localContext) {
 }
 
 function inferMetaDescription(place, province, localContext, supportingSearchTerms) {
-  return `Architect-designed lightweight steel frame homes in ${place}, ${province}. Explore LSF homes for ${localContext}, with ${supportingSearchTerms.join(", ")}.`;
+  return `Architect-designed lightweight steel frame home builders in ${place}, ${province}. Explore LSF homes, residential construction guidance, and planning for ${localContext}, with ${supportingSearchTerms.join(", ")}.`;
 }
 
 function inferIntro({
@@ -69,18 +69,32 @@ function inferLocalNeedTitle(place) {
 
 function inferSeoKeywords(place, province, region, supportingSearchTerms) {
   return [
+    `home builders ${place}`,
+    `new home builders ${place}`,
+    `residential construction ${place}`,
+    `build in ${place}`,
     `lightweight steel frame homes ${place}`,
     `LSF homes ${place}`,
     `modular homes ${place}`,
     `steel frame homes ${place}`,
     `homes in ${place}`,
-    `build in ${place}`,
     `Pequeno ${place}`,
     `lightweight steel homes ${province}`,
     `prefab homes ${place}`,
     `architect designed homes ${place}`,
     ...supportingSearchTerms.map((term) => `${term} ${place}`),
     ...supportingSearchTerms.map((term) => `${term} ${region}`),
+  ];
+}
+
+function inferLocalCommercialTerms(place) {
+  return [
+    `home builders ${place}`,
+    `new home builders ${place}`,
+    `residential construction ${place}`,
+    `lightweight steel frame homes ${place}`,
+    `steel frame homes ${place}`,
+    `modular homes ${place}`,
   ];
 }
 
@@ -107,6 +121,7 @@ export function createLocationPage({
     "off-grid retreats",
     "energy-efficient living",
   ],
+  localCommercialTerms,
   heroEyebrow,
   intro,
   metaDescription,
@@ -152,10 +167,12 @@ export function createLocationPage({
       regulatoryFocus,
       serviceAreaType,
       supportingSearchTerms,
+      localCommercialTerms:
+        localCommercialTerms || inferLocalCommercialTerms(place),
       seoKeywords: inferSeoKeywords(place, province, region, supportingSearchTerms),
-      seoTitle: `Lightweight Steel Frame Homes in ${place} | Pequeno`,
-      pageTitle: `Lightweight Steel Frame Homes in ${place}`,
-      pageSummary: `Architect-designed LSF homes for ${place}, ${province}, with content tailored to ${region}.`,
+      seoTitle: `Build in ${place} | LSF Home Builders & Construction | Pequeno`,
+      pageTitle: `Build in ${place}: Lightweight Steel Frame Homes`,
+      pageSummary: `Architect-designed LSF homes and residential construction guidance for ${place}, ${province}, with content tailored to ${region}.`,
       serviceName: `Pequeño lightweight steel frame homes in ${place}`,
     },
   ];
