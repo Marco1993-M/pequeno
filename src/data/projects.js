@@ -64,6 +64,28 @@ export const projects = Object.fromEntries([
     bestForLocations: ["build-in-pretoria"],
   }),
   createProject({
+    key: "somerset-west",
+    name: "Somerset West LSF Structure",
+    location: "Somerset West, Western Cape",
+    region: "Somerset West",
+    projectType: "LSF structure supply and installation",
+    size: "Structure scope only",
+    summary:
+      "Pequeño supplied and installed the lightweight steel frame structure in Somerset West. The building envelope, fit-out and completed home were outside our scope.",
+    highlights: [
+      "LSF structure supplied and installed by Pequeño",
+      "Roof trusses and wall frames shown during construction",
+      "Other building works were outside Pequeño's scope",
+    ],
+    trustLine:
+      "A documented LSF structure supply and installation project in Somerset West.",
+    gallery: [
+      "/projects/Somerset_a.webp",
+      "/projects/Somerset_b.webp",
+      "/projects/Somerset_c.webp",
+    ],
+  }),
+  createProject({
     key: "staff-compound",
     name: "Staff Compound",
     location: "Hoedspruit",
