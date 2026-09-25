@@ -9,6 +9,7 @@ module.exports = {
     '/prefab-home-prices-south-africa', '/modular-homes-prices-south-africa',
     '/off-grid-homes-south-africa', '/luxury-cabins-south-africa',
     '/articles/modular-architecture', '/enquire', '/portal', '/portal/*',
+    '/apple-icon.png', '/icon.png', '/opengraph-image.jpg', '/twitter-image.jpg',
   ],
   // optional: exclude certain paths
   // exclude: ['/secret-page', '/admin/*'],
