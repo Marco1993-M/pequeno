@@ -141,7 +141,7 @@ export default function LocationLandingPage({ location }) {
 
               <div className="flex flex-wrap justify-center gap-4 pt-2">
                 <Link
-                  href="/enquire"
+                  href="/onboarding"
                   className="rounded-full border border-white/35 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-gray-900"
                 >
                   Talk about your site
@@ -253,7 +253,7 @@ export default function LocationLandingPage({ location }) {
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/our-system"
+                href="/lightweight-steel-frame-homes-south-africa"
                 className="rounded-full border border-white/20 px-4 py-2 transition hover:bg-white hover:text-gray-900"
               >
                 Our building system
@@ -265,10 +265,10 @@ export default function LocationLandingPage({ location }) {
                 Start a project
               </Link>
               <Link
-                href="/resources"
+                href="/articles"
                 className="rounded-full border border-white/20 px-4 py-2 transition hover:bg-white hover:text-gray-900"
               >
-                Resources
+                Articles
               </Link>
             </div>
           </div>
@@ -575,7 +575,7 @@ export default function LocationLandingPage({ location }) {
 
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/enquire"
+              href="/onboarding"
               className="rounded-full bg-[#ff5c36] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#e44d28]"
             >
               Enquire about your site
