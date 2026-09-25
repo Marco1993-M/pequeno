@@ -1,18 +1,6 @@
 // app/layout.js or app/layout.tsx
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AppChrome from "@/components/AppChrome";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  weight: ["400", "600"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Pequeno Home | Pequeño Lightweight Steel Homes South Africa",
@@ -83,7 +71,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased text-gray-900`}
+        className="font-sans antialiased text-gray-900"
       >
         <AppChrome>{children}</AppChrome>
       </body>

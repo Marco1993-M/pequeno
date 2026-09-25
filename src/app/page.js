@@ -1,42 +1,19 @@
 import HomePageClient from "@/components/HomePageClient";
 
-const homeTitle =
-  "Architect-Designed Lightweight Steel Homes in South Africa | Pequeño";
-const homeDescription =
-  "Pequeño designs and builds architect-led lightweight steel homes in South Africa, including premium homes, off-grid retreats, private houses, and selected lifestyle buildings shaped for local conditions.";
-
+const homeTitle = "Luxury Home Design & Build South Africa | Pequeño";
+const homeDescription = "Bespoke luxury home design-and-build in South Africa. Explore Pequeño’s built work, plan your budget, or discuss LSF structure supply and installation.";
 const faqItems = [
-  {
-    question: "What does Pequeño build?",
-    answer:
-      "Pequeño designs and builds architect-led lightweight steel homes, retreats, off-grid homes, and selected lifestyle or commercial structures in South Africa.",
-  },
-  {
-    question: "Why use lightweight steel framing for a home?",
-    answer:
-      "Lightweight steel framing offers speed, precision, strength, and a clean structural system that suits modern homes, remote sites, and carefully detailed architectural work.",
-  },
-  {
-    question: "Do you work in different regions of South Africa?",
-    answer:
-      "Yes. Pequeño is building out region-specific guidance and project pages for towns and provinces across South Africa, with climate and site considerations that differ by location.",
-  },
-  {
-    question: "Can Pequeño help with off-grid homes?",
-    answer:
-      "Yes. Off-grid readiness is part of the design thinking on suitable projects, including planning for orientation, envelope performance, water systems, and solar integration.",
-  },
+  { question: "What does Pequeño offer?", answer: "Our focus is bespoke luxury home design-and-build. We also offer lightweight steel frame (LSF) structures as supply only or supply and installation, for clients managing the remaining building works." },
+  { question: "Where do you work?", answer: "We consider projects across South Africa, assessing each location, scope, and delivery requirements. Our project experience includes Rayton, Hoedspruit, and LSF structure supply and installation in Somerset West." },
+  { question: "Who handles the architectural documentation?", answer: "We coordinate the design-and-build journey with specialist professionals. Architectural partners undertake contract documentation, with professional appointments and responsibilities agreed for each project." },
+  { question: "Does an LSF structure package include a finished shell?", answer: "No. It covers the LSF structure, either supplied only or supplied and installed. Other building works, the weatherproof envelope, and finishes are outside that structure-only scope unless explicitly included in your quotation." },
+  { question: "How do we establish a realistic budget?", answer: "Start with your location, land status, approximate floor area, and intended investment. We discuss the scope, site conditions, and finish expectations before developing project-specific pricing. A steel-frame structure price should not be treated as the total cost of a completed home." },
 ];
 
 export const metadata = {
   title: homeTitle,
   description: homeDescription,
-  keywords: [
-    "architect designed homes south africa",
-    "steel frame homes south africa",
-    "lightweight steel homes south africa",
-    "premium homes south africa",
-  ],
+  keywords: ["luxury home design and build South Africa", "bespoke homes South Africa", "Pequeño", "LSF structure supply and installation"],
   alternates: {
     canonical: "/",
   },
@@ -72,11 +49,7 @@ export default function Page() {
     "@type": "WebSite",
     name: "Pequeño",
     url: "https://www.pequenohome.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.pequenohome.com/locations",
-      "query-input": "required name=search_term_string",
-    },
+
   };
 
   const faqJsonLd = {
