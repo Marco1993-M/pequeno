@@ -41,20 +41,19 @@ export const projects = Object.fromEntries([
   createProject({
     key: "coffee-spa",
     name: "Coffee & Spa",
-    location: "Outside Pretoria East",
-    region: "greater Pretoria East",
+    location: "Rayton, Gauteng",
+    region: "Rayton",
     projectType: "Double-storey commercial structure",
     size: "200 sqm",
     summary:
-      "Coffee & Spa was designed as a calm, contemporary commercial space just outside Pretoria East, bringing hospitality and wellness together in one refined double-storey building. The brief called for a structure that felt welcoming to guests while still being practical to build and efficient to operate. Lightweight steel framing was a strong fit because it supported a clean structural system, faster coordination on site, and the design flexibility needed for crisp lines, generous internal volume, and a polished modern finish.",
+      "Coffee & Spa is a 200 sqm commercial project delivered turnkey by Pequeño in Rayton in 2024. The completed building brings together a glazed gable, a pitched roof and an outdoor timber terrace. Project images show its lightweight steel structure and enclosure during construction.",
     highlights: [
-      "200 sqm double-storey commercial building",
-      "Lightweight steel frame system for efficient structural delivery",
-      "Designed for a calm, modern hospitality and wellness experience",
-      "A strong fit for commercial construction outside Pretoria East",
+      "200 sqm commercial project in Rayton",
+      "Delivered turnkey by Pequeño in 2024",
+      "Lightweight steel structure and construction process documented",
     ],
     trustLine:
-      "A strong example of lightweight steel framing supporting refined, design-led commercial buildings, not only residential homes.",
+      "A completed commercial project delivered turnkey by Pequeño in Rayton in 2024.",
     gallery: [
       "/projects/Coffee_spa_1.JPG",
       "/projects/Coffee_spa_2.jpg",
