@@ -27,7 +27,7 @@ export default function ProjectProofGrid({ limit, compact = false }) {
               {project.location}
             </p>
             <h3 className="mt-3 text-2xl font-semibold text-gray-900">
-              {project.name}
+              {project.key === "coffee-spa" ? <Link href="/projects/coffee-spa" className="hover:underline">{project.name}</Link> : project.name}
             </h3>
             <div className="mt-4 flex flex-wrap gap-3 text-sm text-gray-700">
               <span className="rounded-full bg-[#f7f2ec] px-4 py-2">

@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { getFeaturedLocationPages } from '@/data/locationPages';
 
 export default function Footer() {
@@ -18,9 +18,7 @@ export default function Footer() {
               <Image src="/LogoWhite.png" alt="Pequeño Logo" width={50} height={50} />
             </Link>
             <p className="text-sm text-gray-300">
-              Pequeño designs and builds premium lightweight steel homes and
-              lifestyle buildings shaped for South African sites, climates, and
-              long-term living.
+              Bespoke luxury home design-and-build in South Africa. Considered architecture, precision steel construction, and a personal approach.
             </p>
           </div>
 
@@ -28,12 +26,12 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/architecture" className="hover:text-[#da1a33]">Architecture</Link></li>
-              <li><Link href="/lightweight-steel-frame-homes-south-africa" className="hover:text-[#da1a33]">LSF Homes</Link></li>
+              <li><Link href="/#homes" className="hover:text-[#da1a33]">Homes & services</Link></li>
+              <li><Link href="/lightweight-steel-frame-homes-south-africa" className="hover:text-[#da1a33]">LSF structures</Link></li>
               <li><Link href="/locations" className="hover:text-[#da1a33]">Locations</Link></li>
               <li><Link href="/projects" className="hover:text-[#da1a33]">Projects</Link></li>
-              <li><Link href="/resources" className="hover:text-[#da1a33]">Resources</Link></li>
-              <li><Link href="/enquire" className="hover:text-[#da1a33]">Enquire</Link></li>
+              <li><Link href="/articles/lightweight-steel-frame-home-cost-south-africa" className="hover:text-[#da1a33]">Home cost guide</Link></li>
+              <li><Link href="/onboarding" className="hover:text-[#da1a33]">Enquire</Link></li>
             </ul>
           </div>
 
@@ -62,8 +60,8 @@ export default function Footer() {
             </p>
 
             <div className="flex space-x-4 text-xl">
-              <a href="https://www.facebook.com/profile.php?id=100091390116080" target="_blank" rel="noopener noreferrer" className="hover:text-[#da1a33]"><FaFacebookF /></a>
-              <a href="https://www.instagram.com/pequeno_homes/" target="_blank" rel="noopener noreferrer" className="hover:text-[#da1a33]"><FaInstagram /></a>
+              <a href="https://www.facebook.com/profile.php?id=100091390116080" target="_blank" rel="noopener noreferrer" aria-label="Pequeño on Facebook" className="hover:text-[#da1a33]"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/pequeno_homes/" target="_blank" rel="noopener noreferrer" aria-label="Pequeño on Instagram" className="hover:text-[#da1a33]"><FaInstagram /></a>
             </div>
           </div>
         </div>
