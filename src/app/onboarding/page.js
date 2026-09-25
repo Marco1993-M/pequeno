@@ -1,486 +1,137 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Link from "next/link";
 import emailjs from "@emailjs/browser";
+import styles from "./page.module.css";
 
 const SERVICE_ID = "service_7sp2v1f";
 const TEMPLATE_ID = "template_31rth73";
 const PUBLIC_KEY = "CN4db3HoeMcAONo2F";
 
-// Option Card with Image
-const OptionCard = ({ name, value, label, img, selected, onChange, multi }) => {
-  const handleClick = () => {
-    if (multi) {
-      onChange(name, value, true);
-    } else {
-      onChange(name, value);
-    }
-  };
+const serviceOptions = [
+  { value: "Design and build", title: "Design & build", description: "A bespoke home, from the first brief through the agreed construction scope." },
+  { value: "LSF supply and installation", title: "LSF supply & installation", description: "We supply and install the steel structure for your project team." },
+  { value: "LSF supply only", title: "LSF supply only", description: "We supply the structure for installation by your appointed team." },
+  { value: "Not sure yet", title: "I need guidance", description: "Tell us what you have in mind and we’ll help define the right scope." },
+];
 
-  return (
-    <div
-      onClick={handleClick}
-      className={`border rounded-xl p-4 cursor-pointer flex flex-col items-center text-center transition 
-      ${selected ? "border-black bg-gray-100" : "border-gray-300 hover:border-black"}`}
-    >
-      <img
-        src={img}
-        alt={label}
-        className="w-16 h-16 object-cover rounded-md mb-2"
-      />
-      <span className="font-medium">{label}</span>
-    </div>
-  );
+const initialData = {
+  service: "",
+  location: "",
+  landStatus: "",
+  floorArea: "",
+  budget: "",
+  timeline: "",
+  projectDetails: "",
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
 };
-
-const StyledSelect = ({ name, label, options, required, value, onChange }) => (
-  <div>
-    <label className="block font-semibold mb-2">{label}</label>
-    <select
-      name={name}
-      value={value || ""}
-      required={required}
-      onChange={(e) => onChange(name, e.target.value)}
-      className="w-full border border-black rounded-md px-4 py-3 pr-10 appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-black"
-    >
-      <option value="">Select</option>
-      {options.map((opt, idx) => (
-        <option key={idx} value={opt}>
-          {opt}
-        </option>
-      ))}
-    </select>
-  </div>
-);
 
 export default function OnboardingPage() {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({});
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(initialData);
+  const [status, setStatus] = useState("idle");
+  const formRef = useRef(null);
 
-  const steps = 4;
-
-  const handleChange = (name, value, multi = false) => {
-    if (multi) {
-      const current = formData[name] || [];
-      let updated;
-      if (current.includes(value)) {
-        updated = current.filter((v) => v !== value);
-      } else {
-        updated = [...current, value];
-      }
-      setFormData({ ...formData, [name]: updated });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const submissionData = {
-      ...formData,
-      features: Array.isArray(formData.features)
-        ? formData.features.join(", ")
-        : formData.features || "",
-      contact: `${formData.firstName || ""} ${formData.lastName || ""}, ${
-        formData.email || ""
-      }, ${formData.phone || ""}`,
-    };
-
-    emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, submissionData, PUBLIC_KEY)
-      .then(() => {
-        setSubmitted(true);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-        alert("Submission failed. Please try again.");
-      });
-  };
-
-  if (submitted) {
-    return (
-      <main className="min-h-screen bg-white flex items-center justify-center px-6 py-24">
-        <div className="text-center space-y-4">
-          <h1 className="text-3xl font-bold">Thank you!</h1>
-          <p>We’ve received your info and will be in touch shortly.</p>
-        </div>
-      </main>
-    );
+  function change(event) {
+    const { name, value } = event.target;
+    setData((current) => ({ ...current, [name]: value }));
+    if (status === "error") setStatus("idle");
   }
 
-  return (
-    <main className="min-h-screen bg-white flex items-center justify-center px-6 py-40">
-      <div className="w-full max-w-3xl bg-gray-50 border rounded-xl shadow-md p-8">
-        {/* Header */}
-        <section className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-3">Start Your Project</h1>
-          <p className="text-lg text-gray-700">
-            Answer a few quick questions and we’ll tailor your Pequeño journey.
-          </p>
-        </section>
+  function nextStep() {
+    if (!formRef.current?.reportValidity()) return;
+    setStep(2);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
-        {/* Progress */}
-        <div className="mb-10">
-          <p className="text-sm font-semibold">
-            Step {step} of {steps}
-          </p>
-          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-            <div
-              className="bg-black h-2 rounded-full transition-all"
-              style={{ width: `${(step / steps) * 100}%` }}
-            />
-          </div>
-        </div>
+  async function submit(event) {
+    event.preventDefault();
+    if (!formRef.current?.reportValidity() || status === "sending") return;
+    setStatus("sending");
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-10">
-          {/* Step 1: Basics */}
-          {step === 1 && (
-            <div className="space-y-8">
-              <div>
-                <h3 className="font-semibold mb-4">
-                  1. What kind of structure are you interested in? *
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <OptionCard
-  name="structureType"
-  value="Luxury Cabin"
-  label="Luxury Cabin"
-  img="/icons/luxury.png" // icon instead of photo
-  selected={formData.structureType === "Luxury Cabin"}
-  onChange={handleChange}
-/>
-<OptionCard
-  name="structureType"
-  value="Off-grid Home"
-  label="Off-grid Home"
-  img="/icons/off-grid.png"
-  selected={formData.structureType === "Off-grid Home"}
-  onChange={handleChange}
-/>
-<OptionCard
-  name="structureType"
-  value="Guest Unit"
-  label="Guest Accommodation"
-  img="/icons/guest-unit.png"
-  selected={formData.structureType === "Guest Unit"}
-  onChange={handleChange}
-/>
-<OptionCard
-  name="structureType"
-  value="Rental Unit"
-  label="Short-Term Rental"
-  img="/icons/rental-unit.png"
-  selected={formData.structureType === "Rental Unit"}
-  onChange={handleChange}
-/>
+    // Keep the existing EmailJS template fields populated while adding the new project fields.
+    const message = [
+      `Service: ${data.service}`,
+      `Location: ${data.location}`,
+      `Land: ${data.landStatus || "Not provided"}`,
+      `Approximate area: ${data.floorArea || "Not provided"}`,
+      `Budget: ${data.budget || "Needs guidance"}`,
+      `Timing: ${data.timeline || "Not provided"}`,
+      `Project: ${data.projectDetails || "Not provided"}`,
+    ].join("\n");
+    const submissionData = {
+      ...data,
+      structureType: data.service,
+      purpose: data.service,
+      capacity: data.floorArea || "Not provided",
+      features: message,
+      turnkey: data.service,
+      landOwned: data.landStatus || "Not provided",
+      servicesAvailable: data.projectDetails || "Not provided",
+      contact: `${data.firstName} ${data.lastName}, ${data.email}, ${data.phone || "No phone supplied"}`,
+      message,
+    };
 
-                </div>
-              </div>
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, submissionData, PUBLIC_KEY);
+      setStatus("sent");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (error) {
+      console.error("Project enquiry could not be sent", error);
+      setStatus("error");
+    }
+  }
 
-              <div>
-                <label className="block font-semibold mb-2">
-                  2. Where will the structure be located? *
-                </label>
-                <input
-                  type="text"
-                  name="location"
-                  value={formData.location || ""}
-                  onChange={(e) => handleChange("location", e.target.value)}
-                  required
-                  placeholder="e.g. Robertson, Western Cape (Farm)"
-                  className="w-full border border-black px-4 py-3 rounded-md focus:outline-none"
-                />
-              </div>
+  if (status === "sent") {
+    return <main className={styles.success}><p className={styles.eyebrow}>Enquiry received</p><h1>Thank you for<br /><em>getting in touch.</em></h1><p>We’ll review your project details and contact you about the next step.</p><Link href="/projects">Explore our work <span aria-hidden="true">↗</span></Link></main>;
+  }
 
-              <StyledSelect
-                name="purpose"
-                label="3. What is most important to you in this project? *"
-                options={[
-                  "Affordability",
-                  "Sustainability / Energy Efficiency",
-                  "Design & Aesthetics",
-                  "Speed of Construction",
-                ]}
-                required
-                value={formData.purpose}
-                onChange={handleChange}
-              />
+  return <main className={styles.page}>
+    <div className={styles.layout}>
+      <aside className={styles.intro}>
+        <p className={styles.eyebrow}>Pequeño / Start a conversation</p>
+        <h1>Tell us about<br /><em>your project.</em></h1>
+        <p>Whether you’re planning a complete home or need a lightweight steel structure, a few details will help us understand the opportunity.</p>
+        <div className={styles.asideNote}><span>01</span><p>Start with what you know. An early brief and an approximate budget are enough for a first conversation.</p></div>
+        <div className={styles.asideNote}><span>02</span><p>We’ll review your location, timing and required scope before discussing a suitable next step.</p></div>
+        <div className={styles.contact}><span>Prefer to write directly?</span><a href="mailto:info@pequenohome.com">info@pequenohome.com</a></div>
+      </aside>
+
+      <section className={styles.formPanel} aria-label="Project enquiry">
+        <div className={styles.progress}><span>Step {step} of 2</span><span>{step === 1 ? "The project" : "Your details"}</span></div>
+        <div className={styles.progressTrack}><div style={{ width: `${step * 50}%` }} /></div>
+        <form ref={formRef} onSubmit={submit}>
+          {step === 1 ? <>
+            <div className={styles.stepHeading}><p className={styles.eyebrow}>01 / The project</p><h2>What are you<br /><em>planning?</em></h2></div>
+            <fieldset className={styles.serviceFieldset}><legend>What would you like help with? <span>*</span></legend><div className={styles.serviceOptions}>{serviceOptions.map((option) => <label key={option.value} className={`${styles.option} ${data.service === option.value ? styles.selected : ""}`}><input type="radio" name="service" value={option.value} checked={data.service === option.value} onChange={change} required /><span className={styles.optionMark} aria-hidden="true" /><span><strong>{option.title}</strong><small>{option.description}</small></span></label>)}</div></fieldset>
+            <div className={styles.fields}>
+              <label className={styles.full}>Where is the project? <span>*</span><input name="location" value={data.location} onChange={change} required placeholder="Town or area, province" autoComplete="address-level2" /></label>
+              <label>What is your land status?<select name="landStatus" value={data.landStatus} onChange={change}><option value="">Select if known</option><option>I own the land</option><option>I am buying land</option><option>I am looking for land</option><option>Not applicable / unsure</option></select></label>
+              <label>Approximate floor area<input name="floorArea" value={data.floorArea} onChange={change} placeholder="e.g. 250 m², or still exploring" /></label>
+              <label>Budget you have in mind<input name="budget" value={data.budget} onChange={change} placeholder="A range is fine, or say unsure" /><small>For the full project if design-and-build; for the structure if LSF only.</small></label>
+              <label>When would you like to begin?<select name="timeline" value={data.timeline} onChange={change}><option value="">Select if known</option><option>As soon as practical</option><option>Within 6 months</option><option>6–12 months</option><option>More than a year away</option><option>Still exploring</option></select></label>
+              <label className={styles.full}>Anything else we should know?<textarea name="projectDetails" value={data.projectDetails} onChange={change} rows={4} placeholder="Tell us about the site, design ideas, or questions you have." /></label>
             </div>
-          )}
-
-          {/* Step 2: Design */}
-          {step === 2 && (
-            <div className="space-y-8">
-              <StyledSelect
-                name="capacity"
-                label="4. How many people should it accommodate?"
-                options={[
-                  "2-person (Couple)",
-                  "4-person (Small Family)",
-                  "6-person (Extended Family)",
-                  "Custom Layout",
-                ]}
-                value={formData.capacity}
-                onChange={handleChange}
-              />
-
-              <div>
-                <h3 className="font-semibold mb-4">
-                  5. Specific features or styles in mind? *
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <OptionCard
-                    name="features"
-                    value="Solar Power"
-                    label="Solar Power"
-                    img="/icons/solar.png"
-                    selected={formData.features?.includes("Solar Power")}
-                    onChange={handleChange}
-                    multi
-                  />
-                  <OptionCard
-                    name="features"
-                    value="Fireplace"
-                    label="Fireplace"
-                    img="/icons/fireplace.png"
-                    selected={formData.features?.includes("Fireplace")}
-                    onChange={handleChange}
-                    multi
-                  />
-                  <OptionCard
-                    name="features"
-                    value="Mezzanine"
-                    label="Mezzanine"
-                    img="/icons/mezzanine.png"
-                    selected={formData.features?.includes("Mezzanine")}
-                    onChange={handleChange}
-                    multi
-                  />
-                  <OptionCard
-                    name="features"
-                    value="Multi Level"
-                    label="Multi Level"
-                    img="/icons/multilevel.png"
-                    selected={formData.features?.includes("Multi Level")}
-                    onChange={handleChange}
-                    multi
-                  />
-                </div>
-              </div>
-
-              <StyledSelect
-                name="timeline"
-                label="6. Ideal timeline to get started? *"
-                options={[
-                  "Immediately",
-                  "Within 3 months",
-                  "3–6 months",
-                  "Next year",
-                ]}
-                required
-                value={formData.timeline}
-                onChange={handleChange}
-              />
+            <div className={styles.actions}><button type="button" onClick={nextStep}>Continue <span aria-hidden="true">↗</span></button></div>
+          </> : <>
+            <div className={styles.stepHeading}><p className={styles.eyebrow}>02 / Your details</p><h2>How can we<br /><em>reach you?</em></h2><p>We’ll use these details to respond to your project enquiry.</p></div>
+            <div className={styles.fields}>
+              <label>First name <span>*</span><input name="firstName" value={data.firstName} onChange={change} required autoComplete="given-name" /></label>
+              <label>Last name <span>*</span><input name="lastName" value={data.lastName} onChange={change} required autoComplete="family-name" /></label>
+              <label className={styles.full}>Email address <span>*</span><input type="email" name="email" value={data.email} onChange={change} required autoComplete="email" /></label>
+              <label className={styles.full}>Phone number <small>Optional</small><input type="tel" name="phone" value={data.phone} onChange={change} autoComplete="tel" /></label>
             </div>
-          )}
-
-          {/* Step 3: Budget & Land */}
-          {step === 3 && (
-            <div className="space-y-8">
-              <StyledSelect
-                name="budget"
-                label="7. Estimated budget (excluding land) *"
-                options={[
-                  "Under R500,000",
-                  "R500,000 – R1,000,000",
-                  "R1,000,000 – R2,000,000",
-                  "Over R2,000,000",
-                ]}
-                required
-                value={formData.budget}
-                onChange={handleChange}
-              />
-
-              <StyledSelect
-                name="turnkey"
-                label="8. Turnkey or White Box? *"
-                options={[
-                  "Turnkey (fully finished)",
-                  "White Box (fit-out)",
-                  "Hybrid",
-                  "Not sure yet",
-                ]}
-                required
-                value={formData.turnkey}
-                onChange={handleChange}
-              />
-
-              <StyledSelect
-                name="landOwned"
-                label="9. Do you already own the land? *"
-                options={["Yes", "No", "In Process", "Undecided"]}
-                required
-                value={formData.landOwned}
-                onChange={handleChange}
-              />
-
-              <StyledSelect
-                name="servicesAvailable"
-                label="10. Existing services on-site?"
-                options={[
-                  "Full Municipal Services",
-                  "Water & Solar Only",
-                  "Off-grid (No Services)",
-                  "Not Sure",
-                ]}
-                value={formData.servicesAvailable}
-                onChange={handleChange}
-              />
-            </div>
-          )}
-
-          {/* Step 4: Contact + Summary */}
-          {step === 4 && (
-            <div className="space-y-8">
-              {/* Contact details */}
-              <div>
-                <h3 className="font-semibold mb-4">
-                  11. Contact Details *
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <input
-                    type="text"
-                    name="firstName"
-                    required
-                    value={formData.firstName || ""}
-                    onChange={(e) =>
-                      handleChange("firstName", e.target.value)
-                    }
-                    placeholder="First Name"
-                    className="w-full border border-black px-4 py-3 rounded-md focus:outline-none"
-                  />
-                  <input
-                    type="text"
-                    name="lastName"
-                    required
-                    value={formData.lastName || ""}
-                    onChange={(e) =>
-                      handleChange("lastName", e.target.value)
-                    }
-                    placeholder="Last Name"
-                    className="w-full border border-black px-4 py-3 rounded-md focus:outline-none"
-                  />
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    value={formData.email || ""}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    placeholder="Email Address"
-                    className="w-full border border-black px-4 py-3 rounded-md focus:outline-none"
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    required
-                    value={formData.phone || ""}
-                    onChange={(e) => handleChange("phone", e.target.value)}
-                    placeholder="Phone Number"
-                    className="w-full border border-black px-4 py-3 rounded-md focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              {/* Summary */}
-              <div className="border rounded-lg bg-white shadow-sm p-6">
-                <h3 className="font-semibold mb-4">Summary Review</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>
-                    <strong>Structure:</strong> {formData.structureType}
-                  </li>
-                  <li>
-                    <strong>Location:</strong> {formData.location}
-                  </li>
-                  <li>
-                    <strong>Purpose:</strong> {formData.purpose}
-                  </li>
-                  <li>
-                    <strong>Capacity:</strong> {formData.capacity}
-                  </li>
-                  <li>
-                    <strong>Features:</strong>{" "}
-                    {formData.features?.join(", ") || "None selected"}
-                  </li>
-                  <li>
-                    <strong>Timeline:</strong> {formData.timeline}
-                  </li>
-                  <li>
-                    <strong>Budget:</strong> {formData.budget}
-                  </li>
-                  <li>
-                    <strong>Finish:</strong> {formData.turnkey}
-                  </li>
-                  <li>
-                    <strong>Land Ownership:</strong> {formData.landOwned}
-                  </li>
-                  <li>
-                    <strong>Services:</strong> {formData.servicesAvailable}
-                  </li>
-                  <li>
-                    <strong>Name:</strong> {formData.firstName}{" "}
-                    {formData.lastName}
-                  </li>
-                  <li>
-                    <strong>Email:</strong> {formData.email}
-                  </li>
-                  <li>
-                    <strong>Phone:</strong> {formData.phone}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {/* Navigation */}
-          <div className="flex justify-between pt-6">
-            {step > 1 && (
-              <button
-                type="button"
-                onClick={() => setStep(step - 1)}
-                className="px-4 py-2 border rounded-md"
-              >
-                Back
-              </button>
-            )}
-            {step < steps ? (
-              <button
-                type="button"
-                onClick={() => setStep(step + 1)}
-                className="px-6 py-3 bg-black text-white rounded-full font-semibold"
-              >
-                Next
-              </button>
-            ) : (
-              <button
-                type="submit"
-                disabled={loading}
-                className="px-6 py-3 bg-black text-white rounded-full font-semibold"
-              >
-                {loading ? "Submitting..." : "Submit Project Info"}
-              </button>
-            )}
-          </div>
+            <div className={styles.review}><span>Your project</span><p>{data.service} <span aria-hidden="true">·</span> {data.location}</p><button type="button" onClick={() => setStep(1)}>Edit project details</button></div>
+            {status === "error" && <p role="alert" className={styles.error}>Your enquiry could not be sent. Please try again, or email us at <a href="mailto:info@pequenohome.com">info@pequenohome.com</a>.</p>}
+            <div className={styles.actions}><button type="button" className={styles.back} onClick={() => setStep(1)}>Back</button><button type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Send enquiry"} <span aria-hidden="true">↗</span></button></div>
+            <p className={styles.disclosure}>Submitting sends your details to Pequeño so we can respond to your enquiry.</p>
+          </>}
         </form>
-      </div>
-    </main>
-  );
+      </section>
+    </div>
+  </main>;
 }
