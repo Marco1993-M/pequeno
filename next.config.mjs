@@ -10,6 +10,21 @@ const nextConfig = {
     root: __dirname,
   },
   outputFileTracingRoot: __dirname,
+  async redirects() {
+    return [
+      {
+        source: "/recent",
+        destination: "/projects",
+        permanent: true,
+      },
+      { source: "/resources", destination: "/articles", permanent: true },
+      { source: "/our-system", destination: "/lightweight-steel-frame-homes-south-africa", permanent: true },
+      { source: "/prefab-homes-south-africa", destination: "/lightweight-steel-frame-homes-south-africa", permanent: true },
+      { source: "/modular-homes-south-africa", destination: "/lightweight-steel-frame-homes-south-africa", permanent: true },
+      { source: "/prefab-home-prices-south-africa", destination: "/articles/lightweight-steel-frame-home-cost-south-africa", permanent: true },
+      { source: "/modular-homes-prices-south-africa", destination: "/articles/lightweight-steel-frame-home-cost-south-africa", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
