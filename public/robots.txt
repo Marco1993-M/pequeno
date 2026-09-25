@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.pequenohome.com
+
+# Sitemaps
+Sitemap: https://www.pequenohome.com/sitemap.xml
