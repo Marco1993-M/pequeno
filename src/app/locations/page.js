@@ -42,7 +42,7 @@ export default function LocationsPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/enquire"
+              href="/onboarding"
               className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-gray-900"
             >
               Let's Talk about your location

@@ -462,7 +462,7 @@ export default function LsfCostArticlePage() {
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
-              href="/enquire"
+              href="/onboarding"
               className="rounded-full bg-[#ff5c36] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#e44d28]"
             >
               Enquire about pricing

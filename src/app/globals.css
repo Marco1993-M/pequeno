@@ -1,53 +1,45 @@
-/* Import Tailwind and Google Fonts */
-@import "tailwindcss";
+/* ====================== ALL EXTERNAL IMPORTS FIRST ====================== */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Lora:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+/* Tailwind v4 - must come AFTER external @import url() */
+@import "tailwindcss";
+
+/* ====================== CUSTOM STYLES ====================== */
+
 .font-handwriting {
   font-family: 'Indie Flower', cursive;
-  font-weight: 400; /* Regular */
+  font-weight: 400;
 }
 
-
-
-/* Define colors */
+/* Font and color variables */
 :root {
   --background: #f3efea;
   --foreground: #e5dcd1;
+  --font-sans: 'Figtree', system-ui, sans-serif;
+  --font-serif: 'Lora', serif;
+}
 
-  body {
+/* Base body styles */
+body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
 }
 
-
-  /* Font variables */
-  --font-sans: 'Figtree', sans-serif;
-  --font-serif: 'Lora', serif;
-}
-
-/* Removed invalid @theme at-rule. If you need to define custom properties, use :root or a selector instead. */
-
+/* Dark mode (currently same as light – update if needed) */
 @media (prefers-color-scheme: dark) {
   :root {
-   --background: #f3efea;
-  --foreground: #e5dcd1;
-
+    --background: #f3efea;
+    --foreground: #e5dcd1;
   }
 }
 
 /* Gradient animation */
 @keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .animate-gradient {
@@ -55,18 +47,18 @@
   animation: gradientFlow 6s ease-in-out infinite;
 }
 
-/* CSS-generated blueprint/grid background */
+/* Blueprint grid background */
 .grid-bg {
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
-  background-size: 40px 40px; /* adjust scale */
+  background-size: 40px 40px;
   background-position: center;
 }
 
-/* Floating blueprint grid */
+/* Floating animated grid */
 .animated-grid-bg {
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -75,13 +67,7 @@
 }
 
 @keyframes floatGrid {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 20px 20px;
-  }
-  100% {
-    background-position: 0 0;
-  }
+  0% { background-position: 0 0; }
+  50% { background-position: 20px 20px; }
+  100% { background-position: 0 0; }
 }
